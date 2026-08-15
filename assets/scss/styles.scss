@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+
+@use "bootstrap/scss/bootstrap";
+
+@use 'fonts';
+
+// global
+@use 'theme';
+
+
+// site components
+@use 'blocks';
+@use 'paragraphs';
+@use 'regions';
+@use 'views';
+
+@use 'mixins';
+@include mixins.title-display;
+@include mixins.link-styling;
+@include mixins.newspaper;

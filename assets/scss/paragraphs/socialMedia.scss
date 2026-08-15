@@ -1,0 +1,30 @@
+@use '../variables.scss' as *;
+
+.footer-social-wrapper {
+    >ul {
+        >li {
+            display: inline-block;
+            margin-right: 5px;
+
+            a {
+                display: block;
+                height: 40px;
+                width: 40px;
+                border: 1px solid $accent;
+                border-radius: 0.125rem;
+                background-color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+
+                &:hover,
+                &:focus {
+                    color: $white;
+                    background-color: $accentDark;
+                }
+
+            }
+        }
+    }
+}

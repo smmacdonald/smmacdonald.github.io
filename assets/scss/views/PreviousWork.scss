@@ -1,0 +1,111 @@
+@use '../variables.scss' as *;
+
+.portfolio-item {
+    height: auto;
+
+    .portfolio-archived-work {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .portfolio-featured-image {
+            .item-list {
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+
+                    max-width: 800px;
+                    margin: 0 auto;
+                    position: relative;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    li {
+                        margin: 0;
+                        padding: 0;
+
+                        display: flex;
+                        overflow-x: auto;
+                        scroll-behavior: smooth;
+                        scroll-snap-type: x mandatory;
+                        scrollbar-width: none;
+
+                        img {
+                            flex: 0 0 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            scroll-snap-align: start;
+                        }
+                    }
+                }
+            }
+        }
+
+        .portfolio-content-wrap {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background-color: #141414;
+        }
+    }
+}
+
+.portfolio-term-label {
+    display: inline-flex;
+    padding: 2px 5px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $accent;
+    border-radius: 0.125rem;
+    background-color: transparent;
+    color: $accent;
+    margin-bottom: 5px;
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.previous-work-form {
+    margin-bottom: 20px;
+
+    .form-check {
+        margin: 0;
+        padding: 0;
+        display: inline;
+        margin-right: 5px;
+    }
+
+    input {
+        height: 0;
+        width: 0;
+        opacity: 0;
+
+        &:checked+label {
+            color: $white;
+            background-color: $accentDark;
+        }
+    }
+
+    label {
+        display: inline-flex;
+        padding: 5px 10px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $accent;
+        border-radius: 0.125rem;
+        background-color: transparent;
+        color: $accent;
+        margin-bottom: 5px;
+        transition: ease all 0.5s;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: $white;
+            background-color: $accentDark;
+        }
+
+    }
+}

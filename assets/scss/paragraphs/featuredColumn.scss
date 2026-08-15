@@ -1,0 +1,27 @@
+.featured-image-text-wrapper {
+    height: auto;
+
+    .featured-content-wrap {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .image-wrapper {}
+
+        .featured-text-wrap {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            .text-wrapper {
+                height: 100%;
+
+                >div {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

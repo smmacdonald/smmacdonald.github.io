@@ -1,0 +1,124 @@
+@use '../variables.scss' as *;
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: ease all 0.4s;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 99999;
+    backdrop-filter: blur(10px);
+
+    &.sticky {
+        height: 70px;
+        background-color: rgba(46, 46, 46, 0.9);
+    }
+
+    .header-site-logo {
+        a {
+            display: inline-block;
+        }
+    }
+
+    .nav-wrap {
+        &-main {
+            display: none;
+
+            @media screen and (min-width: 992px) {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                height: 100%;
+            }
+
+            .menu-wrapper {
+                .menu-items {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+                    margin: 0;
+                    padding: 0;
+
+                    .menu__item {
+                        position: relative;
+
+                        .menu__link {
+                            padding: 5px 8px;
+                            margin-left: 5px;
+                        }
+
+                        .dropdown-list {
+                            display: none;
+                        }
+
+                        &:hover {
+                            >.dropdown-list {
+                                display: block;
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-mobile {
+            display: none;
+
+            @media screen and (max-width: 991px) {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                height: 100%;
+            }
+
+            .menu-wrapper {
+                .menu-items {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+                    margin: 0;
+                    padding: 0;
+
+                    .menu__item {
+                        .menu__link {
+                            font-size: 0;
+                            line-height: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 40px;
+                            width: 40px;
+                            border: 1px solid $accent;
+                            border-radius: 0.125rem;
+                            background-color: transparent;
+                            text-decoration: none;
+                            color: $accent;
+
+                            &:before {
+                                font-family: $fontAwesome;
+                                font-size: 20px !important;
+                                line-height: 20px !important;
+                                content: "\f0c9";
+                            }
+
+                            &:hover,
+                            &:focus {
+                                color: $white !important;
+                                background-color: $accentDark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

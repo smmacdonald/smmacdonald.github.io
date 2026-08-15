@@ -1,0 +1,90 @@
+@use 'variables' as *;
+
+body {
+    font-family: $sans-serif;
+    font-optical-sizing: auto;
+    color: $lightGray;
+    background-color: $black;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: .2px;
+    margin-top: 100px; // sticky header fix
+}
+
+.nav,
+nav {
+    flex-direction: column;
+
+    ul {
+        margin: 0 !important;
+        padding: 0 !important;
+
+        li {}
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.align-left {
+    margin-right: 20px;
+    max-width: 30%;
+    float: left;
+
+    @media screen and (max-width: 576px) {
+        float: none !important;
+        max-width: initial;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.align-right {
+    margin-left: 20px;
+    max-width: 30%;
+    float: right;
+
+    @media screen and (max-width: 576px) {
+        float: none !important;
+        max-width: initial;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.align-center {
+    &.media {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.image-style {
+    &-_6-9 {
+        aspect-ratio: 16/9;
+    }
+
+    &-featured-image {
+        aspect-ratio: 6/4;
+    }
+}
+
+.table {
+    color: inherit;
+    background-color: transparent;
+
+    tbody,
+    tr,
+    td {
+        color: inherit;
+        background-color: transparent;
+    }
+}
+
+.text-align-center {
+    text-align: center;
+}

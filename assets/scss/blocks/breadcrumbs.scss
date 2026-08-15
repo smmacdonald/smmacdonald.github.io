@@ -1,0 +1,56 @@
+@use '../variables.scss' as *;
+
+.breadcrumbs {
+    background-color: $darkGray;
+
+    .breadcrumb-list {
+        .breadcrumb__item {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:first-child {
+                &:before {
+                    content: "";
+                }
+
+                .breadcrumb__link {
+                    &:before {
+                        content: '\f015';
+                        font-family: $fontAwesome;
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+
+                    .breadcrumb__text {
+                        font-size: 0;
+                        line-height: 0;
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .breadcrumb__link {
+                .breadcrumb__text {}
+            }
+
+            &.active {
+                color: $white;
+            }
+
+            &:before {
+                content: "/";
+                float: left;
+            }
+
+            .breadcrumb__text {}
+
+            &.current {
+                .breadcrumb__text {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@use '../variables.scss' as *;
+
+.site-footer {
+    background-image: url(../../media/noisy-texture-200x200-o39-d100-c-141414-t1.png);
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: auto;
+
+    .footer {
+        &-main {}
+
+        &-bottom {
+            .copyright-container {
+                border-top: 1px solid $accent;
+            }
+        }
+    }
+}

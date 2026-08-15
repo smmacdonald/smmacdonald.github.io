@@ -1,0 +1,58 @@
+@use '../variables.scss' as *;
+
+.slick-arrow {
+    z-index: 10;
+    height: auto !important;
+    width: auto !important;
+
+    &.slick-prev {
+        left: 0;
+
+        &:before {
+            content: "\f053";
+            left: 30px;
+            font-family: $fontAwesome;
+
+            @media screen and (max-width: 1150px) {
+                left: 20px;
+            }
+        }
+    }
+
+    &.slick-next {
+        right: 0;
+
+        &:before {
+            content: "\f054";
+            font-family: $fontAwesome;
+            right: 30px;
+
+            @media screen and (max-width: 1150px) {
+                right: 20px;
+            }
+        }
+    }
+
+    &:before {
+        display: inline-block;
+        font-size: 48px !important;
+        color: $accent !important;
+    }
+}
+
+.slick-dots {
+    bottom: 15px !important;
+
+    .slick-active {}
+
+    button {
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:before {
+            color: $accent !important;
+            font-size: 16px !important;
+        }
+    }
+}

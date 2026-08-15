@@ -1,0 +1,111 @@
+@use "sass:map";
+
+/************************************
+ * Core Font Families
+************************************/
+$sans-serif: "Montserrat", sans-serif;
+$serif: "Playfair", serif;
+$fontAwesome: "Font Awesome 7 Pro";
+
+/************************************
+ * Core site colors
+************************************/
+$black: #141414;
+$white: #ffffff;
+$accent: #4ac1af;
+$accentDark: #2c7369;
+$lightGray: #cccccc;
+$lightGrey: #cccccc;
+$gray: #f6f6f6;
+$grey: #f6f6f6;
+$darkGray: #2e2e2e;
+$darkGrey: #2e2e2e;
+
+$colors: (
+    ) !default;
+$colors: map.merge(("black": $black,
+            "white": $white,
+            "accent": $accent,
+            "accent-dark": $accentDark,
+            "grey": $gray,
+            "gray": $grey,
+            "dark-gray": $darkGray,
+            "dark-grey": $darkGrey ),
+        $colors
+);
+
+@each $name, $color in $colors {
+    .color-#{$name} {
+        color: $color !important;
+        transition: ease color 0.4s;
+    }
+}
+
+/************************************
+ * Section spacing
+************************************/
+$spacing: (
+    (top, false, 30),
+    (false, bottom, 30),
+    (top, bottom, 30),
+    (top, false, 60),
+    (false, bottom, 60),
+    (top, bottom, 60),
+    (top, false, 90),
+    (false, bottom, 90),
+    (top, bottom, 90),
+    (top, false, 120),
+    (false, bottom, 120),
+    (top, bottom, 120)
+);
+
+// Section Paragraph - column spacing selections
+@each $p1, $p2, $spacing in $spacing {
+    @if $p1 !=false and $p2 !=false {
+        .margin-#{$p1}-#{$spacing} {
+            box-sizing: border-box;
+            margin-#{$p1}: #{$spacing}px;
+        }
+
+        .padding-#{$p1}-#{$spacing} {
+            box-sizing: border-box;
+            padding-#{$p1}: #{$spacing}px;
+        }
+    }
+
+    @if $p1 !=false and $p2 !=false {
+        .margin-#{$p1}-#{$p2}-#{$spacing} {
+            box-sizing: border-box;
+            margin-#{$p1}: #{$spacing}px;
+            margin-#{$p2}: #{$spacing}px;
+        }
+
+        .padding-#{$p1}-#{$p2}-#{$spacing} {
+            box-sizing: border-box;
+            padding-#{$p1}: #{$spacing}px;
+            padding-#{$p2}: #{$spacing}px;
+        }
+    }
+
+    @if $p2 !=false and $p1 !=false {
+        .margin-#{$p2}-#{$spacing} {
+            box-sizing: border-box;
+            margin-#{$p2}: #{$spacing}px;
+        }
+
+        .padding-#{$p2}-#{$spacing} {
+            box-sizing: border-box;
+            padding-#{$p2}: #{$spacing}px;
+        }
+    }
+}
+
+/************************************
+ * Newspaper column styling
+************************************/
+@each $col in "2" "3" "4" {
+    .text-column-#{$col} {
+        column-count: #{$col};
+        column-gap: 16px;
+    }
+}

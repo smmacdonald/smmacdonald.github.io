@@ -1,0 +1,43 @@
+@use "../fonts/FontAwesome/css/all.min.css";
+
+/**
+ * Montserrat Variable Font
+ * Montserrat Italic Variable Font
+ **/
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Montserrat Italic
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/**
+ * Playfair Display Variable Font 
+ * Playfair Display Italic Variable Font 
+ **/
+@font-face {
+    font-family: "Playfair";
+    src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Playfair Display Italic
+@font-face {
+    font-family: "Playfair";
+    src: url("../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}

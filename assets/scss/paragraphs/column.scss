@@ -1,0 +1,13 @@
+.column-wrapper {
+    margin-bottom: 24px;
+
+    &.styled-box {
+        .column-content-wrapper {
+            padding: 32px;
+        }
+    }
+
+    .column-content-wrapper {
+        height: 100%;
+    }
+}
