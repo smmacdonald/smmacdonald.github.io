@@ -57,6 +57,9 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Compile and Export Static Next.js Application
+        env:
+          NEXT_PUBLIC_LOCAL_API_GRAPHQL_URL: ${{ secrets.NEXT_PUBLIC_LOCAL_API_GRAPHQL_URL }}
+          NEXT_PUBLIC_LOCAL_API_URL: ${{ secrets.NEXT_PUBLIC_LOCAL_API_URL }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Pack Static Assets Artifact
