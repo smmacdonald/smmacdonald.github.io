@@ -17,13 +17,30 @@ concurrency:
 
 jobs:
   # -------------------------
-  # VERIFY
+  # BUILD
   # -------------------------
-  verify:
-    name: Verify Environment
+  build:
+    name: Build Next.js
     runs-on: ubuntu-latest
 
+    environment:
+      name: github-pages
+
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          static_site_generator: next
+
       - name: Verify API Environment
         env:
           NEXT_PUBLIC_LOCAL_API_URL: ${{ secrets.NEXT_PUBLIC_LOCAL_API_URL }}
@@ -41,31 +58,7 @@ jobs:
             exit 1
           fi
 
-          echo "NEXT_PUBLIC_LOCAL_API_URL is configured"
-          echo "NEXT_PUBLIC_LOCAL_API_GRAPHQL_URL is configured"
-
-  # -------------------------
-  # BUILD
-  # -------------------------
-  build:
-    name: Build Next.js
-    runs-on: ubuntu-latest
-    needs: verify
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
+          echo "API environment variables are configured"
 
       - name: Install Dependencies
         run: npm ci
