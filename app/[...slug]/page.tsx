@@ -17,6 +17,41 @@ type Props = {
 
 type SectionElement = ParagraphSectionProps | ParagraphBlockReferenceProps
 
+type SitemapProps = {
+    view_node: string
+}
+
+export async function generateStaticParams() {
+    try {
+        const url = process.env.NEXT_PUBLIC_LOCAL_API_URL + '/rest/headless-sitemap';
+        const allPaths = await fetch(url);
+        let paths: SitemapProps[] = await allPaths.json();
+
+        return paths
+            .map((item) => {
+                const pathString = item.view_node; // e.g., '/portfolio/city-college-san-francisco'
+                const cleanSlugArray = pathString.replace(/^\/|\/$/g, "").split("/");
+
+                if (
+                    cleanSlugArray.includes("403") ||
+                    cleanSlugArray.includes("404") ||
+                    (cleanSlugArray.length === 1 && cleanSlugArray[0] === "homepage")
+                ) {
+                    return null;
+                }
+
+                return {
+                    slug: cleanSlugArray,
+                };
+            })
+            .filter(Boolean)
+
+    } catch (error) {
+        console.error("Failed to fetch paths for static export:", error)
+        return []
+    }
+}
+
 async function getSlugPage(params: Props["params"]) {
     const { slug } = await params;
     const path = `/${slug.join("/")}`;
@@ -45,7 +80,7 @@ export default async function Slug({ params }: Props) {
                     {...entity.pageHero} />
             )}
 
-            {entity.projectHero && (
+            {entity?.projectHero && (
                 <Section
                     key={entity.projectHero.id}
                     {...entity.projectHero} />
