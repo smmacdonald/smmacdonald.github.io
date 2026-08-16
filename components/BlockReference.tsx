@@ -40,7 +40,6 @@ export default function BlockReference(data: ParagraphBlockReferenceProps) {
                             default:
                                 return (
                                     <div
-                                        key={data.id}
                                         dangerouslySetInnerHTML={{
                                             __html: fixCmsImagePaths(data.blockReference.render),
                                         }}

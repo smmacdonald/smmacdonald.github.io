@@ -19,10 +19,9 @@ export default async function RootLayout({
     children: React.ReactNode
 }>) {
     const siteInfo = await getSiteInfo()
-
     return (
         <html lang="en" data-scroll-behavior="smooth">
-            <body className="min-h-full flex flex-col">
+            <body>
                 <Header
                     logo={siteInfo.data.logo}
                     mainMenu={siteInfo.data.main}

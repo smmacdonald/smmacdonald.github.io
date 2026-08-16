@@ -5,7 +5,7 @@ import { SiteLogoProps } from "@/types/SiteLogoProps"
 
 export default function SiteLogo(data: SiteLogoProps) {
     return (
-        <div className="site-logo">
+        <div className={`site-logo block__${data.__typename}`}>
             <Link href="/">
                 <Image
                     src={data.image[0].mediaImage.url}

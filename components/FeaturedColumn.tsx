@@ -3,11 +3,11 @@ import { fixCmsImagePaths } from "@/src/utils/html"
 import { ParagraphCardFeaturedImageTextProps } from "@/types/ParagraphCardFeaturedImageTextProps"
 
 export default function FeaturedColumn(data: ParagraphCardFeaturedImageTextProps) {
+    console.log(data)
     return (
         <div
-            key={`featured-column-${data.id}`}
             id={`pid-${data.sectionId ? data.sectionId : data.id}`}
-            className={data.columnWidth?.join(' ') + ' featured-image-text-wrapper'}>
+            className={`${data.columnWidth?.join(' ')} featured-image-text-wrapper paragraph__${data.__typename}`}>
             <div className="featured-content-wrap">
                 <FeaturedImage
                     {...data.media} />

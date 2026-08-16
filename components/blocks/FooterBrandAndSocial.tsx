@@ -5,7 +5,8 @@ import { FooterBrandAndSocialProps } from "@/types/FooterBrandAndSocialProps"
 export default function FooterBrandAndSocial(data: FooterBrandAndSocialProps) {
     return (
         <div
-            className="footer-brand-social-wrapper">
+            id={`block-id-${data.id}`}
+            className={`footer-brand-social-wrapper block__${data.__typename}`}>
             <div className="footer-logo-wrapper mb-4">
                 <LinkedImage {...data.image[0]} />
             </div>

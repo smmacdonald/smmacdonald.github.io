@@ -16,7 +16,7 @@ export default function Section(data: ParagraphSectionProps) {
     return (
         <section
             id={data.sectionId ? `pid-` + data.sectionId : `pid-` + data.id}
-            className={"section-container " + data.padding}
+            className={`section-container ${data.padding} paragraph__${data.__typename}`}
             style={style}
         >
             {data.bgColor ? (

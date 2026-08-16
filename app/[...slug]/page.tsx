@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { parseMetadata } from "@/lib/metadata"
 import { getPageByPath } from "@/lib/getPage"
+import BodyClassSync from "@/src/utils/BodyClassSync"
 
 import Section from "@/components/Section"
 import Breadcrumbs from "@/components/blocks/Breadcrumbs"
@@ -74,6 +75,7 @@ export default async function Slug({ params }: Props) {
     }
     return (
         <>
+            <BodyClassSync title={entity.title} />
             {entity?.pageHero && (
                 <Section
                     key={entity.pageHero.id}

@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function FeaturedImage(data: MediaImageProps) {
     return (
-        <div className="image-wrapper">
+        <div className={`image-wrapper paragraph__${data.__typename}`}>
             <Image
                 src={data.mediaImage.variations[0].url}
                 height={400}
