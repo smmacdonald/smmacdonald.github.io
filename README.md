@@ -43,7 +43,6 @@ Depending on the content type, Next.js can retrieve information such as:
 * Projects and case studies
 * Skills and technologies
 * Work experience
-* Education
 * Contact information
 * Other structured portfolio content managed through Drupal
 
@@ -79,8 +78,7 @@ Project
 ├── Description
 ├── Image
 ├── Technologies
-├── Project URL
-└── Date
+└── Project URL
 ```
 
 This approach keeps data requests focused and allows the Next.js components to work with predictable content structures.
@@ -155,9 +153,7 @@ A simplified view of the application might look like:
 ```text
 .
 ├── app/
-│   ├── components/
-│   ├── projects/
-│   ├── about/
+│   ├── ['...slug]/
 │   └── ...
 ├── assets/
 ├── components/
