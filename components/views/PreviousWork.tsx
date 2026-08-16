@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
-import PortfolioSlider from "../PortfolioSlider";
-import Image from "next/image";
+import { useEffect, useState } from "react"
+import PortfolioSlider from "../PortfolioSlider"
+import Image from "next/image"
 
 type FormFieldItemProps = {
     name: string
@@ -29,21 +29,21 @@ export default function PreviousWork() {
         try {
             const url = term
                 ? `${baseUrl}/rest/projects/archived/${term}`
-                : `${baseUrl}/rest/projects/archived`;
+                : `${baseUrl}/rest/projects/archived`
 
-            const res = await fetch(url);
+            const res = await fetch(url)
 
             if (!res.ok) {
-                throw new Error(`Projects request failed: ${res.status}`);
+                throw new Error(`Projects request failed: ${res.status}`)
             }
 
-            const data = await res.json();
+            const data = await res.json()
 
-            setProjects(data);
+            setProjects(data)
         } catch (error) {
-            console.error("Failed to load projects:", error);
+            console.error("Failed to load projects:", error)
         }
-    };
+    }
 
 
     // Initial load
@@ -53,39 +53,39 @@ export default function PreviousWork() {
                 const [formRes, projectsRes] = await Promise.all([
                     fetch(`${baseUrl}/rest/projects-filters/archived`),
                     fetch(`${baseUrl}/rest/projects/archived`),
-                ]);
+                ])
 
                 const [formData, projectsData] = await Promise.all([
                     formRes.json(),
                     projectsRes.json(),
-                ]);
+                ])
 
-                setFormFields(formData);
-                setProjects(projectsData);
+                setFormFields(formData)
+                setProjects(projectsData)
 
             } catch (error) {
-                console.error("Failed to load initial data:", error);
+                console.error("Failed to load initial data:", error)
             } finally {
-                setLoading(false);
+                setLoading(false)
             }
-        };
+        }
 
-        loadInitialData();
-    }, [baseUrl]);
+        loadInitialData()
+    }, [baseUrl])
 
     // Fetch filtered projects
     useEffect(() => {
-        if (!termId) return;
+        if (!termId) return
 
-        fetchProjects(termId);
-    }, [termId]);
+        fetchProjects(termId)
+    }, [termId])
 
     const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setTermId(e.target.value);
-    };
+        setTermId(e.target.value)
+    }
 
     if (loading)
-        return <div>Loading portfolio...</div>;
+        return <div>Loading portfolio...</div>
 
     return (
         <>
@@ -167,5 +167,5 @@ export default function PreviousWork() {
                 </div>
             ))}
         </>
-    );
+    )
 }

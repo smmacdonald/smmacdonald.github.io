@@ -11,12 +11,12 @@ const path = process.env.NEXT_PUBLIC_LOCAL_API_URL
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://smmacdonald.github.io/"),
-};
+}
 
 export default async function RootLayout({
     children,
 }: Readonly<{
-    children: React.ReactNode;
+    children: React.ReactNode
 }>) {
     const siteInfo = await getSiteInfo()
 
@@ -40,5 +40,5 @@ export default async function RootLayout({
                     mobileToggle={siteInfo.data.menuToggle} />
             </body>
         </html>
-    );
+    )
 }

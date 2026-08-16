@@ -1,9 +1,9 @@
 "use client"
 
-import Slider from "react-slick";
+import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import Image from "next/image";
+import Image from "next/image"
 
 type PortfolioSliderProps = {
     data: string
@@ -20,7 +20,7 @@ export default function PortfolioSlider({ data, autoplay, show, scroll }: Portfo
         speed: 500,
         slidesToShow: Number(show),
         slidesToScroll: Number(scroll)
-    };
+    }
     const path = process.env.NEXT_PUBLIC_LOCAL_API_URL
 
     return (

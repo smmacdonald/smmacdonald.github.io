@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import { parseMetadata } from "@/lib/metadata";
+import type { Metadata } from "next"
+import { parseMetadata } from "@/lib/metadata"
 import { getPageByPath } from "@/lib/getPage"
-import Section from "@/components/Section";
-import { PageProps } from "@/types/PageProps";
+import Section from "@/components/Section"
+import { PageProps } from "@/types/PageProps"
 
 async function getHomePage() {
     const { data } = await getPageByPath("/homepage")
@@ -11,12 +11,12 @@ async function getHomePage() {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-    const data = await getHomePage();
-    return parseMetadata(data.metatag);
+    const data = await getHomePage()
+    return parseMetadata(data.metatag)
 }
 
 export default async function Home() {
-    const entity: PageProps = await getHomePage();
+    const entity: PageProps = await getHomePage()
     return (
         <>
             {entity.pageHero && (

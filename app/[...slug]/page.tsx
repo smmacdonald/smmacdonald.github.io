@@ -1,19 +1,19 @@
-import type { Metadata } from "next";
-import { parseMetadata } from "@/lib/metadata";
-import { getPageByPath } from "@/lib/getPage";
+import type { Metadata } from "next"
+import { parseMetadata } from "@/lib/metadata"
+import { getPageByPath } from "@/lib/getPage"
 
-import Section from "@/components/Section";
-import Breadcrumbs from "@/components/blocks/Breadcrumbs";
-import BlockReference from "@/components/BlockReference";
+import Section from "@/components/Section"
+import Breadcrumbs from "@/components/blocks/Breadcrumbs"
+import BlockReference from "@/components/BlockReference"
 
-import { ParagraphBlockReferenceProps } from "@/types/ParagraphBlockReferenceProps";
-import { ParagraphSectionProps } from "@/types/ParagraphSectionProps";
+import { ParagraphBlockReferenceProps } from "@/types/ParagraphBlockReferenceProps"
+import { ParagraphSectionProps } from "@/types/ParagraphSectionProps"
 
 type Props = {
     params: Promise<{
-        slug: string[];
-    }>;
-};
+        slug: string[]
+    }>
+}
 
 type SectionElement = ParagraphSectionProps | ParagraphBlockReferenceProps
 
@@ -23,26 +23,26 @@ type SitemapProps = {
 
 export async function generateStaticParams() {
     try {
-        const url = process.env.NEXT_PUBLIC_LOCAL_API_URL + '/rest/headless-sitemap';
-        const allPaths = await fetch(url);
-        let paths: SitemapProps[] = await allPaths.json();
+        const url = process.env.NEXT_PUBLIC_LOCAL_API_URL + '/rest/headless-sitemap'
+        const allPaths = await fetch(url)
+        let paths: SitemapProps[] = await allPaths.json()
 
         return paths
             .map((item) => {
-                const pathString = item.view_node; // e.g., '/portfolio/city-college-san-francisco'
-                const cleanSlugArray = pathString.replace(/^\/|\/$/g, "").split("/");
+                const pathString = item.view_node
+                const cleanSlugArray = pathString.replace(/^\/|\/$/g, "").split("/")
 
                 if (
                     cleanSlugArray.includes("403") ||
                     cleanSlugArray.includes("404") ||
                     (cleanSlugArray.length === 1 && cleanSlugArray[0] === "homepage")
                 ) {
-                    return null;
+                    return null
                 }
 
                 return {
                     slug: cleanSlugArray,
-                };
+                }
             })
             .filter(Boolean)
 
@@ -53,24 +53,24 @@ export async function generateStaticParams() {
 }
 
 async function getSlugPage(params: Props["params"]) {
-    const { slug } = await params;
-    const path = `/${slug.join("/")}`;
-    const { data } = await getPageByPath(path);
-    return data;
+    const { slug } = await params
+    const path = `/${slug.join("/")}`
+    const { data } = await getPageByPath(path)
+    return data
 }
 
 export async function generateMetadata({ params, }: Props): Promise<Metadata> {
-    const data = await getSlugPage(params);
-    return parseMetadata(data?.route?.entity?.metatag ?? []);
+    const data = await getSlugPage(params)
+    return parseMetadata(data?.route?.entity?.metatag ?? [])
 }
 
 export default async function Slug({ params }: Props) {
-    const data = await getSlugPage(params);
-    const entity = data?.route?.entity;
-    const breadcrumbs = data?.route?.breadcrumbs;
+    const data = await getSlugPage(params)
+    const entity = data?.route?.entity
+    const breadcrumbs = data?.route?.breadcrumbs
 
     if (!entity) {
-        return null;
+        return null
     }
     return (
         <>

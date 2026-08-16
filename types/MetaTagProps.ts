@@ -3,16 +3,16 @@ export type MetaTagProps = {
     | "MetaTagValue"
     | "MetaTagProperty"
     | "MetaTagLink"
-    tag?: string | null
+    tag?: string
     attributes: {
-        name?: string | null
-        property?: string | null
-        content?: string | null
-        rel?: string | null
-        href?: string | null
-        hreflang?: string | null
-        media?: string | null
-        sizes?: string | null
-        type?: string | null
+        name?: string
+        property?: string
+        content?: string
+        rel?: string
+        href?: string
+        hreflang?: string
+        media?: string
+        sizes?: string
+        type?: string
     }
 }

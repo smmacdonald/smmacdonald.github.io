@@ -36,10 +36,10 @@ export default function OffCanvas({ logo, mainMenu, mobileToggle }: OffCanvasPro
             <div className="off-canvas-wrap">
                 <SiteLogo {...logo} />
                 <div className="menu-toggle-wrapper">
-                    <Menu data={mainMenu} />
+                    <Menu data={mobileToggle} />
                 </div>
                 <div className="off-canvas-menu">
-                    <Menu data={mobileToggle} />
+                    <Menu data={mainMenu} />
                 </div>
             </div>
         </div>
