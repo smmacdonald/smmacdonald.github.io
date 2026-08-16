@@ -6,7 +6,7 @@ export default function FooterBrandAndSocial(data: FooterBrandAndSocialProps) {
     return (
         <div
             className="footer-brand-social-wrapper">
-            <div className="footer-logo-wrapper">
+            <div className="footer-logo-wrapper mb-4">
                 <LinkedImage {...data.image[0]} />
             </div>
             <div className="footer-about-wrapper">
