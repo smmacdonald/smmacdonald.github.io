@@ -9,7 +9,7 @@ export default function FormActions({ name, field }: Props) {
     return (
         <div className="mt-4">
             <button
-                type={name}
+                type="submit"
                 className="button transparent"
             >
                 {field["#submit__label"] || "Submit"}
