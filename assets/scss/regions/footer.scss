@@ -15,4 +15,12 @@
             }
         }
     }
+
+    .page-contact & {
+        .footer-main {
+            .block__BlockContentBasic {
+                display: none;
+            }
+        }
+    }
 }

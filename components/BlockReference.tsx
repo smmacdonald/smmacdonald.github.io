@@ -2,6 +2,7 @@ import { fixCmsImagePaths } from "@/src/utils/html"
 import PreviousWork from "./views/PreviousWork"
 import FeaturedWork from "./views/FeaturedWork"
 import { ParagraphBlockReferenceProps } from "@/types/ParagraphBlockReferenceProps"
+import WebformContact from "./blocks/WebformContact"
 
 export default function BlockReference(data: ParagraphBlockReferenceProps) {
     const hasBgImage = data.bgImage?.mediaImage2?.url
@@ -35,6 +36,11 @@ export default function BlockReference(data: ParagraphBlockReferenceProps) {
                             case "views_block:portfolio-archived":
                                 return (
                                     <PreviousWork />
+                                )
+
+                            case "webform_block":
+                                return (
+                                    <WebformContact />
                                 )
 
                             default:

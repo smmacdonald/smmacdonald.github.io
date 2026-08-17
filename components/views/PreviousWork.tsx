@@ -45,7 +45,6 @@ export default function PreviousWork() {
         }
     }
 
-
     // Initial load
     useEffect(() => {
         const loadInitialData = async () => {
