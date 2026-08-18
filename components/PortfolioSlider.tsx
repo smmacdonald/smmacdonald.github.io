@@ -13,32 +13,28 @@ type PortfolioSliderProps = {
 }
 
 export default function PortfolioSlider({ data, autoplay, show, scroll }: PortfolioSliderProps) {
+    const toShow = Number(show)
+    const toScroll = Number(scroll)
     const settings = {
         dots: true,
         infinite: true,
         autoplay: autoplay == "1" ? true : false,
         speed: 500,
-        slidesToShow: Number(show),
-        slidesToScroll: Number(scroll),
+        slidesToShow: toShow,
+        slidesToScroll: toScroll,
         responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: Number(show)
-                }
-            },
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: Number(show) >= 3 ? 2 : Number(show),
-                    slidesToScroll: Number(scroll) >= 3 ? 2 : Number(scroll)
+                    slidesToShow: toShow >= 3 ? 2 : toShow,
+                    slidesToScroll: toScroll >= 3 ? 2 : toScroll
                 }
             },
             {
                 breakpoint: 576,
                 settings: {
-                    slidesToShow: Number(show) >= 3 ? 1 : Number(show),
-                    slidesToScroll: Number(scroll) >= 3 ? 1 : Number(scroll)
+                    slidesToShow: toShow >= 3 ? 1 : toShow,
+                    slidesToScroll: toScroll >= 3 ? 1 : toScroll
                 }
             }
         ]

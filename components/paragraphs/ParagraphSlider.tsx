@@ -20,12 +20,6 @@ export default function ParagraphSlider(data: ParagraphSliderProps) {
         slidesToScroll: scroll,
         responsive: [
             {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: show
-                }
-            },
-            {
                 breakpoint: 992,
                 settings: {
                     slidesToShow: show >= 3 ? 2 : show,
