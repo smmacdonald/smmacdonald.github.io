@@ -3,7 +3,6 @@ import { fixCmsImagePaths } from "@/src/utils/html"
 import { ParagraphCardFeaturedImageTextProps } from "@/types/ParagraphCardFeaturedImageTextProps"
 
 export default function FeaturedColumn(data: ParagraphCardFeaturedImageTextProps) {
-    console.log(data)
     return (
         <div
             id={`pid-${data.sectionId ? data.sectionId : data.id}`}

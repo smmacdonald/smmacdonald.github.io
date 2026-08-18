@@ -54,6 +54,7 @@ export default function WebformContact() {
 
         if (values.hidden_fields) {
             console.log("There was a problem submitting the form.")
+            setError("There was a problem submitting the form.")
             setIsSubmitting(false)
             return
         }
@@ -75,9 +76,6 @@ export default function WebformContact() {
             )
 
             const responseText = await response.text()
-
-            console.log("STATUS:", response.status)
-            console.log("DRUPAL RESPONSE:", responseText)
 
             if (!response.ok) {
                 throw new Error(

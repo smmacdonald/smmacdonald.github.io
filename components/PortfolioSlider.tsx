@@ -19,8 +19,31 @@ export default function PortfolioSlider({ data, autoplay, show, scroll }: Portfo
         autoplay: autoplay == "1" ? true : false,
         speed: 500,
         slidesToShow: Number(show),
-        slidesToScroll: Number(scroll)
+        slidesToScroll: Number(scroll),
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: Number(show)
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: Number(show) >= 3 ? 2 : Number(show),
+                    slidesToScroll: Number(scroll) >= 3 ? 2 : Number(scroll)
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: Number(show) >= 3 ? 1 : Number(show),
+                    slidesToScroll: Number(scroll) >= 3 ? 1 : Number(scroll)
+                }
+            }
+        ]
     }
+
     const path = process.env.NEXT_PUBLIC_LOCAL_API_URL
 
     return (
