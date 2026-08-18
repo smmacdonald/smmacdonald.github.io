@@ -1,12 +1,17 @@
 .featured-image-text-wrapper {
     height: auto;
+    margin-bottom: 24px;
 
     .featured-content-wrap {
         display: flex;
         flex-direction: column;
         height: 100%;
 
-        .image-wrapper {}
+        .image-wrapper {
+            img {
+                width: 100%;
+            }
+        }
 
         .featured-text-wrap {
             display: flex;
