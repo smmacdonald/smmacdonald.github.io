@@ -6,7 +6,6 @@ type Props = {
 }
 
 export default function FormTextField({ name, field }: Props) {
-    console.log(field)
     return (
         <div className={`mb-3 ${field['#webform_id']} ${field["#wrapper_attributes"]?.class?.join(" ") || ""}`}>
             <label
