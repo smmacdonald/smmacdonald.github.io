@@ -6,7 +6,6 @@ import FormActions from "@/components/form/FormActions"
 import FormSelect from "@/components/form/FormSelect"
 
 export function RenderFormFields(key: string, field: WebformFieldProps, index: number) {
-    console.log(key)
     switch (field["#type"]) {
         case "textfield":
             return (
