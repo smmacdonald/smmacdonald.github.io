@@ -99,7 +99,7 @@ export default function WebformContact() {
     }
 
     if (loading)
-        return <div>Loading portfolio...</div>
+        return <div>Loading webform...</div>
 
     return (
         <form onSubmit={handleSubmit} id="contact">

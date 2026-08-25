@@ -67,8 +67,8 @@ export async function generateMetadata({ params, }: Props): Promise<Metadata> {
 
 export default async function Slug({ params }: Props) {
     const data = await getSlugPage(params)
-    const entity = data?.route?.entity
-    const breadcrumbs = data?.route?.breadcrumbs
+    const entity = data.route.entity
+    const breadcrumbs = data.route.breadcrumbs
 
     if (!entity) {
         return null

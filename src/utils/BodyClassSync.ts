@@ -15,5 +15,5 @@ export default function BodyClassSync({ title }: { title: string }) {
         };
     }, [title]);
 
-    return null; // This component doesn't render any HTML
+    return null;
 }
