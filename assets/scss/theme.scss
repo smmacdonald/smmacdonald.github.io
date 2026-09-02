@@ -88,3 +88,44 @@ img {
 .text-align-center {
     text-align: center;
 }
+
+.animate-image {
+    opacity: 0;
+    transition: ease all 0.5s;
+
+    &.from {
+        &_left {
+            transform: translateX(-100px);
+        }
+
+        &_right {
+            transform: translateX(100px);
+        }
+
+        &_top {
+            transform: translateY(-100px);
+        }
+
+        &_bottom {
+            transform: translateY(100px);
+        }
+    }
+}
+
+.animated {
+    opacity: 1;
+
+    &.from {
+
+        &_left,
+        &_right {
+            transform: translateX(0px);
+        }
+
+        &_top,
+        &_bottom {
+            transform: translateY(0);
+        }
+    }
+
+}

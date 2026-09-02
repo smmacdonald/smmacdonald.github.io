@@ -16,6 +16,8 @@
                 }
 
                 .breadcrumb__link {
+                    text-decoration: none;
+
                     &:before {
                         content: '\f015';
                         font-family: $fontAwesome;

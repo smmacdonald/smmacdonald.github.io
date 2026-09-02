@@ -1,13 +1,49 @@
+"use client"
+
+import { useEffect, useRef, useState } from 'react';
 import Media from "./Media"
 import { ParagraphImageProps } from "@/types/ParagraphImageProps"
 
 export default function ParagraphImage(data: ParagraphImageProps) {
+    const ref = useRef<HTMLDivElement>(null);
+    const [hasBeenSeen, setHasBeenSeen] = useState(false);
+
     const direction = data.animationDirection
     const animate = data.animate ?
-        `animate-me ` + direction
+        `animate-image ` + direction
         : ""
+
+    useEffect(() => {
+        // If it already triggered, don't set up a new observer
+        if (hasBeenSeen) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setHasBeenSeen(true);
+
+                    // Stop observing immediately after it enters the viewport
+                    if (ref.current) {
+                        observer.unobserve(ref.current);
+                    }
+                }
+            },
+            { threshold: 0.5 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, [hasBeenSeen]);
+
     return (
-        <div className={`image-container ${animate}`}>
+        <div ref={ref} className={`image-container ${animate} ${hasBeenSeen ? 'animated' : ''}`}>
             <Media {...data} />
         </div>
     )
