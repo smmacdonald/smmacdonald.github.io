@@ -1,0 +1,32 @@
+// The parts of Bootstrap this site (and its CMS content) actually use.
+//
+// Importing all of Bootstrap shipped about 228 KB of CSS (30 KB gzipped); this
+// subset is about 134 KB (19 KB gzipped). Used today: the grid (container, row,
+// col-*), headings (.h2 to .h4), forms, alerts, tables, helpers
+// (.visually-hidden*, .invisible) and the utility classes (d-*, m*, p*, flex).
+//
+// Left out because nothing uses them: buttons, button groups, nav, navbar,
+// card, badge, list group, dropdown, breadcrumb, pagination, progress,
+// accordion, modal, offcanvas, toast, tooltip, popover, carousel, spinners,
+// placeholders, close, transitions. To bring one back, add its partial below,
+// for example `@import "bootstrap/scss/buttons";`.
+//
+// Bootstrap 5 is written for Sass `@import`, not `@use`; the deprecation
+// warning is silenced in next.config.ts until Bootstrap 6 uses `@use`.
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/utilities/api";

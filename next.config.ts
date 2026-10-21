@@ -16,6 +16,8 @@ const nextConfig: NextConfig = {
     },
     sassOptions: {
         quietDeps: true,
+        // Bootstrap 5 uses Sass @import (see assets/scss/bootstrap-subset.scss).
+        silenceDeprecations: ["import"],
     },
     images: {
         remotePatterns: [
