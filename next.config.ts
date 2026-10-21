@@ -1,8 +1,8 @@
 import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
-    output: 'export',
-    basePath: process.env.BASE_PATH ?? '',
+    output: "export",
+    basePath: process.env.BASE_PATH ?? "",
     turbopack: {
         rules: {
             "*.graphql": {
@@ -19,10 +19,10 @@ const nextConfig: NextConfig = {
     images: {
         remotePatterns: [
             {
-                protocol: 'https',
-                hostname: 'macdonaldesign.com',
-                port: '',
-                pathname: '/**',
+                protocol: "https",
+                hostname: "macdonaldesign.com",
+                port: "",
+                pathname: "/**",
             },
         ],
     },

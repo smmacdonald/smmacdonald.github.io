@@ -15,31 +15,37 @@ export default function Breadcrumbs({ data, current }: BreadcrumbsProps) {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-
                         <ol className="d-flex m-0 p-0 breadcrumb-list">
-                            {data.map((node: BreadcrumbItemProp, index: number) => (
-                                <li
-                                    key={index}
-                                    className="breadcrumb__item list-unstyled">
-                                    <Link
-                                        href={node.url}
-                                        className={index == 0 ? "breadcrumb__link pe-3 py-3" : "menu__link px-3 py-3"}
+                            {data.map(
+                                (node: BreadcrumbItemProp, index: number) => (
+                                    <li
+                                        key={index}
+                                        className="breadcrumb__item list-unstyled"
                                     >
-                                        <div className="breadcrumb__text">
-                                            {node.title}
-                                        </div>
-                                    </Link>
-                                </li>
-                            ))}
+                                        <Link
+                                            href={node.url}
+                                            className={
+                                                index == 0
+                                                    ? "breadcrumb__link pe-3 py-3"
+                                                    : "menu__link px-3 py-3"
+                                            }
+                                        >
+                                            <div className="breadcrumb__text">
+                                                {node.title}
+                                            </div>
+                                        </Link>
+                                    </li>
+                                )
+                            )}
                             <li
                                 key="current"
-                                className="breadcrumb__item list-unstyled current">
+                                className="breadcrumb__item list-unstyled current"
+                            >
                                 <div className="breadcrumb__text">
                                     {current}
                                 </div>
                             </li>
                         </ol>
-
                     </div>
                 </div>
             </div>

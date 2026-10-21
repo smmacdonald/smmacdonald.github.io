@@ -1,0 +1,9 @@
+.next
+out
+node_modules
+coverage
+assets
+public
+certificates
+package-lock.json
+*.md

@@ -4,14 +4,11 @@ import socialMediaItemFields from "./socialMediaItem"
 export default gql`
     fragment paragraphSocialMediaFields on ParagraphSocialMedia {
         __typename
-        ... on ParagraphSocialMedia {
+        id
+        socialMediaElement {
             __typename
-            id
-            socialMediaElement {
-                __typename
-                ... on ParagraphSocialMediaItem {
-                    ...socialMediaItemFields
-                }
+            ... on ParagraphSocialMediaItem {
+                ...socialMediaItemFields
             }
         }
     }

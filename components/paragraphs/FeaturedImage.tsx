@@ -9,7 +9,8 @@ export default function FeaturedImage(data: MediaImageProps) {
                 height={400}
                 width={600}
                 alt={data.mediaImage.alt}
-                unoptimized />
+                unoptimized
+            />
         </div>
     )
 }

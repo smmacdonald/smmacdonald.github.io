@@ -10,13 +10,18 @@
         "build": "next build",
         "start": "next start",
         "lint": "eslint",
-        "typecheck": "tsc --noEmit"
+        "typecheck": "tsc --noEmit",
+        "lint:fix": "eslint --fix",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "knip": "knip",
+        "prepare": "husky",
+        "check": "npm run format:check && npm run lint && npm run typecheck"
     },
     "dependencies": {
         "bootstrap": "^5.3.8",
         "graphql": "^17.0.2",
         "graphql-tag": "^2.12.7",
-        "html-react-parser": "^6.1.5",
         "next": "16.4.2",
         "react": "19.2.4",
         "react-dom": "19.2.4",
@@ -32,7 +37,16 @@
         "baseline-browser-mapping": "^2.10.9",
         "eslint": "^9",
         "eslint-config-next": "16.4.2",
+        "eslint-config-prettier": "^10.1.8",
+        "husky": "^9.1.7",
+        "knip": "^6.42.1",
+        "lint-staged": "^17.6.0",
+        "prettier": "^3.9.10",
         "sass": "^1.93.2",
         "typescript": "^5"
+    },
+    "lint-staged": {
+        "*.{ts,tsx,mjs,json,yml}": "prettier --write",
+        "*.{ts,tsx,mjs}": "eslint --fix"
     }
 }

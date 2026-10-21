@@ -17,33 +17,19 @@ export default function Column(data: ParagraphColumnProps) {
             <div
                 className="column-content-wrapper"
                 style={
-                    data.bgColor
-                        ? { backgroundColor: data.bgColor }
-                        : undefined
+                    data.bgColor ? { backgroundColor: data.bgColor } : undefined
                 }
             >
                 {data.element.map((element, index: number) => {
                     switch (element.__typename) {
                         case "ParagraphSlider":
-                            return (
-                                <ParagraphSlider
-                                    key={index}
-                                    {...element} />
-                            )
+                            return <ParagraphSlider key={index} {...element} />
 
                         case "ParagraphImage":
-                            return (
-                                <ParagraphImage
-                                    key={index}
-                                    {...element} />
-                            )
+                            return <ParagraphImage key={index} {...element} />
 
                         case "ParagraphText":
-                            return (
-                                <Text
-                                    key={index}
-                                    {...element} />
-                            )
+                            return <Text key={index} {...element} />
 
                         default:
                             return null

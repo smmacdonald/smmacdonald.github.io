@@ -11,26 +11,23 @@ export default function MenuItem({ item, level }: Props) {
 
     return (
         <li className="menu__item">
-
             <Link
                 href={item.url ? item.url : "#"}
-                title={item.title.toLowerCase().replace(/\s+/g, '-')}
-                className={`menu__link ${item.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                title={item.title.toLowerCase().replace(/\s+/g, "-")}
+                className={`menu__link ${item.title.toLowerCase().replace(/\s+/g, "-")}`}
+            >
                 {item.title}
             </Link>
 
             {hasChildren && (
-                <ul className={`menu menu-level-${level + 1} list-unstyled dropdown-list `}>
+                <ul
+                    className={`menu menu-level-${level + 1} list-unstyled dropdown-list `}
+                >
                     {item.children.map((child, index) => (
-                        <MenuItem
-                            key={index}
-                            item={child}
-                            level={level + 1}
-                        />
+                        <MenuItem key={index} item={child} level={level + 1} />
                     ))}
                 </ul>
             )}
-
         </li>
     )
 }

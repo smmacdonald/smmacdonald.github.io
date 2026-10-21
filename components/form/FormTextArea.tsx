@@ -7,28 +7,24 @@ type Props = {
 
 export default function FormTextArea({ name, field }: Props) {
     return (
-        <div className={`mb-3 ${field['#webform_id']} ${field["#wrapper_attributes"]?.class?.join(" ") || ""}`}>
+        <div
+            className={`mb-3 ${field["#webform_id"]} ${field["#wrapper_attributes"]?.class?.join(" ") || ""}`}
+        >
             <label
-                htmlFor={field['#webform_id'] ?? name}
+                htmlFor={field["#webform_id"] ?? name}
                 className="form-label"
             >
-                {field['#title']}
+                {field["#title"]}
 
-                {field['#required'] && (
-                    <span className="text-danger">
-                        {" "}*
-                    </span>
-                )}
+                {field["#required"] && <span className="text-danger"> *</span>}
             </label>
 
             <textarea
-                id={field['#webform_id'] ?? name}
+                id={field["#webform_id"] ?? name}
                 name={name}
                 className="form-control"
-                defaultValue={
-                    field["#default_value"] || ""
-                }
-                required={field['#required']}
+                defaultValue={field["#default_value"] || ""}
+                required={field["#required"]}
                 rows={6}
             />
         </div>

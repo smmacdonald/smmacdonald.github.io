@@ -11,7 +11,8 @@ export default function LinkedImage(data: MediaLinkedImageProps) {
                     height={data.mediaImage1.height}
                     width={data.mediaImage1.width}
                     alt={data.mediaImage1.alt}
-                    unoptimized />
+                    unoptimized
+                />
             </Link>
         </div>
     )

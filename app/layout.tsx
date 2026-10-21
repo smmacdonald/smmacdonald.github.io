@@ -23,18 +23,21 @@ export default async function RootLayout({
                 <Header
                     logo={siteInfo.data.logo}
                     mainMenu={siteInfo.data.main}
-                    mobileToggle={siteInfo.data.menuToggle} />
+                    mobileToggle={siteInfo.data.menuToggle}
+                />
 
                 {children}
 
                 <Footer
                     brand={siteInfo.data.footerBrand}
                     contact={siteInfo.data.contactCTA}
-                    legal={siteInfo.data.copyright} />
+                    legal={siteInfo.data.copyright}
+                />
                 <OffCanvas
                     logo={siteInfo.data.logo}
                     mainMenu={siteInfo.data.main}
-                    mobileToggle={siteInfo.data.menuToggle} />
+                    mobileToggle={siteInfo.data.menuToggle}
+                />
             </body>
         </html>
     )

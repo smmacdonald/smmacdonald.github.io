@@ -1,19 +1,19 @@
-'use client';
+"use client"
 
-import { useEffect } from 'react';
+import { useEffect } from "react"
 
 export default function BodyClassSync({ title }: { title: string }) {
     useEffect(() => {
-        if (!title) return;
+        if (!title) return
 
-        const safeClass = title.toLowerCase().replace(/[^a-z0-9]/g, '-');
-        document.body.classList.add(`page-${safeClass}`);
+        const safeClass = title.toLowerCase().replace(/[^a-z0-9]/g, "-")
+        document.body.classList.add(`page-${safeClass}`)
 
         // Clean up the class if the user navigates away
         return () => {
-            document.body.classList.remove(`page-${safeClass}`);
-        };
-    }, [title]);
+            document.body.classList.remove(`page-${safeClass}`)
+        }
+    }, [title])
 
-    return null;
+    return null
 }

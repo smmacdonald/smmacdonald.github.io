@@ -1,7 +1,7 @@
 import { ParagraphImageProps } from "./ParagraphImageProps"
 
 export type ParagraphSliderProps = {
-    __typename: 'ParagraphSlider'
+    __typename: "ParagraphSlider"
     id: string
     sectionId: string
     autoplay: boolean

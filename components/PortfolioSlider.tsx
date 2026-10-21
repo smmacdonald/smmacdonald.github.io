@@ -12,7 +12,12 @@ type PortfolioSliderProps = {
     scroll: string
 }
 
-export default function PortfolioSlider({ data, autoplay, show, scroll }: PortfolioSliderProps) {
+export default function PortfolioSlider({
+    data,
+    autoplay,
+    show,
+    scroll,
+}: PortfolioSliderProps) {
     const toShow = Number(show)
     const toScroll = Number(scroll)
     const settings = {
@@ -27,24 +32,24 @@ export default function PortfolioSlider({ data, autoplay, show, scroll }: Portfo
                 breakpoint: 992,
                 settings: {
                     slidesToShow: toShow >= 3 ? 2 : toShow,
-                    slidesToScroll: toScroll >= 3 ? 2 : toScroll
-                }
+                    slidesToScroll: toScroll >= 3 ? 2 : toScroll,
+                },
             },
             {
                 breakpoint: 576,
                 settings: {
                     slidesToShow: toShow >= 3 ? 1 : toShow,
-                    slidesToScroll: toScroll >= 3 ? 1 : toScroll
-                }
-            }
-        ]
+                    slidesToScroll: toScroll >= 3 ? 1 : toScroll,
+                },
+            },
+        ],
     }
 
     const path = process.env.NEXT_PUBLIC_LOCAL_API_URL
 
     return (
         <Slider {...settings}>
-            {data.split(',').map((item: string, index: number) => {
+            {data.split(",").map((item: string, index: number) => {
                 return (
                     <Image
                         key={index}
@@ -52,7 +57,8 @@ export default function PortfolioSlider({ data, autoplay, show, scroll }: Portfo
                         height={400}
                         width={600}
                         alt=""
-                        unoptimized />
+                        unoptimized
+                    />
                 )
             })}
         </Slider>

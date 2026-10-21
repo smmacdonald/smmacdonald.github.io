@@ -1,6 +1,7 @@
 import mediaImageFields from "../fragments/mediaImage"
 import mediaLinkedImageFields from "../fragments/mediaLinkedImage"
 import menuItemFields from "../fragments/menuItem"
+import paragraphSocialMediaFields from "../fragments/paragraphSocialMedia"
 
 import { gql } from "graphql-tag"
 
@@ -50,7 +51,7 @@ export default gql`
                 }
             }
         }
-        logo:blockContent(id: "1") {
+        logo: blockContent(id: "1") {
             __typename
             ... on BlockContentSiteLogo {
                 __typename
@@ -61,31 +62,31 @@ export default gql`
                 }
             }
         }
-        main:menu(name: MAIN) {
+        main: menu(name: MAIN) {
             name
             items {
                 ...menuItemFields
+                children {
+                    ...menuItemFields
                     children {
-                        ...menuItemFields
-                        children {
                         ...menuItemFields
                     }
                 }
             }
         }
-        menuToggle:menu(name: MOBILE_MENU_TOGGLE) {
+        menuToggle: menu(name: MOBILE_MENU_TOGGLE) {
             name
             items {
                 ...menuItemFields
+                children {
+                    ...menuItemFields
                     children {
-                        ...menuItemFields
-                        children {
                         ...menuItemFields
                     }
                 }
             }
         }
-        footerBrand:blockContent(id: "5") {
+        footerBrand: blockContent(id: "5") {
             __typename
             ... on BlockContentFooterBrandAndSocial {
                 __typename
@@ -101,25 +102,12 @@ export default gql`
                 socialMedia {
                     __typename
                     ... on ParagraphSocialMedia {
-                        __typename
-                        id
-                        socialMediaElement {
-                            __typename
-                            ... on ParagraphSocialMediaItem {
-                                __typename
-                                id
-                                link {
-                                    url
-                                    title
-                                }
-                                socialMediaIcon
-                            }
-                        }
+                        ...paragraphSocialMediaFields
                     }
                 }
             }
         }
-        contactCTA:blockContent(id: "2") {
+        contactCTA: blockContent(id: "2") {
             __typename
             ... on BlockContentBasic {
                 __typename
@@ -130,7 +118,7 @@ export default gql`
                 }
             }
         }
-        copyright:blockContent(id: "6") {
+        copyright: blockContent(id: "6") {
             __typename
             ... on BlockContentBasic {
                 __typename
@@ -141,8 +129,9 @@ export default gql`
                 }
             }
         }
-     }
+    }
     ${mediaImageFields}
     ${menuItemFields}
     ${mediaLinkedImageFields}
+    ${paragraphSocialMediaFields}
 `

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import PortfolioSlider from "../PortfolioSlider"
 import Image from "next/image"
 
@@ -17,21 +17,25 @@ type ProjectItemProps = {
 }
 
 export default function PreviousWork() {
-    const [termId, setTermId] = useState("")
     const [formFields, setFormFields] = useState<FormFieldItemProps[]>([])
     const [projects, setProjects] = useState<ProjectItemProps[]>([])
     const [loading, setLoading] = useState(true)
 
     const baseUrl = process.env.NEXT_PUBLIC_LOCAL_API_URL
+    const filterRequest = useRef<AbortController | null>(null)
 
-    // Fetch projects
+    // Fetch projects, ignoring any response superseded by a newer filter choice
     const fetchProjects = async (term: string) => {
+        filterRequest.current?.abort()
+        const controller = new AbortController()
+        filterRequest.current = controller
+
         try {
             const url = term
                 ? `${baseUrl}/rest/projects/archived/${term}`
                 : `${baseUrl}/rest/projects/archived`
 
-            const res = await fetch(url)
+            const res = await fetch(url, { signal: controller.signal })
 
             if (!res.ok) {
                 throw new Error(`Projects request failed: ${res.status}`)
@@ -41,6 +45,7 @@ export default function PreviousWork() {
 
             setProjects(data)
         } catch (error) {
+            if (controller.signal.aborted) return
             console.error("Failed to load projects:", error)
         }
     }
@@ -61,7 +66,6 @@ export default function PreviousWork() {
 
                 setFormFields(formData)
                 setProjects(projectsData)
-
             } catch (error) {
                 console.error("Failed to load initial data:", error)
             } finally {
@@ -72,19 +76,11 @@ export default function PreviousWork() {
         loadInitialData()
     }, [baseUrl])
 
-    // Fetch filtered projects
-    useEffect(() => {
-        if (!termId) return
-
-        fetchProjects(termId)
-    }, [termId])
-
     const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setTermId(e.target.value)
+        fetchProjects(e.target.value)
     }
 
-    if (loading)
-        return <div>Loading portfolio...</div>
+    if (loading) return <div>Loading portfolio...</div>
 
     return (
         <>
@@ -100,7 +96,10 @@ export default function PreviousWork() {
                         defaultChecked
                         onChange={handleRadioChange}
                     />
-                    <label className="form-check-label" htmlFor="flexRadioDefault-All">
+                    <label
+                        className="form-check-label"
+                        htmlFor="flexRadioDefault-All"
+                    >
                         - Any -
                     </label>
                 </div>
@@ -118,7 +117,8 @@ export default function PreviousWork() {
                             className="form-check-label"
                             htmlFor={`flexRadioDefault-${element.tid}`}
                         >
-                            {element.name?.replaceAll('&amp;', '&')} ({element.count})
+                            {element.name?.replaceAll("&amp;", "&")} (
+                            {element.count})
                         </label>
                     </div>
                 ))}
@@ -127,32 +127,44 @@ export default function PreviousWork() {
                 <div key={i} className="col-lg-3 col-md-6 pb-4 portfolio-item">
                     <div className="portfolio-archived-work">
                         <div className="portfolio-featured-image">
-                            {post.field_slider.includes(', ') ? (
-                                <PortfolioSlider data={post.field_slider} autoplay="1" show="1" scroll="1" />
+                            {post.field_slider.includes(", ") ? (
+                                <PortfolioSlider
+                                    data={post.field_slider}
+                                    autoplay="1"
+                                    show="1"
+                                    scroll="1"
+                                />
                             ) : (
                                 <Image
-                                    src={process.env.NEXT_PUBLIC_LOCAL_API_URL + post.field_slider.trim()}
+                                    src={
+                                        process.env.NEXT_PUBLIC_LOCAL_API_URL +
+                                        post.field_slider.trim()
+                                    }
                                     height={400}
                                     width={600}
                                     alt=""
-                                    unoptimized />
+                                    unoptimized
+                                />
                             )}
                         </div>
                         <div className="portfolio-content-wrap p-4">
-                            <div className="h4 portfolio-title">{post.title}</div>
+                            <div className="h4 portfolio-title">
+                                {post.title}
+                            </div>
                             <div className="portfolio-tags mt-auto">
-                                {post.field_tags.includes(', ') ? (
-                                    post.field_tags.split(', ').map((item, index) => {
-                                        return (
-                                            <span
-                                                key={index}
-                                                className="portfolio-term-label"
-                                            >
-                                                {item.trim()}
-                                            </span>
-                                        )
-                                    })
-
+                                {post.field_tags.includes(", ") ? (
+                                    post.field_tags
+                                        .split(", ")
+                                        .map((item, index) => {
+                                            return (
+                                                <span
+                                                    key={index}
+                                                    className="portfolio-term-label"
+                                                >
+                                                    {item.trim()}
+                                                </span>
+                                            )
+                                        })
                                 ) : (
                                     <>
                                         <span className="portfolio-term-label">

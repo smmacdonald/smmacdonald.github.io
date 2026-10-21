@@ -6,7 +6,8 @@ export default function FooterBrandAndSocial(data: FooterBrandAndSocialProps) {
     return (
         <div
             id={`block-id-${data.id}`}
-            className={`footer-brand-social-wrapper block__${data.__typename}`}>
+            className={`footer-brand-social-wrapper block__${data.__typename}`}
+        >
             <div className="footer-logo-wrapper mb-4">
                 <LinkedImage {...data.image[0]} />
             </div>
@@ -19,8 +20,7 @@ export default function FooterBrandAndSocial(data: FooterBrandAndSocialProps) {
                 />
             </div>
             <div className="footer-social-wrapper">
-                <ParagraphSocialMedia
-                    {...data.socialMedia[0]} />
+                <ParagraphSocialMedia {...data.socialMedia[0]} />
             </div>
         </div>
     )

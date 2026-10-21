@@ -1,5 +1,5 @@
 export type ParagraphBlockReferenceProps = {
-    __typename: 'ParagraphBlockReference'
+    __typename: "ParagraphBlockReference"
     id: string
     bgColor: string
     bgImage: {

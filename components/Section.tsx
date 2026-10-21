@@ -6,11 +6,11 @@ export default function Section(data: ParagraphSectionProps) {
     const hasBgImage = data.bgImage?.mediaImage2?.url
     const style = hasBgImage
         ? {
-            backgroundImage: `url(${data.bgImage.mediaImage2.url})`,
-            backgroundSize: data.bgImageSize,
-            backgroundPosition: data.bgImagePosition,
-            backgroundRepeat: data.bgImageRepeat,
-        }
+              backgroundImage: `url(${data.bgImage.mediaImage2.url})`,
+              backgroundSize: data.bgImageSize,
+              backgroundPosition: data.bgImagePosition,
+              backgroundRepeat: data.bgImageRepeat,
+          }
         : {}
 
     return (
@@ -20,25 +20,21 @@ export default function Section(data: ParagraphSectionProps) {
             style={style}
         >
             {data.bgColor ? (
-                <div className="color-overlay" style={{ backgroundColor: data.bgColor }} />
+                <div
+                    className="color-overlay"
+                    style={{ backgroundColor: data.bgColor }}
+                />
             ) : null}
             <div className="container">
                 <div className="row">
-
                     {data.content?.map((column, index: number) => {
                         switch (column.__typename) {
                             case "ParagraphColumn":
-                                return (
-                                    <Column
-                                        key={index}
-                                        {...column} />
-                                )
+                                return <Column key={index} {...column} />
 
                             case "ParagraphCardFeaturedImageText":
                                 return (
-                                    <FeaturedColumn
-                                        key={index}
-                                        {...column} />
+                                    <FeaturedColumn key={index} {...column} />
                                 )
 
                             default:

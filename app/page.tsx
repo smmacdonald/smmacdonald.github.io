@@ -25,15 +25,10 @@ export default async function Home() {
     const entity: PageProps = await getHomePage()
     return (
         <>
-            {entity.pageHero && (
-                <Section
-                    {...entity.pageHero} />
-            )}
+            {entity.pageHero && <Section {...entity.pageHero} />}
 
             {entity.content?.map((section, index: number) => (
-                <Section
-                    key={index}
-                    {...section} />
+                <Section key={index} {...section} />
             ))}
         </>
     )

@@ -9,7 +9,8 @@ export default function Media(data: ParagraphImageProps) {
                 height={data.media.mediaImage.height}
                 width={data.media.mediaImage.width}
                 alt={data.media.mediaImage.alt}
-                unoptimized />
+                unoptimized
+            />
         </div>
     )
 }

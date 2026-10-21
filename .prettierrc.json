@@ -1,0 +1,14 @@
+{
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": false,
+    "trailingComma": "es5",
+    "overrides": [
+        {
+            "files": "*.{yml,yaml}",
+            "options": {
+                "tabWidth": 2
+            }
+        }
+    ]
+}

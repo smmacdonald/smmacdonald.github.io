@@ -1,7 +1,7 @@
 import { ImageProps } from "./ImageProps"
 
 export type MediaImageProps = {
-    __typename: 'MediaImage'
+    __typename: "MediaImage"
     id: string
     mediaImage: ImageProps
 }

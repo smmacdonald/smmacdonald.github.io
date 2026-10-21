@@ -15,10 +15,14 @@ export default function Footer({ brand, contact, legal }: FooterProps) {
             <div className="footer-main padding-top-bottom-90">
                 <div className="container">
                     <div className="row">
-                        <div className={`col-md-5 mb-4 block__${brand.__typename}`}>
+                        <div
+                            className={`col-md-5 mb-4 block__${brand.__typename}`}
+                        >
                             <FooterBrandAndSocial {...brand} />
                         </div>
-                        <div className={`col-md-5 offset-md-2 block__${contact.__typename}`}>
+                        <div
+                            className={`col-md-5 offset-md-2 block__${contact.__typename}`}
+                        >
                             <Basic {...contact} />
                         </div>
                     </div>
@@ -28,7 +32,9 @@ export default function Footer({ brand, contact, legal }: FooterProps) {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <div className={`copyright-container padding-top-bottom-30 block__${legal.__typename}`}>
+                            <div
+                                className={`copyright-container padding-top-bottom-30 block__${legal.__typename}`}
+                            >
                                 <Basic {...legal} />
                             </div>
                         </div>

@@ -7,17 +7,14 @@ export function parseMetadata(metaTags: MetaTagProps[]): Metadata {
     const getMeta = (key: string): string | undefined => {
         const tag = metaTags.find(
             ({ attributes }) =>
-                attributes.name === key ||
-                attributes.property === key
+                attributes.name === key || attributes.property === key
         )
 
         return tag?.attributes.content ?? undefined
     }
 
     const getLink = (rel: string): string | undefined => {
-        const tag = metaTags.find(
-            ({ attributes }) => attributes.rel === rel
-        )
+        const tag = metaTags.find(({ attributes }) => attributes.rel === rel)
 
         return tag?.attributes.href ?? undefined
     }
@@ -52,14 +49,7 @@ export function parseMetadata(metaTags: MetaTagProps[]): Metadata {
     const ogType = getMeta("og:type")
     const ogSiteName = getMeta("og:site_name")
 
-    if (
-        ogTitle ||
-        ogDescription ||
-        ogImage ||
-        ogUrl ||
-        ogType ||
-        ogSiteName
-    ) {
+    if (ogTitle || ogDescription || ogImage || ogUrl || ogType || ogSiteName) {
         metadata.openGraph = {
             ...(ogTitle && { title: ogTitle }),
             ...(ogDescription && { description: ogDescription }),
@@ -90,10 +80,7 @@ export function parseMetadata(metaTags: MetaTagProps[]): Metadata {
         metadata.twitter = {
             ...(twitterCard && {
                 card: twitterCard as
-                    | "summary"
-                    | "summary_large_image"
-                    | "player"
-                    | "app",
+                    "summary" | "summary_large_image" | "player" | "app",
             }),
             ...(twitterTitle && {
                 title: twitterTitle,

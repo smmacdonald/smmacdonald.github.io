@@ -1,7 +1,9 @@
 import Link from "next/link"
 import { ParagraphSocialMediaItemProps } from "@/types/ParagraphSocialMediaItemProps"
 
-export default function SocialMediaElement(data: ParagraphSocialMediaItemProps) {
+export default function SocialMediaElement(
+    data: ParagraphSocialMediaItemProps
+) {
     return (
         <Link
             href={data.link.url}

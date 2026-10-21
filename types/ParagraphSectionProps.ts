@@ -3,7 +3,7 @@ import { MediaBackgroundImageProps } from "./MediaBackgroundImageProps"
 import { ParagraphCardFeaturedImageTextProps } from "./ParagraphCardFeaturedImageTextProps"
 
 export type ParagraphSectionProps = {
-    __typename: 'ParagraphSection',
+    __typename: "ParagraphSection"
     id: string
     bgColor: string
     bgImage: MediaBackgroundImageProps
@@ -18,4 +18,5 @@ export type ParagraphSectionProps = {
     content: ParagraphSectionContentProps[]
 }
 
-type ParagraphSectionContentProps = | ParagraphColumnProps | ParagraphCardFeaturedImageTextProps
+type ParagraphSectionContentProps =
+    ParagraphColumnProps | ParagraphCardFeaturedImageTextProps
