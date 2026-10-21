@@ -57,6 +57,8 @@ Rather than hard-coding this information into the Next.js application, Drupal ac
 * **REST API** — API access for Drupal resources and content
 * **GitHub Pages** — Static hosting
 * **GitHub Actions** — Automated builds and deployment
+* **Sass and Bootstrap 5** — Layout and styling; only the Bootstrap modules the site uses are imported
+* **FontAwesome (full library)** — Icons, so editors can use any icon anywhere
 * **TypeScript, ESLint, Prettier** — Type safety and consistent code
 * **Vitest and Testing Library** — Unit and component tests
 * **Playwright and axe-core** — End-to-end and accessibility tests, run against recorded Drupal fixtures
@@ -169,6 +171,34 @@ Content pages are rendered on the server at build time from Drupal. Interactivit
 mobile menu, the portfolio filter, the contact form submit, the image reveal) lives in small client components
 that receive server-rendered content.
 
+## Styling, Fonts and Icons
+
+* **Bootstrap subset.** `assets/scss/bootstrap-subset.scss` imports only the Bootstrap modules in use: the grid,
+  headings, forms, alerts, tables, helpers and utilities. Components nothing uses (buttons, cards, nav, badges,
+  modals and so on) are left out, which keeps the stylesheet about 93 KB smaller. If CMS content ever needs one,
+  add its line to that file, for example `@import "bootstrap/scss/buttons";`. A test fails if a class the site
+  relies on stops resolving, and another if the stylesheet grows past its size budget.
+* **Fonts.** Montserrat and Playfair Display are variable fonts served as WOFF2
+  (`assets/fonts/*/*.woff2`); the original TTF files are kept as sources.
+* **Icons.** The full FontAwesome library is committed on purpose so editors can use any icon. Its stylesheet is
+  about 172 KB of the page CSS.
+* **Favicon.** `app/favicon.ico` is a small multi-size icon made from the MD monogram.
+* Images come from the Drupal site; every page preconnects to that host.
+
+## Accessibility and SEO
+
+* A skip link and a `<main>` landmark on every page; the mobile menu is keyboard and screen-reader accessible
+  (it reports `aria-expanded`, closes with Escape, and the closed panel is `inert`); icon-only links have
+  accessible names; external links open in a new tab safely.
+* Automated checks run on every page with axe-core (WCAG 2.2 A/AA and best practices). The one known violation
+  is a heading level in a Drupal block, tracked in `e2e/a11y.spec.ts`. Contrast over images, zoom and screen
+  reader behavior still need manual checks; see the checklist in
+  [docs/audits/testing-strategy.md](docs/audits/testing-strategy.md).
+* Page titles and canonical URLs come from Drupal's metatags (including project pages and the 404 page). This is
+  not the primary site, so it intentionally has no sitemap or `robots.txt`.
+* The breadcrumb trail always starts with Home, even if Drupal returns an empty trail; the build logs a warning
+  when that happens.
+
 ## Getting Started
 
 ### Prerequisites
@@ -239,6 +269,38 @@ Because Drupal content is read at build time, **after editing content in Drupal 
 Export to GitHub Pages" workflow manually** to publish it. Full details, rollback options and troubleshooting:
 [docs/deployment.md](docs/deployment.md).
 
+## Making Changes
+
+1. Branch from `main` and make the change. The Husky hooks format and lint staged files on commit and run the
+   typecheck on push.
+2. Run `npm run check` (and `npm run test:e2e` for anything visible).
+3. Open a pull request. `main` is protected: it needs a pull request and both CI checks, "Format, lint, type
+   check, test and audit" and "End-to-end tests (Chromium)", to pass. If you rename a job, update the required
+   check in the repository ruleset.
+4. After merging, the site deploys automatically; check the live pages.
+
+When Drupal content or the GraphQL queries change, re-record the E2E fixtures with
+`npm run e2e:record -- <drupal url>` and review the diff.
+
+## Project Status
+
+An audit and modernisation pass (October 2026) delivered, through reviewed pull requests:
+
+| Area | What changed |
+|---|---|
+| Security and reliability | Next.js upgraded (0 production vulnerabilities); Drupal failures now fail the build loudly; `not-found` and `error` pages; generic contact form errors |
+| Quality tooling | Prettier, ESLint cleanup, Husky hooks, Knip, Dependabot, a protected `main` |
+| Tests | Unit and component tests; Playwright end-to-end and axe accessibility tests against recorded Drupal fixtures; a weekly cross-browser run |
+| CI/CD | Format, lint, typecheck, unit, E2E and audit checks gate every deploy; export verification and a post-deploy smoke test |
+| Architecture | Content rendered on the server at build time; small client islands for interactivity |
+| Accessibility and metadata | Landmark, skip link, accessible menu, named links, page titles, canonical fix |
+| Performance | Favicon 293 KB to 4.5 KB, WOFF2 fonts, preconnect, Bootstrap subset: about 400 KB less per page and a 16% smaller stylesheet (gzip) |
+| Documentation | Audit reports, deployment guide, this README |
+
+Still open: the footer heading level in Drupal, `prefers-reduced-motion` support, the Dependabot pull requests,
+larger performance work (Drupal image styles) and manual accessibility testing. See
+[docs/audits/implementation-plan.md](docs/audits/implementation-plan.md).
+
 ## Documentation
 
 | Document | Contents |
@@ -248,7 +310,7 @@ Export to GitHub Pages" workflow manually** to publish it. Full details, rollbac
 | [docs/audits/implementation-plan.md](docs/audits/implementation-plan.md) | What was delivered and what is left |
 | [docs/audits/testing-strategy.md](docs/audits/testing-strategy.md) | Test layers, fixtures, coverage, manual checks |
 | [docs/audits/security-review.md](docs/audits/security-review.md) | Security findings and status |
-| [docs/audits/performance-review.md](docs/audits/performance-review.md) | Lighthouse baseline and recommendations |
+| [docs/audits/performance-review.md](docs/audits/performance-review.md) | Lighthouse baseline, measured results of each optimisation, recommendations |
 | [docs/audits/final-verification.md](docs/audits/final-verification.md) | Results of the final checks |
 
 ## Known limitations
@@ -256,7 +318,9 @@ Export to GitHub Pages" workflow manually** to publish it. Full details, rollbac
 * Content is a snapshot taken at build time; it updates only when the site is rebuilt.
 * GitHub Pages cannot set security headers and serves every file with a 10-minute cache lifetime.
 * The site needs a reachable Drupal at build time (not at runtime, except for the contact form submit).
-* Simulated mobile load time is still slow (Lighthouse LCP about 7 to 8 s); the quick wins cut about 390 KB per page, and larger items (the 406 KB stylesheet, Drupal image styles) remain. See the performance review.
+* Simulated mobile load time is still slow (Lighthouse LCP about 7 to 8 s). The quick wins and the Bootstrap subset cut about 400 KB per page, but the Lighthouse score barely changed; the remaining levers (Drupal image styles, FontAwesome's size) are larger or are your choice. See the performance review.
+* The site does not yet honor `prefers-reduced-motion`.
+* If CMS content uses a Bootstrap component class that is not in the subset (for example `.btn`), add its module to `assets/scss/bootstrap-subset.scss`.
 
 ## Purpose
 

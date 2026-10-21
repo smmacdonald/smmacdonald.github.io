@@ -20,6 +20,7 @@ to `main` directly by the repository owner after local verification.
 | 4a. Accessibility and metadata | `<main>`, skip link, named links, accessible mobile menu, page titles, canonical, generic form error | PR #16 | Done |
 | 4b. Breadcrumb resilience | Always render the Home breadcrumb when Drupal returns an empty trail | PR #17 | Done; live site verified |
 | 4c. Performance quick wins | Small favicon, WOFF2 fonts, preconnect to the Drupal image host | PR #19 | Done; -390 KB per page measured |
+| 4d. Bootstrap subset | Import only the Bootstrap modules in use; guards for the classes and a stylesheet size budget | PR #21 | Done; -93 KB raw / -12 KB gzip CSS; no pixel differences; Lighthouse median unchanged |
 | 6. Documentation | These documents and the README | PR #18 | Done |
 
 Phase 5 (CI/CD hardening) was delivered incrementally inside phases 1b to 3c rather than as a separate step.
@@ -35,7 +36,7 @@ Phase 5 (CI/CD hardening) was delivered incrementally inside phases 1b to 3c rat
 | 5 | Enable CodeQL and Dependabot security updates in repository settings | Free static analysis and automatic security PRs | Low | repository settings |
 | 6 | Add `prefers-reduced-motion` support (disable the image reveal, menu slide-in and smooth scroll when requested) | Found in the original audit and never fixed | Low | none |
 | 7 | Manual accessibility pass (contrast over images, zoom/reflow, screen reader) | Automation cannot decide these | Medium | none |
-| 8 | Smaller CSS (import only the Bootstrap parts in use), responsive Drupal image styles | Performance, larger effort | Medium | Drupal image styles |
+| 8 | ~~Smaller CSS~~ **Done (PR #21, Bootstrap subset).** Remaining: responsive Drupal image styles | Performance | Medium | Drupal image styles |
 | 9 | GraphQL Code Generator with a committed schema | Types that cannot drift from Drupal | Medium | Confirm Drupal allows introspection |
 | 10 | Test the rollback procedure once | The procedure is documented but never exercised | Low | none |
 
