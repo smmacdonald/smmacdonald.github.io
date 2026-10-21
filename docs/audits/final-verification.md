@@ -13,6 +13,13 @@ Nothing below is claimed as passing unless it was run; see "Not executed" for wh
 > again. The production build logged no `[breadcrumbs]` warning (the only one in the run came from the E2E job's
 > deliberate empty-trail simulation). The cause of the Drupal-side problem was not recorded. With PR #17, `main`
 > has 81 unit tests and 50 Chromium E2E tests. The tables below describe commit `9680d95` as run.
+>
+> **Update, 2026-10-21 (later):** PRs #19 (favicon, WOFF2 fonts, preconnect) and #21 (Bootstrap subset) merged and
+> deployed, each with all CI jobs green and the smoke test passing. `main` now has 81 unit tests and 55 Chromium E2E
+> tests (the five added guard the favicon, fonts, preconnect, the Bootstrap classes and the stylesheet size
+> budget). Locally, all three browsers passed 163 tests with 2 WebKit skips. The Lighthouse re-measurements are in
+> [performance-review.md](performance-review.md); they show about 400 KB less per page but no change in the
+> typical score.
 
 ## Passed
 
