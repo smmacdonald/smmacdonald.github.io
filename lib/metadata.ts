@@ -102,3 +102,31 @@ export function parseMetadata(metaTags: MetaTagProps[]): Metadata {
 
     return metadata
 }
+
+const HOME_SLUG = /\/homepage\/?$/
+
+/**
+ * Drupal serves the home page at `/` (`/homepage` redirects there), but its
+ * metatag canonical and og:url still name `/homepage`. Point both at `/`.
+ */
+export function withHomeCanonical(metadata: Metadata): Metadata {
+    const canonical = metadata.alternates?.canonical
+    const ogUrl = metadata.openGraph?.url
+
+    return {
+        ...metadata,
+        ...(typeof canonical === "string" && {
+            alternates: {
+                ...metadata.alternates,
+                canonical: canonical.replace(HOME_SLUG, "/"),
+            },
+        }),
+        ...(metadata.openGraph &&
+            typeof ogUrl === "string" && {
+                openGraph: {
+                    ...metadata.openGraph,
+                    url: ogUrl.replace(HOME_SLUG, "/"),
+                },
+            }),
+    }
+}

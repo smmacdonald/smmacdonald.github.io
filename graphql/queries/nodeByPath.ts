@@ -2,6 +2,7 @@ import { gql } from "graphql-tag"
 import paragraphSectionFields from "../fragments/paragraphSection"
 import paragraphBlockReferenceFields from "../fragments/paragraphBlockReference"
 import breadcrumbsFields from "../fragments/breadcrumbs"
+import metatagFields from "../fragments/metatag"
 
 export default gql`
     query ByPath($path: String!) {
@@ -20,40 +21,7 @@ export default gql`
                             ...paragraphBlockReferenceFields
                         }
                         metatag {
-                            ... on MetaTagScript {
-                                content
-                                attributes {
-                                    integrity
-                                    src
-                                    type
-                                }
-                            }
-                            ... on MetaTagProperty {
-                                __typename
-                                attributes {
-                                    content
-                                    property
-                                }
-                            }
-                            ... on MetaTagValue {
-                                __typename
-                                attributes {
-                                    content
-                                    name
-                                }
-                            }
-                            ... on MetaTagLink {
-                                __typename
-                                tag
-                                attributes {
-                                    href
-                                    hreflang
-                                    media
-                                    rel
-                                    sizes
-                                    type
-                                }
-                            }
+                            ...metatagFields
                         }
                     }
                     ... on NodeProject {
@@ -64,6 +32,9 @@ export default gql`
                         }
                         content {
                             ...paragraphSectionFields
+                        }
+                        metatag {
+                            ...metatagFields
                         }
                     }
                 }
@@ -76,4 +47,5 @@ export default gql`
     ${paragraphSectionFields}
     ${paragraphBlockReferenceFields}
     ${breadcrumbsFields}
+    ${metatagFields}
 `

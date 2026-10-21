@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { parseMetadata } from "@/lib/metadata"
+import { parseMetadata, withHomeCanonical } from "@/lib/metadata"
 import { getPageByPath } from "@/lib/getPage"
 import Section from "@/components/Section"
 import { PageProps } from "@/types/PageProps"
@@ -18,7 +18,7 @@ async function getHomePage() {
 
 export async function generateMetadata(): Promise<Metadata> {
     const data = await getHomePage()
-    return parseMetadata(data.metatag ?? [])
+    return withHomeCanonical(parseMetadata(data.metatag ?? []))
 }
 
 export default async function Home() {
