@@ -142,7 +142,7 @@ jobs:
           echo "Files generated: $(find ./out -type f | wc -l)"
 
       - name: Upload GitHub Pages Artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./out
 
