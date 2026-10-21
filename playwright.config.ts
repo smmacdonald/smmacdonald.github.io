@@ -29,6 +29,8 @@ export default defineConfig({
     webServer: {
         // Builds the site against the mock Drupal (e2e/fixtures), then serves it.
         command: "node e2e/server.mjs",
+        // Simulates Drupal returning no breadcrumbs for /about (see breadcrumbs.spec.ts).
+        env: { E2E_EMPTY_BREADCRUMBS: "/about" },
         url: `http://127.0.0.1:${PORT}`,
         reuseExistingServer: !process.env.CI,
         timeout: 240_000,

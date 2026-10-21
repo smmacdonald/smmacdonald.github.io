@@ -4,6 +4,7 @@ import { parseMetadata } from "@/lib/metadata"
 import { getPageByPath } from "@/lib/getPage"
 import { sitemapToSlugParams } from "@/lib/sitemap"
 import { getJson } from "@/lib/getJson"
+import { withHomeBreadcrumb } from "@/lib/breadcrumbs"
 import BodyClassSync from "@/src/utils/BodyClassSync"
 
 import Section from "@/components/Section"
@@ -55,6 +56,7 @@ export default async function Slug({ params }: Props) {
     const data = await getSlugPage(params)
     const entity = data?.route?.entity
     const breadcrumbs = data?.route?.breadcrumbs
+    const { slug } = await params
 
     if (!entity) {
         notFound()
@@ -71,7 +73,10 @@ export default async function Slug({ params }: Props) {
             )}
 
             {breadcrumbs && (
-                <Breadcrumbs data={breadcrumbs} current={entity.title} />
+                <Breadcrumbs
+                    data={withHomeBreadcrumb(breadcrumbs, `/${slug.join("/")}`)}
+                    current={entity.title}
+                />
             )}
 
             {entity?.content?.map((section: SectionElement, index: number) => {
