@@ -114,3 +114,28 @@ test("the home page canonical is / rather than the redirecting /homepage", async
 
     expect(new URL(canonical!).pathname).toBe("/")
 })
+
+test("the home page offers Drupal's thumbnail as the share image", async ({
+    page,
+}) => {
+    await page.goto("/")
+
+    // The fixture's home page has a Metatag "Image" (a legacy image_src link).
+    const ogImage = page.locator('meta[property="og:image"]')
+    await expect(ogImage).toHaveAttribute(
+        "content",
+        /^https?:\/\/.+\/sites\/default\/files\/.+\.(jpe?g|png)$/
+    )
+    await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute(
+        "content",
+        "summary_large_image"
+    )
+    await expect(page.locator('meta[name="twitter:image"]')).toHaveAttribute(
+        "content",
+        (await ogImage.getAttribute("content"))!
+    )
+    await expect(page.locator('meta[property="og:title"]')).toHaveAttribute(
+        "content",
+        "Homepage | portfolio"
+    )
+})

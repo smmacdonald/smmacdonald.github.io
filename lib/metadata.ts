@@ -1,6 +1,17 @@
 import { Metadata } from "next"
 import { MetaTagProps } from "@/types/MetaTagProps"
 
+/** A link to an image on the Drupal host must not resolve against this site. */
+function absoluteUrl(url: string): string {
+    const origin = process.env.NEXT_PUBLIC_LOCAL_API_URL
+
+    if (url.startsWith("/") && origin) {
+        return new URL(url, origin).toString()
+    }
+
+    return url
+}
+
 export function parseMetadata(metaTags: MetaTagProps[]): Metadata {
     const metadata: Metadata = {}
 
@@ -42,9 +53,17 @@ export function parseMetadata(metaTags: MetaTagProps[]): Metadata {
         }
     }
 
-    const ogTitle = getMeta("og:title")
-    const ogDescription = getMeta("og:description")
-    const ogImage = getMeta("og:image")
+    // Drupal's Metatag "Image" field is emitted as the legacy
+    // <link rel="image_src">, not as og:image. Sharing apps ignore it and guess
+    // an image from the page instead, so use it as the share image when there
+    // is no explicit og:image, together with the page title and description.
+    const imageSrc = getLink("image_src")
+    const shareImage = !getMeta("og:image") && imageSrc ? imageSrc : undefined
+
+    const ogTitle = getMeta("og:title") ?? (shareImage ? title : undefined)
+    const ogDescription =
+        getMeta("og:description") ?? (shareImage ? description : undefined)
+    const ogImage = getMeta("og:image") ?? shareImage
     const ogUrl = getMeta("og:url")
     const ogType = getMeta("og:type")
     const ogSiteName = getMeta("og:site_name")
@@ -53,7 +72,7 @@ export function parseMetadata(metaTags: MetaTagProps[]): Metadata {
         metadata.openGraph = {
             ...(ogTitle && { title: ogTitle }),
             ...(ogDescription && { description: ogDescription }),
-            ...(ogImage && { images: [ogImage] }),
+            ...(ogImage && { images: [absoluteUrl(ogImage)] }),
             ...(ogUrl && { url: ogUrl }),
             ...(ogType && {
                 type: ogType as "website" | "article",
@@ -62,10 +81,16 @@ export function parseMetadata(metaTags: MetaTagProps[]): Metadata {
         }
     }
 
-    const twitterCard = getMeta("twitter:card")
-    const twitterTitle = getMeta("twitter:title")
-    const twitterDescription = getMeta("twitter:description")
-    const twitterImage = getMeta("twitter:image")
+    const twitterCard =
+        getMeta("twitter:card") ??
+        (shareImage && !getMeta("twitter:image")
+            ? "summary_large_image"
+            : undefined)
+    const twitterTitle =
+        getMeta("twitter:title") ?? (shareImage ? title : undefined)
+    const twitterDescription =
+        getMeta("twitter:description") ?? (shareImage ? description : undefined)
+    const twitterImage = getMeta("twitter:image") ?? shareImage
     const twitterCreator = getMeta("twitter:creator")
     const twitterSite = getMeta("twitter:site")
 
@@ -89,7 +114,7 @@ export function parseMetadata(metaTags: MetaTagProps[]): Metadata {
                 description: twitterDescription,
             }),
             ...(twitterImage && {
-                images: [twitterImage],
+                images: [absoluteUrl(twitterImage)],
             }),
             ...(twitterCreator && {
                 creator: twitterCreator,
