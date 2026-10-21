@@ -1,0 +1,106 @@
+{
+    "data": {
+        "route": {
+            "__typename": "RouteInternal",
+            "entity": {
+                "id": "7",
+                "title": "Contact",
+                "pageHero": {
+                    "__typename": "ParagraphSection",
+                    "id": "85",
+                    "bgColor": "rgba(20, 20, 20, 0.89)",
+                    "bgImage": {
+                        "__typename": "MediaBackgroundImage",
+                        "id": "31",
+                        "mediaImage2": {
+                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/contact-bg-img.jpg"
+                        }
+                    },
+                    "bgImagePosition": "center center",
+                    "bgImageRepeat": "no-repeat",
+                    "bgImageSize": "cover",
+                    "centerContent": false,
+                    "fullWidth": false,
+                    "margin": null,
+                    "padding": "padding-top-bottom-60",
+                    "sectionId": null,
+                    "content": [
+                        {
+                            "__typename": "ParagraphColumn",
+                            "id": "84",
+                            "bgColor": null,
+                            "sectionId": null,
+                            "columnWidth": ["col-lg-6"],
+                            "styledBox": false,
+                            "element": [
+                                {
+                                    "__typename": "ParagraphText",
+                                    "id": "83",
+                                    "verticalAlign": false,
+                                    "body": {
+                                        "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EGET IN TOUCH\u003C\/span\u003E\u003C\/p\u003E\n\u003Ch1\u003ELet\u2019s Build\u003Cbr\u003E\u003Cspan class=\u0022color-accent\u0022\u003ESomething Meaningful.\u003C\/span\u003E\u003C\/h1\u003E\n\u003Cp\u003EWhether it\u2019s a scalable platform, a creative concept, or a collaboration - I\u2019m always open to new ideas.\u003C\/p\u003E\n"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "content": [
+                    {
+                        "__typename": "ParagraphBlockReference",
+                        "id": "223",
+                        "bgColor": null,
+                        "bgImage": null,
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "cover",
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "blockReference": {
+                            "id": "webform_block",
+                            "render": "\u003Cform class=\u0022webform-submission-form webform-submission-add-form webform-submission-contact-form webform-submission-contact-add-form webform-submission-contact-graphql_server-graphql_compose_server-form webform-submission-contact-graphql_server-graphql_compose_server-add-form webform-submission-contact-graphql-server-graphql-compose-server-add-form js-webform-details-toggle webform-details-toggle\u0022 data-drupal-selector=\u0022webform-submission-contact-graphql-server-graphql-compose-server-add-form\u0022 action=\u0022\/graphql\u0022 method=\u0022post\u0022 id=\u0022webform-submission-contact-graphql-server-graphql-compose-server-add-form\u0022 accept-charset=\u0022UTF-8\u0022 novalidate\u003E\n  \n  \u003Cdiv class=\u0022js-webform-type-textfield webform-type-textfield js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name\u0022\u003E\n      \u003Clabel for=\u0022edit-name\u0022 class=\u0022js-form-required form-required form-label\u0022\u003EYour Name\u003C\/label\u003E\n        \u003Cinput data-drupal-selector=\u0022edit-name\u0022 type=\u0022text\u0022 id=\u0022edit-name\u0022 name=\u0022name\u0022 value=\u0022\u0022 size=\u002260\u0022 maxlength=\u0022255\u0022 class=\u0022required form-control\u0022 required=\u0022required\u0022 \/\u003E\n\n        \u003C\/div\u003E\n\u003Cdiv class=\u0022js-webform-type-email webform-type-email js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email\u0022\u003E\n      \u003Clabel for=\u0022edit-email\u0022 class=\u0022js-form-required form-required form-label\u0022\u003EYour Email\u003C\/label\u003E\n        \u003Cinput data-drupal-selector=\u0022edit-email\u0022 type=\u0022email\u0022 id=\u0022edit-email\u0022 name=\u0022email\u0022 value=\u0022\u0022 size=\u002260\u0022 maxlength=\u0022254\u0022 class=\u0022form-email required form-control\u0022 required=\u0022required\u0022 \/\u003E\n\n        \u003C\/div\u003E\n\u003Cdiv class=\u0022js-webform-type-textfield webform-type-textfield js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-subject form-item-subject\u0022\u003E\n      \u003Clabel for=\u0022edit-subject\u0022 class=\u0022js-form-required form-required form-label\u0022\u003ESubject\u003C\/label\u003E\n        \u003Cinput data-drupal-selector=\u0022edit-subject\u0022 type=\u0022text\u0022 id=\u0022edit-subject\u0022 name=\u0022subject\u0022 value=\u0022\u0022 size=\u002260\u0022 maxlength=\u0022255\u0022 class=\u0022required form-control\u0022 required=\u0022required\u0022 \/\u003E\n\n        \u003C\/div\u003E\n\u003Cdiv class=\u0022js-webform-type-textarea webform-type-textarea js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-message form-item-message\u0022\u003E\n      \u003Clabel for=\u0022edit-message\u0022 class=\u0022js-form-required form-required form-label\u0022\u003EMessage\u003C\/label\u003E\n        \u003Cdiv class=\u0022form-textarea-wrapper\u0022\u003E\n  \u003Ctextarea data-drupal-selector=\u0022edit-message\u0022 id=\u0022edit-message\u0022 name=\u0022message\u0022 rows=\u00225\u0022 cols=\u002260\u0022 class=\u0022form-textarea required resize-vertical\u0022 required=\u0022required\u0022\u003E\u003C\/textarea\u003E\n\u003C\/div\u003E\n\n        \u003C\/div\u003E\n\u003Cdiv class=\u0022invisible js-webform-type-select webform-type-select js-form-item form-item js-form-type-select form-type-select js-form-item-hidden-fields form-item-hidden-fields\u0022\u003E\n      \u003Clabel for=\u0022edit-hidden-fields\u0022 class=\u0022form-label\u0022\u003EHidden fields\u003C\/label\u003E\n        \u003Cselect data-drupal-selector=\u0022edit-hidden-fields\u0022 id=\u0022edit-hidden-fields\u0022 name=\u0022hidden_fields\u0022 class=\u0022form-select\u0022\u003E\u003Coption value=\u0022\u0022 selected=\u0022selected\u0022\u003E- None -\u003C\/option\u003E\u003Coption value=\u0022option 1\u0022\u003Eoption 1\u003C\/option\u003E\u003Coption value=\u0022option 2\u0022\u003Eoption 2\u003C\/option\u003E\u003Coption value=\u0022option 3\u0022\u003Eoption 3\u003C\/option\u003E\u003C\/select\u003E\n        \u003C\/div\u003E\n\u003Cdiv data-drupal-selector=\u0022edit-actions\u0022 class=\u0022form-actions webform-actions js-form-wrapper form-wrapper\u0022 id=\u0022edit-actions\u0022\u003E\u003Cinput class=\u0022webform-button--submit button button--primary js-form-submit form-submit transparent\u0022 data-drupal-selector=\u0022edit-actions-submit\u0022 type=\u0022submit\u0022 id=\u0022edit-actions-submit\u0022 name=\u0022op\u0022 value=\u0022Send message\u0022 \/\u003E\n\n\u003C\/div\u003E\n\u003Cinput data-drupal-selector=\u0022edit-honeypot-time\u0022 type=\u0022hidden\u0022 name=\u0022honeypot_time\u0022 value=\u0022j5_9QZl1ID0hQz2p2QAyI-yh3cGBNQEudgO9x76jbgI\u0022 \/\u003E\n\u003Cinput autocomplete=\u0022off\u0022 data-drupal-selector=\u0022form-so9qafeeak-yte2izj7wyh47n-tr77loc2m7olh2-f0\u0022 type=\u0022hidden\u0022 name=\u0022form_build_id\u0022 value=\u0022form-sO9QAfEeaK_yte2Izj7WyH47n-Tr77LOc2M7OLH2_F0\u0022 \/\u003E\n\u003Cinput data-drupal-selector=\u0022edit-webform-submission-contact-graphql-server-graphql-compose-server-add-form\u0022 type=\u0022hidden\u0022 name=\u0022form_id\u0022 value=\u0022webform_submission_contact_graphql_server_graphql_compose_server_add_form\u0022 \/\u003E\n\u003Cdiv class=\u0022url-textfield js-form-wrapper form-wrapper\u0022 style=\u0022display: none !important;\u0022\u003E\u003Cdiv class=\u0022js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-url form-item-url\u0022\u003E\n      \u003Clabel for=\u0022edit-url\u0022 class=\u0022form-label\u0022\u003ELeave this field blank\u003C\/label\u003E\n        \u003Cinput autocomplete=\u0022off\u0022 data-drupal-selector=\u0022edit-url\u0022 type=\u0022text\u0022 id=\u0022edit-url\u0022 name=\u0022url\u0022 value=\u0022\u0022 size=\u002220\u0022 maxlength=\u0022128\u0022 class=\u0022form-control\u0022 \/\u003E\n\n        \u003C\/div\u003E\n\u003C\/div\u003E\n\n\n  \n\u003C\/form\u003E\n"
+                        }
+                    }
+                ],
+                "metatag": [
+                    {
+                        "__typename": "MetaTagValue",
+                        "attributes": {
+                            "content": "Contact | portfolio",
+                            "name": "title"
+                        }
+                    },
+                    {
+                        "__typename": "MetaTagValue",
+                        "attributes": {
+                            "content": "Get in touch for web development, design, or collaboration opportunities. Let\u2019s build scalable, high-performing digital experiences together.",
+                            "name": "description"
+                        }
+                    },
+                    {
+                        "__typename": "MetaTagValue",
+                        "attributes": {
+                            "content": "index, follow",
+                            "name": "robots"
+                        }
+                    },
+                    {
+                        "__typename": "MetaTagLink",
+                        "tag": "link",
+                        "attributes": {
+                            "href": "__ORIGIN__\/contact",
+                            "hreflang": null,
+                            "media": null,
+                            "rel": "canonical",
+                            "sizes": null,
+                            "type": null
+                        }
+                    }
+                ]
+            },
+            "breadcrumbs": [{ "url": "\/", "title": "Home" }]
+        }
+    }
+}

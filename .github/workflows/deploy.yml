@@ -59,12 +59,50 @@ jobs:
         run: npm audit --omit=dev --audit-level=high
 
   # -------------------------
+  # END-TO-END
+  # -------------------------
+  e2e:
+    name: End-to-end tests (Chromium)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      # Builds the site against recorded Drupal fixtures, so no live backend
+      # and no secrets are needed.
+      - name: Run end-to-end tests
+        run: npm run test:e2e
+
+      - name: Upload Playwright report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7
+
+  # -------------------------
   # BUILD
   # -------------------------
   build:
     name: Build Next.js
     runs-on: ubuntu-latest
-    needs: check
+    needs: [check, e2e]
     if: github.event_name != 'pull_request'
 
     environment:

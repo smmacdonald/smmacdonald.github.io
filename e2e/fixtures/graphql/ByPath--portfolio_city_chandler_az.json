@@ -1,0 +1,232 @@
+{
+    "data": {
+        "route": {
+            "__typename": "RouteInternal",
+            "entity": {
+                "id": "9",
+                "title": "City of Chandler, AZ",
+                "projectHero": {
+                    "__typename": "ParagraphSection",
+                    "id": "108",
+                    "bgColor": "rgba(20, 20, 20, 0.75)",
+                    "bgImage": {
+                        "__typename": "MediaBackgroundImage",
+                        "id": "14",
+                        "mediaImage2": {
+                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/portfolio-header.jpg"
+                        }
+                    },
+                    "bgImagePosition": "center center",
+                    "bgImageRepeat": "no-repeat",
+                    "bgImageSize": "cover",
+                    "centerContent": false,
+                    "fullWidth": false,
+                    "margin": null,
+                    "padding": "padding-top-bottom-60",
+                    "sectionId": null,
+                    "content": [
+                        {
+                            "__typename": "ParagraphColumn",
+                            "id": "113",
+                            "bgColor": null,
+                            "sectionId": null,
+                            "columnWidth": ["col-lg-6"],
+                            "styledBox": false,
+                            "element": [
+                                {
+                                    "__typename": "ParagraphText",
+                                    "id": "112",
+                                    "verticalAlign": false,
+                                    "body": {
+                                        "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EGovernment\u003C\/span\u003E\u003C\/p\u003E\n\u003Ch1\u003ECity of Chandler, AZ\u003C\/h1\u003E\n\u003Cp\u003EWith nearly 250,000 residents relying on it, the City of Chandler\u2019s website needed to be more than functional\u2014it had to be intuitive, reliable, and built for scale. By integrating critical systems that support the city\u2019s daily operations, we delivered a seamless digital experience that empowers both residents and internal teams with clarity, efficiency, and ease of use.\u003C\/p\u003E\n\u003Cp\u003E\u003Ca class=\u0022button transparent\u0022 href=\u0022https:\/\/www.chandleraz.gov\u0022 target=\u0022_blank\u0022 tabindex=\u00220\u0022\u003EView Website\u003C\/a\u003E\u003C\/p\u003E\n"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "__typename": "ParagraphColumn",
+                            "id": "174",
+                            "bgColor": null,
+                            "sectionId": null,
+                            "columnWidth": ["col-lg-6"],
+                            "styledBox": false,
+                            "element": [
+                                {
+                                    "__typename": "ParagraphImage",
+                                    "id": "173",
+                                    "animate": true,
+                                    "animationDirection": "from_bottom",
+                                    "media": {
+                                        "__typename": "MediaImage",
+                                        "id": "39",
+                                        "mediaImage": {
+                                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/chandler-devices.png",
+                                            "alt": "Chandler, Arizona website displayed on multiple devices",
+                                            "height": 758,
+                                            "width": 1200,
+                                            "variations": [
+                                                {
+                                                    "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/chandler-devices.png?h=3732344e\u0026itok=hLwjUPrO"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "content": [
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "162",
+                        "bgColor": null,
+                        "bgImage": null,
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "cover",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "161",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6", "offset-lg-3"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "160",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EMy Role\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003ELed development efforts while acting as the bridge between stakeholders and the engineering team.\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e470282370e13c83ff7528f17ed6004ef\u0022\u003ELed team of 3 developers\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022eb6231e00a415ce5fddc0cf05d540f514\u0022\u003EPrimary technical contact for stakeholders\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e1425ad5dc98acf4391cf6cfe3302be84\u0022\u003ETranslated requirements into scalable solutions\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e27950e2413d94175a8ae5229f2687f98\u0022\u003EOversaw architecture, integrations, and delivery\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "167",
+                        "bgColor": "rgba(255, 255, 255, 0.05)",
+                        "bgImage": {
+                            "__typename": "MediaBackgroundImage",
+                            "id": "13",
+                            "mediaImage2": {
+                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
+                            }
+                        },
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "repeat",
+                        "bgImageSize": "auto",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "164",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-4"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "163",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EThe Problem\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003EThe existing experience made it difficult for residents to quickly find what they needed.\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e0d161838a6db99ebcdd60a84900e048f\u0022\u003ENavigation built around departments, not users\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022eab52efd7537924f39ba6773424ababff\u0022\u003EOutdated, content-heavy experience\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022eb490e998e54153345e464a94372a7e26\u0022\u003EKey services hard to find\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "166",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-4"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "165",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EThe Approach\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003EWe restructured both the experience and the underlying system to better serve users.\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022eb854239720dc19a01127e4a7bbb95c9b\u0022\u003EShifted to audience-based navigation\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022ea9ae87bdb592b9c8625e41a2ceb70816\u0022\u003EBuilt flexible Drupal architecture\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e88d5bc88b73b8312bf12ab35e3010994\u0022\u003EImproved search and content structure\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e991c6dc45ebe16928340e0c2ac815c6e\u0022\u003EIntegrated essential city systems\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "169",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-4"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "168",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EKey Wins\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003EFocused improvements led to a more intuitive and scalable platform.\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e48c3c294dbe4ddad79d54d3d9141fd66\u0022\u003EAudience-first navigation (Residents, Business, Government)\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e345cbe35f2c7fe401a617d00c7e88d27\u0022\u003EImproved service discovery\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e279b568a9214ba407aa5c7d16a96cf85\u0022\u003EScalable platform for future growth\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022ef9398283ad0372a00ef764d9cffb9e08\u0022\u003EStreamlined user experience\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "172",
+                        "bgColor": null,
+                        "bgImage": null,
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "cover",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "171",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6", "offset-lg-3"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "170",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EOutcome\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EA faster, more intuitive website built around how residents actually use city services.\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "breadcrumbs": [
+                { "url": "\/", "title": "Home" },
+                { "url": "\/portfolio", "title": "Portfolio" }
+            ]
+        }
+    }
+}

@@ -1,0 +1,298 @@
+{
+    "data": {
+        "route": {
+            "__typename": "RouteInternal",
+            "entity": {
+                "id": "10",
+                "title": "NeoGenomics Laboratories",
+                "projectHero": {
+                    "__typename": "ParagraphSection",
+                    "id": "116",
+                    "bgColor": "rgba(20, 20, 20, 0.75)",
+                    "bgImage": {
+                        "__typename": "MediaBackgroundImage",
+                        "id": "14",
+                        "mediaImage2": {
+                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/portfolio-header.jpg"
+                        }
+                    },
+                    "bgImagePosition": "center center",
+                    "bgImageRepeat": "no-repeat",
+                    "bgImageSize": "cover",
+                    "centerContent": false,
+                    "fullWidth": false,
+                    "margin": null,
+                    "padding": "padding-top-bottom-60",
+                    "sectionId": null,
+                    "content": [
+                        {
+                            "__typename": "ParagraphColumn",
+                            "id": "115",
+                            "bgColor": null,
+                            "sectionId": null,
+                            "columnWidth": ["col-lg-6"],
+                            "styledBox": false,
+                            "element": [
+                                {
+                                    "__typename": "ParagraphText",
+                                    "id": "114",
+                                    "verticalAlign": false,
+                                    "body": {
+                                        "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EHealthcare\u003C\/span\u003E\u003C\/p\u003E\n\u003Ch1\u003ENeoGenomics Laboratories\u003C\/h1\u003E\n\u003Cp\u003ERebuilding a complex laboratory ecosystem into a secure, scalable Drupal 10 platform powered by modern architecture, seamless integrations, and HIPAA-compliant performance.\u003C\/p\u003E\n\u003Cp\u003E\u003Ca class=\u0022button transparent\u0022 href=\u0022https:\/\/www.neogenomics.com\u0022 target=\u0022_blank\u0022 tabindex=\u00220\u0022\u003EView Website\u003C\/a\u003E\u003C\/p\u003E\n"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "__typename": "ParagraphColumn",
+                            "id": "125",
+                            "bgColor": null,
+                            "sectionId": null,
+                            "columnWidth": ["col-lg-6"],
+                            "styledBox": false,
+                            "element": [
+                                {
+                                    "__typename": "ParagraphImage",
+                                    "id": "124",
+                                    "animate": true,
+                                    "animationDirection": "from_bottom",
+                                    "media": {
+                                        "__typename": "MediaImage",
+                                        "id": "34",
+                                        "mediaImage": {
+                                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/Neo-devices.png",
+                                            "alt": "neogenomics website on devices",
+                                            "height": 993,
+                                            "width": 1586,
+                                            "variations": [
+                                                {
+                                                    "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/Neo-devices.png?h=46347a61\u0026itok=iddJ1S_R"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "content": [
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "131",
+                        "bgColor": null,
+                        "bgImage": null,
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "cover",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "129",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6", "offset-lg-3"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "128",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ECase Study\u003C\/span\u003E\u003C\/p\u003E\n\u003Ch3 class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EChallenge\u003C\/span\u003E\u003C\/h3\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EThe legacy Drupal 7 website was not the authoritative source for laboratory test information. Test data existed across multiple systems, creating inconsistencies for client services, sales representatives, and customers. The platform also relied on an aging architecture that limited future development.\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "137",
+                        "bgColor": "rgba(255, 255, 255, 0.05)",
+                        "bgImage": {
+                            "__typename": "MediaBackgroundImage",
+                            "id": "13",
+                            "mediaImage2": {
+                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
+                            }
+                        },
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "repeat",
+                        "bgImageSize": "auto",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "139",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "138",
+                                        "verticalAlign": true,
+                                        "body": {
+                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EPhase 1 Solution\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EDrupal 7 -\u0026gt; Drupal 10\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e81c58c1b363e7b3b33be411a86e77058\u0022\u003EMigrated the website from Drupal 7 to Drupal 10.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e4eb874259afb154a0047d0f1c4e473f1\u0022\u003ECreated a single source of truth for laboratory test information.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e38e6505ef30828303e8c4293366e9aa5\u0022\u003EIntroduced a downloadable Test Menu PDF generated from the latest data.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e354499a76d399053a4d1649e09a22da0\u0022\u003EIntegrated Salesforce (Pardot) for marketing and lead capture.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022ed3e0a654c8c11a77d128b3379d7e1d61\u0022\u003EImproved confidence that internal teams and customers were accessing current test information.\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "141",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphImage",
+                                        "id": "147",
+                                        "animate": true,
+                                        "animationDirection": "from_right",
+                                        "media": {
+                                            "__typename": "MediaImage",
+                                            "id": "36",
+                                            "mediaImage": {
+                                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/screencapture-web-archive-org-web-20170209130123-h.png",
+                                                "alt": "NeoGenomics upgrade from template website to custom built theme",
+                                                "height": 1672,
+                                                "width": 1200,
+                                                "variations": [
+                                                    {
+                                                        "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/screencapture-web-archive-org-web-20170209130123-h.png?h=7879c778\u0026itok=XTuttXr1"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "146",
+                        "bgColor": "rgba(255, 255, 255, 0.1)",
+                        "bgImage": {
+                            "__typename": "MediaBackgroundImage",
+                            "id": "13",
+                            "mediaImage2": {
+                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
+                            }
+                        },
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "repeat",
+                        "bgImageSize": "auto",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "143",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphImage",
+                                        "id": "148",
+                                        "animate": true,
+                                        "animationDirection": "from_left",
+                                        "media": {
+                                            "__typename": "MediaImage",
+                                            "id": "37",
+                                            "mediaImage": {
+                                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/before-after-neo.png",
+                                                "alt": "NeoGenomics before\/after theme from d9 to headless d11 + Next.js",
+                                                "height": 845,
+                                                "width": 1200,
+                                                "variations": [
+                                                    {
+                                                        "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/before-after-neo.png?h=b200dd89\u0026itok=Nr8wUxAS"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "145",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "144",
+                                        "verticalAlign": true,
+                                        "body": {
+                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EPhase 2 Solution\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EHeadless Platform\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e5766f3c786c525ebe31cb9a66ceb8674\u0022\u003ETransitioned to a headless architecture using Drupal 10, Next.js, and GraphQL.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e49452a14b552ec20d931159af03610e5\u0022\u003EHosted the application internally on Azure.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e7b0f6bbbecfd141f29bb6630cc1d2faa\u0022\u003EBuilt CI\/CD pipelines for Development, Test, and Production.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022ecae88c3718e2f94bb28fa3ed96fe8959\u0022\u003EDeveloped a custom Drupal module to synchronize test data from an internal source.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022ecb74657605c35fa507f36c5a86bdc341\u0022\u003EEnhanced search with Apache Solr for faster, more relevant results\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "134",
+                        "bgColor": null,
+                        "bgImage": null,
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "cover",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "133",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6", "offset-lg-3"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "132",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ESuccess\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EImpact\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EThe project transformed a legacy website into a modern, scalable platform that serves as the trusted source for laboratory test information. By centralizing data, automating synchronization, and improving search, internal teams and customers can reliably access accurate, up-to-date information. The move to a headless architecture, combined with Azure hosting and automated CI\/CD pipelines, established a strong technical foundation that supports faster releases, easier maintenance, and future growth.\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "breadcrumbs": [
+                { "url": "\/", "title": "Home" },
+                { "url": "\/portfolio", "title": "Portfolio" }
+            ]
+        }
+    }
+}

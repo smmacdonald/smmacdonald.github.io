@@ -1,0 +1,45 @@
+name: Cross-browser end-to-end tests
+
+# The fast Chromium run happens on every push and pull request (deploy.yml).
+# This slower run covers Firefox and WebKit on a schedule and on demand.
+on:
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  e2e:
+    name: Chromium, Firefox and WebKit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium firefox webkit
+
+      - name: Run end-to-end tests in all browsers
+        run: npm run test:e2e
+        env:
+          E2E_ALL_BROWSERS: "1"
+
+      - name: Upload Playwright report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-cross-browser
+          path: playwright-report/
+          retention-days: 14
