@@ -8,46 +8,45 @@ export default function BlockReference(data: ParagraphBlockReferenceProps) {
     const hasBgImage = data.bgImage?.mediaImage2?.url
     const style = hasBgImage
         ? {
-            backgroundImage: `url(${data.bgImage.mediaImage2.url})`,
-            backgroundSize: data.bgImageSize,
-            backgroundPosition: data.bgImagePosition,
-            backgroundRepeat: data.bgImageRepeat,
-        }
+              backgroundImage: `url(${data.bgImage.mediaImage2.url})`,
+              backgroundSize: data.bgImageSize,
+              backgroundPosition: data.bgImagePosition,
+              backgroundRepeat: data.bgImageRepeat,
+          }
         : {}
 
     return (
         <section
             id={data.sectionId ? `pid-` + data.sectionId : `pid-` + data.id}
-            className={'section-container ' + data.padding}
+            className={"section-container " + data.padding}
             style={style}
         >
             {data.bgColor ? (
-                <div className="color-overlay" style={{ backgroundColor: data.bgColor }} />
+                <div
+                    className="color-overlay"
+                    style={{ backgroundColor: data.bgColor }}
+                />
             ) : null}
             <div className="container">
                 <div className="row">
                     {(() => {
                         switch (data.blockReference.id) {
                             case "views_block:portfolio-featured":
-                                return (
-                                    <FeaturedWork />
-                                )
+                                return <FeaturedWork />
 
                             case "views_block:portfolio-archived":
-                                return (
-                                    <PreviousWork />
-                                )
+                                return <PreviousWork />
 
                             case "webform_block":
-                                return (
-                                    <WebformContact />
-                                )
+                                return <WebformContact />
 
                             default:
                                 return (
                                     <div
                                         dangerouslySetInnerHTML={{
-                                            __html: fixCmsImagePaths(data.blockReference.render),
+                                            __html: fixCmsImagePaths(
+                                                data.blockReference.render
+                                            ),
                                         }}
                                     />
                                 )

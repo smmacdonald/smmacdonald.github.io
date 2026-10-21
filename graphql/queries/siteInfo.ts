@@ -50,7 +50,7 @@ export default gql`
                 }
             }
         }
-        logo:blockContent(id: "1") {
+        logo: blockContent(id: "1") {
             __typename
             ... on BlockContentSiteLogo {
                 __typename
@@ -61,31 +61,31 @@ export default gql`
                 }
             }
         }
-        main:menu(name: MAIN) {
+        main: menu(name: MAIN) {
             name
             items {
                 ...menuItemFields
+                children {
+                    ...menuItemFields
                     children {
-                        ...menuItemFields
-                        children {
                         ...menuItemFields
                     }
                 }
             }
         }
-        menuToggle:menu(name: MOBILE_MENU_TOGGLE) {
+        menuToggle: menu(name: MOBILE_MENU_TOGGLE) {
             name
             items {
                 ...menuItemFields
+                children {
+                    ...menuItemFields
                     children {
-                        ...menuItemFields
-                        children {
                         ...menuItemFields
                     }
                 }
             }
         }
-        footerBrand:blockContent(id: "5") {
+        footerBrand: blockContent(id: "5") {
             __typename
             ... on BlockContentFooterBrandAndSocial {
                 __typename
@@ -119,7 +119,7 @@ export default gql`
                 }
             }
         }
-        contactCTA:blockContent(id: "2") {
+        contactCTA: blockContent(id: "2") {
             __typename
             ... on BlockContentBasic {
                 __typename
@@ -130,7 +130,7 @@ export default gql`
                 }
             }
         }
-        copyright:blockContent(id: "6") {
+        copyright: blockContent(id: "6") {
             __typename
             ... on BlockContentBasic {
                 __typename
@@ -141,7 +141,7 @@ export default gql`
                 }
             }
         }
-     }
+    }
     ${mediaImageFields}
     ${menuItemFields}
     ${mediaLinkedImageFields}

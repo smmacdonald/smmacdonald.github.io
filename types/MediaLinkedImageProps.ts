@@ -1,5 +1,5 @@
 export type MediaLinkedImageProps = {
-    __typename: 'MediaLinkedImage'
+    __typename: "MediaLinkedImage"
     id: string
     mediaImage1: {
         url: string

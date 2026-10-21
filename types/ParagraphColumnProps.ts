@@ -1,7 +1,7 @@
 import { ColumnElementProps } from "./ColumnElementProps"
 
 export type ParagraphColumnProps = {
-    __typename: 'ParagraphColumn'
+    __typename: "ParagraphColumn"
     id: string
     bgColor: string
     sectionId: string

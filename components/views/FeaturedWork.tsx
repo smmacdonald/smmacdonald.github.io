@@ -11,7 +11,8 @@ type FeaturedProjectProps = {
 }
 
 export default async function FeaturedWork() {
-    const path = process.env.NEXT_PUBLIC_LOCAL_API_URL + '/rest/projects/featured'
+    const path =
+        process.env.NEXT_PUBLIC_LOCAL_API_URL + "/rest/projects/featured"
     const data = await fetch(path)
 
     if (!data.ok) {
@@ -27,43 +28,54 @@ export default async function FeaturedWork() {
                 <div key={i} className="col-lg-3 col-md-6 pb-4 portfolio-item">
                     <div className="portfolio-featured-work">
                         <div className="portfolio-featured-image">
-                            {post.field_slider.includes(', ') ? (
+                            {post.field_slider.includes(", ") ? (
                                 <PortfolioSlider
                                     data={post.field_slider}
                                     autoplay="1"
                                     show="1"
-                                    scroll="1" />
+                                    scroll="1"
+                                />
                             ) : (
                                 <Image
-                                    src={process.env.NEXT_PUBLIC_LOCAL_API_URL + post.field_slider}
+                                    src={
+                                        process.env.NEXT_PUBLIC_LOCAL_API_URL +
+                                        post.field_slider
+                                    }
                                     height={400}
                                     width={600}
                                     alt=""
-                                    unoptimized />
+                                    unoptimized
+                                />
                             )}
                         </div>
                         <div className="portfolio-content-wrap p-4">
-                            <div className="h4 portfolio-title">{post.title}</div>
+                            <div className="h4 portfolio-title">
+                                {post.title}
+                            </div>
                             <div className="portfolio-tags mt-auto">
-                                {post.field_tags.includes(', ') ? (
-                                    post.field_tags.split(', ').map((item, index) => {
-                                        return (
-                                            <span
-                                                key={index}
-                                                className="portfolio-term-label"
-                                            >
-                                                {item.trim()}
-                                            </span>
-                                        )
-                                    })
-
-                                ) : ''}
+                                {post.field_tags.includes(", ")
+                                    ? post.field_tags
+                                          .split(", ")
+                                          .map((item, index) => {
+                                              return (
+                                                  <span
+                                                      key={index}
+                                                      className="portfolio-term-label"
+                                                  >
+                                                      {item.trim()}
+                                                  </span>
+                                              )
+                                          })
+                                    : ""}
                             </div>
                             <Link
                                 href={post.url}
                                 tabIndex={0}
                                 title={`Link to project: ${post.title}`}
-                                className="arrow-right fa-regular fa-arrow-right">View Project</Link>
+                                className="arrow-right fa-regular fa-arrow-right"
+                            >
+                                View Project
+                            </Link>
                         </div>
                     </div>
                 </div>

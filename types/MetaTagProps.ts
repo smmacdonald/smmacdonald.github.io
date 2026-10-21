@@ -1,8 +1,5 @@
 export type MetaTagProps = {
-    __typename:
-    | "MetaTagValue"
-    | "MetaTagProperty"
-    | "MetaTagLink"
+    __typename: "MetaTagValue" | "MetaTagProperty" | "MetaTagLink"
     tag?: string
     attributes: {
         name?: string

@@ -1,7 +1,7 @@
 import { MediaImageProps } from "./MediaImageProps"
 
 export type ParagraphCardFeaturedImageTextProps = {
-    __typename: 'ParagraphCardFeaturedImageText'
+    __typename: "ParagraphCardFeaturedImageText"
     id: string
     bgColor: string
     sectionId: string

@@ -1,7 +1,7 @@
 import { MediaImageProps } from "./MediaImageProps"
 
 export type ParagraphImageProps = {
-    __typename: 'ParagraphImage'
+    __typename: "ParagraphImage"
     id: string
     animate: boolean
     animationDirection: string

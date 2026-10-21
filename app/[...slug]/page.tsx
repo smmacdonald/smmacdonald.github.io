@@ -26,23 +26,28 @@ type SitemapProps = {
 export const dynamicParams = false
 
 export async function generateStaticParams() {
-    const url = process.env.NEXT_PUBLIC_LOCAL_API_URL + '/rest/headless-sitemap'
+    const url = process.env.NEXT_PUBLIC_LOCAL_API_URL + "/rest/headless-sitemap"
     const response = await fetch(url, { signal: AbortSignal.timeout(15_000) })
 
     if (!response.ok) {
-        throw new Error(`Failed to fetch sitemap paths from ${url}: ${response.status}`)
+        throw new Error(
+            `Failed to fetch sitemap paths from ${url}: ${response.status}`
+        )
     }
 
     const paths: SitemapProps[] = await response.json()
 
     const params = paths
         .map((item) => {
-            const cleanSlugArray = item.view_node.replace(/^\/|\/$/g, "").split("/")
+            const cleanSlugArray = item.view_node
+                .replace(/^\/|\/$/g, "")
+                .split("/")
 
             if (
                 cleanSlugArray.includes("403") ||
                 cleanSlugArray.includes("404") ||
-                (cleanSlugArray.length === 1 && cleanSlugArray[0] === "homepage")
+                (cleanSlugArray.length === 1 &&
+                    cleanSlugArray[0] === "homepage")
             ) {
                 return null
             }
@@ -54,7 +59,9 @@ export async function generateStaticParams() {
         .filter((item) => item !== null)
 
     if (params.length === 0) {
-        throw new Error("The Drupal sitemap returned no routes; refusing to build an empty site")
+        throw new Error(
+            "The Drupal sitemap returned no routes; refusing to build an empty site"
+        )
     }
 
     return params
@@ -67,7 +74,7 @@ async function getSlugPage(params: Props["params"]) {
     return data
 }
 
-export async function generateMetadata({ params, }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const data = await getSlugPage(params)
     return parseMetadata(data?.route?.entity?.metatag ?? [])
 }
@@ -84,37 +91,24 @@ export default async function Slug({ params }: Props) {
         <>
             <BodyClassSync title={entity.title} />
             {entity?.pageHero && (
-                <Section
-                    key={entity.pageHero.id}
-                    {...entity.pageHero} />
+                <Section key={entity.pageHero.id} {...entity.pageHero} />
             )}
 
             {entity?.projectHero && (
-                <Section
-                    key={entity.projectHero.id}
-                    {...entity.projectHero} />
+                <Section key={entity.projectHero.id} {...entity.projectHero} />
             )}
 
             {breadcrumbs && (
-                <Breadcrumbs
-                    data={breadcrumbs} current={entity.title} />
+                <Breadcrumbs data={breadcrumbs} current={entity.title} />
             )}
 
             {entity?.content?.map((section: SectionElement, index: number) => {
                 switch (section.__typename) {
                     case "ParagraphSection":
-                        return (
-                            <Section
-                                key={index}
-                                {...section} />
-                        )
+                        return <Section key={index} {...section} />
 
                     case "ParagraphBlockReference":
-                        return (
-                            <BlockReference
-                                key={index}
-                                {...section} />
-                        )
+                        return <BlockReference key={index} {...section} />
 
                     default:
                         return null

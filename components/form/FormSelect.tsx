@@ -7,44 +7,30 @@ type Props = {
 
 export default function FormSelect({ name, field }: Props) {
     return (
-        <div className={`mb-3 ${field['#webform_id']} ${field["#wrapper_attributes"]?.class?.join(" ") || ""}`}>
+        <div
+            className={`mb-3 ${field["#webform_id"]} ${field["#wrapper_attributes"]?.class?.join(" ") || ""}`}
+        >
             <label
-                htmlFor={field['#webform_id'] ?? name}
+                htmlFor={field["#webform_id"] ?? name}
                 className="form-label"
             >
-                {field['#title']}
+                {field["#title"]}
 
-                {field['#required'] && (
-                    <span className="text-danger">
-                        {" "}*
-                    </span>
-                )}
+                {field["#required"] && <span className="text-danger"> *</span>}
             </label>
 
             <select
-                id={field['#webform_id'] ?? name}
+                id={field["#webform_id"] ?? name}
                 name={name}
                 className="form-select"
-                defaultValue={
-                    field["#default_value"] || ""
-                }
-                required={field['#required']}
+                defaultValue={field["#default_value"] || ""}
+                required={field["#required"]}
             >
-                <option value="">
-                    - Select -
-                </option>
+                <option value="">- Select -</option>
 
-                {Object.entries(
-                    field["#options"] || {}
-                ).map(
-                    ([
-                        optionValue,
-                        optionLabel,
-                    ]) => (
-                        <option
-                            key={optionValue}
-                            value={optionValue}
-                        >
+                {Object.entries(field["#options"] || {}).map(
+                    ([optionValue, optionLabel]) => (
+                        <option key={optionValue} value={optionValue}>
                             {optionLabel}
                         </option>
                     )

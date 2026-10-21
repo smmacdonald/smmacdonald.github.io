@@ -12,7 +12,8 @@ export default function SiteLogo(data: SiteLogoProps) {
                     height={data.image[0].mediaImage.height}
                     width={data.image[0].mediaImage.width}
                     alt={data.image[0].mediaImage.alt}
-                    unoptimized />
+                    unoptimized
+                />
             </Link>
         </div>
     )

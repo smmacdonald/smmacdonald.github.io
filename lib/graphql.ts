@@ -2,10 +2,7 @@ import { print, type DocumentNode } from "graphql"
 
 const REQUEST_TIMEOUT_MS = 15_000
 
-export async function fetchGraphQL(
-    query: DocumentNode,
-    variables = {}
-) {
+export async function fetchGraphQL(query: DocumentNode, variables = {}) {
     const endpoint = process.env.NEXT_PUBLIC_LOCAL_API_GRAPHQL_URL
 
     if (!endpoint) {
@@ -25,13 +22,17 @@ export async function fetchGraphQL(
     })
 
     if (!response.ok) {
-        throw new Error(`GraphQL request failed: ${response.status} ${response.statusText}`)
+        throw new Error(
+            `GraphQL request failed: ${response.status} ${response.statusText}`
+        )
     }
 
     const result = await response.json()
 
     if (result.errors?.length) {
-        const messages = result.errors.map((e: { message: string }) => e.message).join("; ")
+        const messages = result.errors
+            .map((e: { message: string }) => e.message)
+            .join("; ")
         throw new Error(`GraphQL returned errors: ${messages}`)
     }
 

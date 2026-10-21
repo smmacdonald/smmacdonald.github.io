@@ -2,7 +2,7 @@ import { MediaLinkedImageProps } from "./MediaLinkedImageProps"
 import { ParagraphSocialMediaProps } from "./ParagraphSocialMediaProps"
 
 export type FooterBrandAndSocialProps = {
-    __typename: 'BlockContentFooterBrandAndSocial'
+    __typename: "BlockContentFooterBrandAndSocial"
     id: string
     image: MediaLinkedImageProps[]
     body: {

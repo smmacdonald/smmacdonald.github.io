@@ -17,11 +17,12 @@ export default function WebformContact() {
     useEffect(() => {
         const loadInitialData = async () => {
             try {
-                const formRes = await fetch(`${baseUrl}/webform_rest/contact/fields?_format=json`)
+                const formRes = await fetch(
+                    `${baseUrl}/webform_rest/contact/fields?_format=json`
+                )
                 const formData = await formRes.json()
 
                 setFormFields(formData)
-
             } catch (error) {
                 console.error("Failed to load initial data:", error)
             } finally {
@@ -31,7 +32,6 @@ export default function WebformContact() {
 
         loadInitialData()
     }, [baseUrl])
-
 
     async function handleSubmit(
         event: Parameters<
@@ -81,8 +81,7 @@ export default function WebformContact() {
 
             if (!response.ok) {
                 throw new Error(
-                    responseText ||
-                    `Drupal returned ${response.status}`
+                    responseText || `Drupal returned ${response.status}`
                 )
             }
 
@@ -101,36 +100,24 @@ export default function WebformContact() {
         }
     }
 
-    if (loading)
-        return <div>Loading webform...</div>
+    if (loading) return <div>Loading webform...</div>
 
     return (
         <form onSubmit={handleSubmit} id="contact">
             {submitted && (
-                <div
-                    className="alert alert-success"
-                    role="alert"
-                >
+                <div className="alert alert-success" role="alert">
                     Your message has been sent successfully.
                 </div>
             )}
 
             {error && (
-                <div
-                    className="alert alert-danger"
-                    role="alert"
-                >
+                <div className="alert alert-danger" role="alert">
                     {error}
                 </div>
             )}
 
-            {(
-                Object.entries(formFields) as [
-                    string,
-                    WebformFieldProps
-                ][]
-            ).map(([key, field], index) =>
-                RenderFormFields(key, field, index)
+            {(Object.entries(formFields) as [string, WebformFieldProps][]).map(
+                ([key, field], index) => RenderFormFields(key, field, index)
             )}
         </form>
     )

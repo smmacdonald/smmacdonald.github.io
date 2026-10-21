@@ -23,27 +23,23 @@ export default function ParagraphSlider(data: ParagraphSliderProps) {
                 breakpoint: 992,
                 settings: {
                     slidesToShow: show >= 3 ? 2 : show,
-                    slidesToScroll: scroll >= 3 ? 2 : scroll
-                }
+                    slidesToScroll: scroll >= 3 ? 2 : scroll,
+                },
             },
             {
                 breakpoint: 576,
                 settings: {
                     slidesToShow: show >= 3 ? 1 : show,
-                    slidesToScroll: scroll >= 3 ? 1 : scroll
-                }
-            }
-        ]
+                    slidesToScroll: scroll >= 3 ? 1 : scroll,
+                },
+            },
+        ],
     }
 
     return (
         <Slider {...settings}>
             {data.slide?.map((item, index: number) => {
-                return (
-                    <ParagraphImage
-                        key={index}
-                        {...item} />
-                )
+                return <ParagraphImage key={index} {...item} />
             })}
         </Slider>
     )

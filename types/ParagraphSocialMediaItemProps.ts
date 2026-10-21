@@ -1,5 +1,5 @@
 export type ParagraphSocialMediaItemProps = {
-    __typename: 'ParagraphSocialMediaItem'
+    __typename: "ParagraphSocialMediaItem"
     id: string
     link: {
         url: string
