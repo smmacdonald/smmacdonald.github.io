@@ -16,7 +16,7 @@ site. It deploys from `main` to GitHub Pages at `https://smmacdonald.github.io/`
 | Package manager / Node | npm / unpinned (CI used 20) | npm / 24 (`.nvmrc`, `engines`) |
 | Rendering | `output: 'export'`, Drupal data fetched at build **and** in the browser | `output: 'export'`, all Drupal content fetched at build time; only form submission is a browser request |
 | Deployment | GitHub Actions to GitHub Pages on push to `main`, no checks | Same trigger, gated by format/lint/typecheck/unit/E2E/audit; post-deploy smoke test |
-| Tests | none | 78 unit/component tests and 47 Playwright tests on `main` (81 and 50 with the open breadcrumb PR #17); weekly cross-browser run |
+| Tests | none | 81 unit/component tests and 50 Playwright tests (Chromium) on `main`; weekly cross-browser run |
 
 The audit brief assumed a Bluehost deployment with `develop` and `prod` branches. Those belong to the
 Drupal site, not this repository; this repository only ever deployed to GitHub Pages from `main`.
@@ -38,9 +38,10 @@ build-time static export (no server to run or secure).
 **Biggest wins delivered:** security upgrade, loud build failures, quality gates and tests that block deploys,
 server-rendered content, and an accessibility pass that took axe from 6 distinct violated rules across the site to 1 (`heading-order`, a Drupal content edit).
 
-**Biggest remaining opportunities:** mobile load performance (LCP 7.8 to 9.3 s on simulated mobile; see
-[performance-review.md](performance-review.md)), a Drupal-side breadcrumb problem that breaks the live
-breadcrumbs, and manual accessibility checks that automation cannot do.
+**Biggest remaining opportunities:** mobile load performance (LCP 7.8 to 10 s on simulated mobile; see
+[performance-review.md](performance-review.md)), the unexplained Drupal breadcrumb outage (fixed on the live site, cause not recorded;
+see [deployment.md](../deployment.md#known-drupal-side-issue-breadcrumbs)), and manual accessibility checks that
+automation cannot do.
 
 ## Findings
 
@@ -107,7 +108,7 @@ Status: **Done** (merged), **Open PR** (written and verified, awaiting merge), *
 |---|---|---|
 | Hosting model | Static export on GitHub Pages: no server runtime, so no Node-version or SSR compatibility risk | None needed |
 | Drupal availability at build | The build needs a reachable Drupal; the deployed site does not (except contact form submit) | Build fails loudly; the previous deploy stays live |
-| Drupal data quality | A bad Drupal response is published as-is (this caused the missing breadcrumbs) | Home breadcrumb no longer depends on Drupal; a build warning flags empty trails |
+| Drupal data quality | A bad Drupal response is published as-is (this caused the missing breadcrumbs until 2026-10-21) | Home breadcrumb no longer depends on Drupal; a build warning flags empty trails |
 | Environment configuration | API URLs are environment secrets restricted to `main` | Documented in [deployment.md](../deployment.md) |
 | Workflows | Read-only default permissions; per-job `contents: read`; concurrency prevents overlapping deploys | Ruleset requires both CI checks |
 | Branch promotion | Single branch (`main`); PR required by the ruleset | Admin bypass exists for emergencies |

@@ -125,8 +125,14 @@ if yours does not, set `NODE_EXTRA_CA_CERTS` to the mkcert root CA.
 
 ## Known Drupal-side issue: breadcrumbs
 
-**Symptom:** on the live site `/about`, `/portfolio` and project pages lose their "Home" breadcrumb and its
-spacing, while `/contact` keeps it.
+**Status (2026-10-21): resolved on the live site; root cause not recorded.** After PR #17 merged and the site
+was rebuilt, every page shows its breadcrumbs, and production's GraphQL now returns full trails
+(`/about`: Home; `/portfolio/macdonaldesign`: Home, Portfolio). What changed on the Drupal side to fix it was not
+recorded here; if you know (cache clear, redirect, module update), add it below, because the same failure can
+come back. The build now logs `[breadcrumbs]` when it does, and the Home link no longer depends on it.
+
+**Symptom (at the time):** on the live site `/about`, `/portfolio` and project pages lost their "Home" breadcrumb
+and its spacing, while `/contact` kept it.
 
 **What was verified:** production's GraphQL answers the breadcrumb query consistently (6 of 6 requests) with an
 **empty list** for `/about`, `/portfolio` and `/portfolio/macdonaldesign`, and `[{Home}]` for `/contact`. A local DDEV
@@ -160,6 +166,6 @@ module version.
 4. If it persists, report it upstream with the stack trace and the module versions.
 5. Rebuild the site afterwards.
 
-**Mitigation in this repository** (PR #17, open): the Home breadcrumb is always rendered, independent of Drupal,
+**Mitigation in this repository** (PR #17, merged): the Home breadcrumb is always rendered, independent of Drupal,
 and the build logs `[breadcrumbs] Drupal returned no Home crumb for <path>` when Drupal supplied none. Intermediate
 crumbs, such as "Portfolio" on project pages, still come from Drupal.

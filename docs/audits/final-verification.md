@@ -7,6 +7,13 @@ merged at this point and are not part of these results unless stated.
 
 Nothing below is claimed as passing unless it was run; see "Not executed" for what was not.
 
+> **Update, 2026-10-21 (after this report was written):** PR #17 merged and deployed (`check`, `e2e`, `build`
+> and `deploy` succeeded; smoke test 200). The live site now shows the Home breadcrumb on every page, including
+> "Home › Portfolio › MacDonalDesign" on project pages, and production's GraphQL returns full breadcrumb trails
+> again. The production build logged no `[breadcrumbs]` warning (the only one in the run came from the E2E job's
+> deliberate empty-trail simulation). The cause of the Drupal-side problem was not recorded. With PR #17, `main`
+> has 81 unit tests and 50 Chromium E2E tests. The tables below describe commit `9680d95` as run.
+
 ## Passed
 
 | Check | Command | Result |
@@ -58,7 +65,7 @@ No check fails at this commit. Failures that occurred **during** the work and we
 
 ## Issues that need manual review
 
-1. **Live breadcrumbs are broken** until the Drupal side is fixed and the site is rebuilt (details in [deployment.md](../deployment.md#known-drupal-side-issue-breadcrumbs)); PR #17 restores the Home link.
+1. **Drupal breadcrumb data:** fixed on the live site, cause unknown; record what changed so a recurrence can be diagnosed (details in [deployment.md](../deployment.md#known-drupal-side-issue-breadcrumbs)).
 2. The footer call-to-action heading is an `<h3>` in a Drupal block (`heading-order`).
 3. The alt text on portfolio card images is the project title, which is reasonable but is a decision, not a measurement.
 4. The Drupal permission for the contact form's field definitions (it returned 403 locally until permissions were fixed); confirm it on production before each content rebuild.
@@ -67,7 +74,7 @@ No check fails at this commit. Failures that occurred **during** the work and we
 
 | Risk | Impact | Recommendation |
 |---|---|---|
-| Drupal breadcrumb data | Visible layout/navigation defect on several pages | See the Drupal diagnosis in [deployment.md](../deployment.md); merge PR #17 |
+| Drupal breadcrumb data | Recurrence would drop intermediate crumbs (Home no longer depends on it) | Record the cause; watch the build log for `[breadcrumbs]` warnings |
 | Mobile load performance (simulated LCP 7.8 to 10 s; 1.8 MB transfer, half of it fonts; a 293 KB favicon) | Slow experience on weak connections | Quick wins in [performance-review.md](performance-review.md) |
 | No security headers; 10-minute cache on everything | Platform limit of GitHub Pages | Accept, or host behind a CDN/proxy |
 | Public GraphQL endpoint unreviewed | Possible exposure of non-public content | Review anonymous permissions in Drupal (S4 in [security-review.md](security-review.md)) |
@@ -86,7 +93,7 @@ No check fails at this commit. Failures that occurred **during** the work and we
 | Dependencies audited | Met for production (0); 5 dev-tooling findings accepted and documented |
 | Unit, component and integration tests pass | Met. There is no separate MSW layer; integration is covered by the server-component tests and E2E against the mock Drupal |
 | Essential Playwright tests pass; accessibility automation runs | Met |
-| No known critical functionality broken | **Not met** until the breadcrumb issue is fixed live (cosmetic/navigation, not data loss) |
+| No known critical functionality broken | Met as of the 2026-10-21 update (the breadcrumb defect is fixed on the live site) |
 | Production build succeeds; hosting model supported | Met |
 | GraphQL requests work in the intended environment | Met (deploys build against production Drupal) |
 | Errors and missing data handled | Met for build and 404; the runtime `error.tsx` page is not covered by an E2E test |
