@@ -122,3 +122,19 @@
     }
 
 }
+.skip-link.visually-hidden-focusable {
+    &:focus {
+        position: fixed !important;
+        top: 10px;
+        left: 10px;
+        z-index: 100000;
+        width: auto !important;
+        height: auto !important;
+        padding: 10px 16px !important;
+        background-color: #fff !important;
+        color: #000 !important;
+        clip: auto !important;
+        text-decoration: underline;
+        transition: none !important;
+    }
+}
