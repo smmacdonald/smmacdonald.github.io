@@ -16,7 +16,10 @@
         "format:check": "prettier --check .",
         "knip": "knip",
         "prepare": "husky",
-        "check": "npm run format:check && npm run lint && npm run typecheck"
+        "check": "npm run format:check && npm run lint && npm run typecheck && npm run test",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "test:coverage": "vitest run --coverage"
     },
     "dependencies": {
         "bootstrap": "^5.3.8",
@@ -30,20 +33,28 @@
     },
     "devDependencies": {
         "@graphql-tools/webpack-loader": "^7.0.0",
-        "@types/node": "^20",
+        "@testing-library/dom": "^10.4.2",
+        "@testing-library/jest-dom": "^7.0.1",
+        "@testing-library/react": "^16.3.3",
+        "@testing-library/user-event": "^14.6.8",
+        "@types/node": "^24.19.2",
         "@types/react": "^19",
         "@types/react-dom": "^19",
         "@types/react-slick": "^0.23.13",
+        "@vitejs/plugin-react": "^6.1.2",
+        "@vitest/coverage-v8": "^5.0.5",
         "baseline-browser-mapping": "^2.10.9",
         "eslint": "^9",
         "eslint-config-next": "16.4.2",
         "eslint-config-prettier": "^10.1.8",
         "husky": "^9.1.7",
+        "jsdom": "^30.1.3",
         "knip": "^6.42.1",
         "lint-staged": "^17.6.0",
         "prettier": "^3.9.10",
         "sass": "^1.93.2",
-        "typescript": "^5"
+        "typescript": "^5",
+        "vitest": "^5.0.5"
     },
     "lint-staged": {
         "*.{ts,tsx,mjs,json,yml}": "prettier --write",

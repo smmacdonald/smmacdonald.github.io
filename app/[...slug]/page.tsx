@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { parseMetadata } from "@/lib/metadata"
 import { getPageByPath } from "@/lib/getPage"
+import { sitemapToSlugParams } from "@/lib/sitemap"
 import BodyClassSync from "@/src/utils/BodyClassSync"
 
 import Section from "@/components/Section"
@@ -19,10 +20,6 @@ type Props = {
 
 type SectionElement = ParagraphSectionProps | ParagraphBlockReferenceProps
 
-type SitemapProps = {
-    view_node: string
-}
-
 export const dynamicParams = false
 
 export async function generateStaticParams() {
@@ -35,28 +32,7 @@ export async function generateStaticParams() {
         )
     }
 
-    const paths: SitemapProps[] = await response.json()
-
-    const params = paths
-        .map((item) => {
-            const cleanSlugArray = item.view_node
-                .replace(/^\/|\/$/g, "")
-                .split("/")
-
-            if (
-                cleanSlugArray.includes("403") ||
-                cleanSlugArray.includes("404") ||
-                (cleanSlugArray.length === 1 &&
-                    cleanSlugArray[0] === "homepage")
-            ) {
-                return null
-            }
-
-            return {
-                slug: cleanSlugArray,
-            }
-        })
-        .filter((item) => item !== null)
+    const params = sitemapToSlugParams(await response.json())
 
     if (params.length === 0) {
         throw new Error(
