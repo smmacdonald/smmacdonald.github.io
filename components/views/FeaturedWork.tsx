@@ -1,6 +1,7 @@
 import Link from "next/link"
 import PortfolioSlider from "../PortfolioSlider"
 import Image from "next/image"
+import { getJson } from "@/lib/getJson"
 
 type FeaturedProjectProps = {
     field_filter: string
@@ -11,15 +12,9 @@ type FeaturedProjectProps = {
 }
 
 export default async function FeaturedWork() {
-    const path =
+    const posts = await getJson<FeaturedProjectProps[]>(
         process.env.NEXT_PUBLIC_LOCAL_API_URL + "/rest/projects/featured"
-    const data = await fetch(path)
-
-    if (!data.ok) {
-        throw new Error(`Featured projects request failed: ${data.status}`)
-    }
-
-    const posts: FeaturedProjectProps[] = await data.json()
+    )
 
     return (
         <>

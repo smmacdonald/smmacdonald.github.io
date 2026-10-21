@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import { parseMetadata } from "@/lib/metadata"
 import { getPageByPath } from "@/lib/getPage"
 import { sitemapToSlugParams } from "@/lib/sitemap"
+import { getJson } from "@/lib/getJson"
 import BodyClassSync from "@/src/utils/BodyClassSync"
 
 import Section from "@/components/Section"
@@ -23,16 +24,11 @@ type SectionElement = ParagraphSectionProps | ParagraphBlockReferenceProps
 export const dynamicParams = false
 
 export async function generateStaticParams() {
-    const url = process.env.NEXT_PUBLIC_LOCAL_API_URL + "/rest/headless-sitemap"
-    const response = await fetch(url, { signal: AbortSignal.timeout(15_000) })
-
-    if (!response.ok) {
-        throw new Error(
-            `Failed to fetch sitemap paths from ${url}: ${response.status}`
+    const params = sitemapToSlugParams(
+        await getJson(
+            process.env.NEXT_PUBLIC_LOCAL_API_URL + "/rest/headless-sitemap"
         )
-    }
-
-    const params = sitemapToSlugParams(await response.json())
+    )
 
     if (params.length === 0) {
         throw new Error(
