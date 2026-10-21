@@ -1,19 +1,19 @@
 [
     {
         "field_media": "",
-        "field_slider": "\n  \n          \n      \n  \n      \n      \/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/ships.jpg?h=252f27fa\u0026amp;itok=C-Ns5tGI\n  \n\n  \n\n  \n\n      \n, \n  \n          \n      \n  \n      \n      \/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/fog.jpg?h=77bd0c6f\u0026amp;itok=RMEEWbJz\n  \n\n  \n\n  \n\n      \n, \n  \n          \n      \n  \n      \n      \/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/dot1.jpg?h=204d1517\u0026amp;itok=Wt5HjQlN\n  \n\n  \n\n  \n\n      \n, \n  \n          \n      \n  \n      \n      \/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/dot2.jpg?h=eb5cb3e6\u0026amp;itok=UvXl0LeJ\n  \n\n  \n\n  \n\n      \n",
+        "field_slider": "\n  \n          \n      \n  \n      \n      /sites/default/files/styles/featured_image/public/2026-07/ships.jpg?h=252f27fa&amp;itok=C-Ns5tGI\n  \n\n  \n\n  \n\n      \n, \n  \n          \n      \n  \n      \n      /sites/default/files/styles/featured_image/public/2026-07/fog.jpg?h=77bd0c6f&amp;itok=RMEEWbJz\n  \n\n  \n\n  \n\n      \n, \n  \n          \n      \n  \n      \n      /sites/default/files/styles/featured_image/public/2026-07/dot1.jpg?h=204d1517&amp;itok=Wt5HjQlN\n  \n\n  \n\n  \n\n      \n, \n  \n          \n      \n  \n      \n      /sites/default/files/styles/featured_image/public/2026-07/dot2.jpg?h=eb5cb3e6&amp;itok=UvXl0LeJ\n  \n\n  \n\n  \n\n      \n",
         "field_tags": "Graphite, Stipple",
         "title": "Fine Art"
     },
     {
         "field_media": "",
-        "field_slider": "\n  \n          \n      \n  \n      \n      \/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/unturned-stones.jpg?h=d07cc655\u0026amp;itok=IZcMx_KH\n  \n\n  \n\n  \n\n      \n, \n  \n          \n      \n  \n      \n      \/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/townes2.jpg?h=f11371c9\u0026amp;itok=l6uM8E78\n  \n\n  \n\n  \n\n      \n, \n  \n          \n      \n  \n      \n      \/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/sxsw.jpg?h=4881cdc5\u0026amp;itok=TOoZj3Ey\n  \n\n  \n\n  \n\n      \n, \n  \n          \n      \n  \n      \n      \/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/sxsw-wall.jpg?h=3751da6c\u0026amp;itok=cFNwwJdr\n  \n\n  \n\n  \n\n      \n",
+        "field_slider": "\n  \n          \n      \n  \n      \n      /sites/default/files/styles/featured_image/public/2026-07/unturned-stones.jpg?h=d07cc655&amp;itok=IZcMx_KH\n  \n\n  \n\n  \n\n      \n, \n  \n          \n      \n  \n      \n      /sites/default/files/styles/featured_image/public/2026-07/townes2.jpg?h=f11371c9&amp;itok=l6uM8E78\n  \n\n  \n\n  \n\n      \n, \n  \n          \n      \n  \n      \n      /sites/default/files/styles/featured_image/public/2026-07/sxsw.jpg?h=4881cdc5&amp;itok=TOoZj3Ey\n  \n\n  \n\n  \n\n      \n, \n  \n          \n      \n  \n      \n      /sites/default/files/styles/featured_image/public/2026-07/sxsw-wall.jpg?h=3751da6c&amp;itok=cFNwwJdr\n  \n\n  \n\n  \n\n      \n",
         "field_tags": "Photoshop, Illustrator",
         "title": "Graphic Design"
     },
     {
-        "field_media": "\n  \n      \n      \/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg?h=c49f93d5\u0026amp;itok=w90zW2-b\n  \n\n  ",
-        "field_slider": "\n  \n      \n      \/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg?h=c49f93d5\u0026amp;itok=w90zW2-b\n  \n\n  ",
+        "field_media": "\n  \n      \n      /sites/default/files/styles/featured_image/public/2026-08/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg?h=c49f93d5&amp;itok=w90zW2-b\n  \n\n  ",
+        "field_slider": "\n  \n      \n      /sites/default/files/styles/featured_image/public/2026-08/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg?h=c49f93d5&amp;itok=w90zW2-b\n  \n\n  ",
         "field_tags": "Next.js, Jenkins, GraphQL, REST API, Github Actions, Drupal 11",
         "title": "MacDonalDesign"
     }

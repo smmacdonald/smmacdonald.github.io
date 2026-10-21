@@ -20,13 +20,21 @@ export default async function RootLayout({
     return (
         <html lang="en" data-scroll-behavior="smooth">
             <body>
+                <a
+                    href="#main-content"
+                    className="skip-link visually-hidden-focusable"
+                >
+                    Skip to main content
+                </a>
                 <Header
                     logo={siteInfo.data.logo}
                     mainMenu={siteInfo.data.main}
                     mobileToggle={siteInfo.data.menuToggle}
                 />
 
-                {children}
+                <main id="main-content" tabIndex={-1}>
+                    {children}
+                </main>
 
                 <Footer
                     brand={siteInfo.data.footerBrand}

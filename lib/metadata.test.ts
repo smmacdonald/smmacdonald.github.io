@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { parseMetadata } from "./metadata"
+import { parseMetadata, withHomeCanonical } from "./metadata"
 import type { MetaTagProps } from "@/types/MetaTagProps"
 
 const value = (name: string, content: string): MetaTagProps => ({
@@ -76,5 +76,35 @@ describe("parseMetadata", () => {
 
         expect(result.title).toBeUndefined()
         expect(result.alternates?.canonical).toBe("https://x.test")
+    })
+})
+
+describe("withHomeCanonical", () => {
+    it("points the canonical and og:url at / instead of /homepage", () => {
+        const result = withHomeCanonical({
+            alternates: { canonical: "https://cms.test/homepage" },
+            openGraph: { url: "https://cms.test/homepage", title: "Home" },
+        })
+
+        expect(result.alternates?.canonical).toBe("https://cms.test/")
+        expect(result.openGraph?.url).toBe("https://cms.test/")
+        expect(result.openGraph?.title).toBe("Home")
+    })
+
+    it("also handles a trailing slash", () => {
+        expect(
+            withHomeCanonical({
+                alternates: { canonical: "https://cms.test/homepage/" },
+            }).alternates?.canonical
+        ).toBe("https://cms.test/")
+    })
+
+    it("leaves other URLs and missing values alone", () => {
+        expect(
+            withHomeCanonical({
+                alternates: { canonical: "https://cms.test/about" },
+            }).alternates?.canonical
+        ).toBe("https://cms.test/about")
+        expect(withHomeCanonical({ title: "x" })).toEqual({ title: "x" })
     })
 })

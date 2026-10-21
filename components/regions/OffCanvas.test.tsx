@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest"
+import { describe, expect, it, vi } from "vitest"
 import { render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import OffCanvas from "./OffCanvas"
@@ -43,9 +43,11 @@ const toggleMenu: MenuProps = {
 function renderOffCanvas() {
     const view = render(
         <>
-            <a className="mobile-menu-toggle" href="#">
-                Open menu
-            </a>
+            <header>
+                <a className="mobile-menu-toggle" href="#">
+                    Open menu
+                </a>
+            </header>
             <OffCanvas
                 logo={logo}
                 mainMenu={mainMenu}
@@ -89,8 +91,92 @@ describe("OffCanvas", () => {
         )
     })
 
-    // Known accessibility gaps (see the audit): the panel does not close on
-    // Escape and the toggle exposes no aria-expanded state.
-    it.todo("closes when Escape is pressed")
-    it.todo("exposes the open state to assistive technology via aria-expanded")
+    it("keeps the closed panel out of the tab order and accessibility tree", () => {
+        expect(renderOffCanvas()).toHaveAttribute("inert")
+    })
+
+    it("becomes interactive when open", async () => {
+        const user = userEvent.setup()
+        const panel = renderOffCanvas()
+
+        await user.click(screen.getByText("Open menu"))
+
+        expect(panel).not.toHaveAttribute("inert")
+    })
+
+    it("exposes the open state on every toggle via aria-expanded", async () => {
+        const user = userEvent.setup()
+        const panel = renderOffCanvas()
+        const toggles = () =>
+            Array.from(document.querySelectorAll("a.mobile-menu-toggle"))
+
+        expect(toggles().length).toBeGreaterThan(1)
+        toggles().forEach((toggle) => {
+            expect(toggle).toHaveAttribute("role", "button")
+            expect(toggle).toHaveAttribute("aria-expanded", "false")
+            expect(toggle).toHaveAttribute("aria-controls", panel.id)
+        })
+
+        await user.click(screen.getByText("Open menu"))
+
+        toggles().forEach((toggle) =>
+            expect(toggle).toHaveAttribute("aria-expanded", "true")
+        )
+    })
+
+    it("closes on Escape and returns focus to the header toggle", async () => {
+        const user = userEvent.setup()
+        const panel = renderOffCanvas()
+
+        await user.click(screen.getByText("Open menu"))
+        expect(panel).toHaveClass("active")
+
+        await user.keyboard("{Escape}")
+
+        expect(panel).not.toHaveClass("active")
+        expect(screen.getByText("Open menu")).toHaveFocus()
+    })
+
+    it("moves focus into the panel when it opens", async () => {
+        const user = userEvent.setup()
+        const panel = renderOffCanvas()
+
+        await user.click(screen.getByText("Open menu"))
+
+        expect(panel).toContainElement(document.activeElement as HTMLElement)
+    })
+
+    it("closes when a link inside the panel is followed", async () => {
+        const user = userEvent.setup()
+        const panel = renderOffCanvas()
+
+        await user.click(screen.getByText("Open menu"))
+        await user.click(screen.getByRole("link", { name: "About" }))
+
+        expect(panel).not.toHaveClass("active")
+    })
+
+    it("toggles with the Space key like a button", async () => {
+        const user = userEvent.setup()
+        const panel = renderOffCanvas()
+
+        screen.getByText("Open menu").focus()
+        await user.keyboard(" ")
+        expect(panel).toHaveClass("active")
+
+        await user.keyboard(" ")
+        expect(panel).not.toHaveClass("active")
+    })
+
+    it("does not follow the toggle's # link", async () => {
+        const user = userEvent.setup()
+        renderOffCanvas()
+        const click = vi.fn((event: MouseEvent) => event.defaultPrevented)
+        document.addEventListener("click", click)
+
+        await user.click(screen.getByText("Open menu"))
+
+        document.removeEventListener("click", click)
+        expect(click).toHaveReturnedWith(true)
+    })
 })

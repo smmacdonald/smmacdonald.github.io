@@ -13,7 +13,7 @@
                         "__typename": "MediaBackgroundImage",
                         "id": "14",
                         "mediaImage2": {
-                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/portfolio-header.jpg"
+                            "url": "__ORIGIN__/sites/default/files/2026-07/portfolio-header.jpg"
                         }
                     },
                     "bgImagePosition": "center center",
@@ -30,7 +30,9 @@
                             "id": "255",
                             "bgColor": null,
                             "sectionId": null,
-                            "columnWidth": ["col-lg-6"],
+                            "columnWidth": [
+                                "col-lg-6"
+                            ],
                             "styledBox": false,
                             "element": [
                                 {
@@ -38,7 +40,7 @@
                                     "id": "254",
                                     "verticalAlign": true,
                                     "body": {
-                                        "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ELocal \u0026amp; Creative\u003C\/span\u003E\u003C\/p\u003E\n\u003Ch1\u003EMacDonalDesign\u003C\/h1\u003E\n\u003Cp\u003EA fully custom digital ecosystem built with headless Drupal 11, Next.js, and automated CI\/CD. The platform combines modern frontend architecture, API-driven content, GitHub integration, and Jenkins deployments into a scalable development workflow.\u003C\/p\u003E\n\u003Cp\u003E\u003Ca class=\u0022button transparent\u0022 href=\u0022https:\/\/smmacdonald.github.io\u0022 target=\u0022_blank\u0022 tabindex=\u00220\u0022\u003EView Website\u003C\/a\u003E\u003C\/p\u003E\n"
+                                        "processed": "<p><span class=\"subhead color-accent\">Local &amp; Creative</span></p>\n<h1>MacDonalDesign</h1>\n<p>A fully custom digital ecosystem built with headless Drupal 11, Next.js, and automated CI/CD. The platform combines modern frontend architecture, API-driven content, GitHub integration, and Jenkins deployments into a scalable development workflow.</p>\n<p><a class=\"button transparent\" href=\"https://smmacdonald.github.io\" target=\"_blank\" tabindex=\"0\">View Website</a></p>\n"
                                     }
                                 }
                             ]
@@ -48,7 +50,9 @@
                             "id": "259",
                             "bgColor": null,
                             "sectionId": null,
-                            "columnWidth": ["col-lg-6"],
+                            "columnWidth": [
+                                "col-lg-6"
+                            ],
                             "styledBox": false,
                             "element": [
                                 {
@@ -60,13 +64,13 @@
                                         "__typename": "MediaImage",
                                         "id": "92",
                                         "mediaImage": {
-                                            "url": "__ORIGIN__\/sites\/default\/files\/2026-08\/portfolio-styled-elements-2.png",
+                                            "url": "__ORIGIN__/sites/default/files/2026-08/portfolio-styled-elements-2.png",
                                             "alt": "Headless Portfolio Elements",
                                             "height": 400,
                                             "width": 600,
                                             "variations": [
                                                 {
-                                                    "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/portfolio-styled-elements-2.png?h=252f27fa\u0026itok=ZLgPYltz"
+                                                    "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-08/portfolio-styled-elements-2.png?h=252f27fa&itok=ZLgPYltz"
                                                 }
                                             ]
                                         }
@@ -96,7 +100,10 @@
                                 "id": "261",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6", "offset-lg-3"],
+                                "columnWidth": [
+                                    "col-lg-6",
+                                    "offset-lg-3"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -104,7 +111,7 @@
                                         "id": "260",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ECASE STUDY\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EChallenge\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EThe goal was to build more than a traditional portfolio website. I wanted the site itself to demonstrate modern web development, API-driven architecture, version control, automation, and CI\/CD practices while remaining flexible enough to evolve as new projects and technologies were added.\u003C\/p\u003E\n"
+                                            "processed": "<p class=\"text-align-center\"><span class=\"subhead color-accent\">CASE STUDY</span></p>\n<p class=\"text-align-center\"><span class=\"h3\">Challenge</span></p>\n<p class=\"text-align-center\">The goal was to build more than a traditional portfolio website. I wanted the site itself to demonstrate modern web development, API-driven architecture, version control, automation, and CI/CD practices while remaining flexible enough to evolve as new projects and technologies were added.</p>\n"
                                         }
                                     }
                                 ]
@@ -119,7 +126,7 @@
                             "__typename": "MediaBackgroundImage",
                             "id": "13",
                             "mediaImage2": {
-                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
+                                "url": "__ORIGIN__/sites/default/files/2026-07/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
                             }
                         },
                         "bgImagePosition": "center center",
@@ -136,7 +143,9 @@
                                 "id": "264",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6"],
+                                "columnWidth": [
+                                    "col-lg-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -144,7 +153,7 @@
                                         "id": "263",
                                         "verticalAlign": true,
                                         "body": {
-                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EPHASE 1 SOLUTION\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EModern Drupal Platform\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e14325da0ea3ef791610c9b22f19517b5\u0022\u003EBuilt a custom Drupal 11 website as the content management platform.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022eeea1ae9a4363f182b0d1f9f0e9042ad7\u0022\u003EStructured portfolio projects, experience, skills, and other content in Drupal.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022eedd96273d33d5b9e5e2748b28f0cd0c0\u0022\u003EDeveloped a custom content architecture designed to support a headless implementation.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022efc9ae0b3aedfa5c8379bc0ea06893c86\u0022\u003EUsed Git and GitHub for source control and version management.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e10dea5fa713166e353d9583bb56eb854\u0022\u003EBuilt reusable Drupal components and custom functionality rather than relying entirely on contributed modules.\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                            "processed": "<p><span class=\"subhead color-accent\">PHASE 1 SOLUTION</span></p>\n<p><span class=\"h3\">Modern Drupal Platform</span></p>\n<ul>\n<li data-list-item-id=\"e14325da0ea3ef791610c9b22f19517b5\">Built a custom Drupal 11 website as the content management platform.</li>\n<li data-list-item-id=\"eeea1ae9a4363f182b0d1f9f0e9042ad7\">Structured portfolio projects, experience, skills, and other content in Drupal.</li>\n<li data-list-item-id=\"eedd96273d33d5b9e5e2748b28f0cd0c0\">Developed a custom content architecture designed to support a headless implementation.</li>\n<li data-list-item-id=\"efc9ae0b3aedfa5c8379bc0ea06893c86\">Used Git and GitHub for source control and version management.</li>\n<li data-list-item-id=\"e10dea5fa713166e353d9583bb56eb854\">Built reusable Drupal components and custom functionality rather than relying entirely on contributed modules.</li>\n</ul>\n"
                                         }
                                     }
                                 ]
@@ -154,7 +163,9 @@
                                 "id": "278",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6"],
+                                "columnWidth": [
+                                    "col-lg-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -166,13 +177,13 @@
                                             "__typename": "MediaImage",
                                             "id": "93",
                                             "mediaImage": {
-                                                "url": "__ORIGIN__\/sites\/default\/files\/2026-08\/macdonaldesign-phase-1_0.png",
+                                                "url": "__ORIGIN__/sites/default/files/2026-08/macdonaldesign-phase-1_0.png",
                                                 "alt": "MacDonalDesign Phase 1 Drupal 11 platform",
                                                 "height": 512,
                                                 "width": 600,
                                                 "variations": [
                                                     {
-                                                        "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/macdonaldesign-phase-1_0.png?h=51f69b1a\u0026itok=0MHAms3a"
+                                                        "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-08/macdonaldesign-phase-1_0.png?h=51f69b1a&itok=0MHAms3a"
                                                     }
                                                 ]
                                             }
@@ -190,7 +201,7 @@
                             "__typename": "MediaBackgroundImage",
                             "id": "13",
                             "mediaImage2": {
-                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
+                                "url": "__ORIGIN__/sites/default/files/2026-07/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
                             }
                         },
                         "bgImagePosition": "center center",
@@ -207,7 +218,9 @@
                                 "id": "266",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6"],
+                                "columnWidth": [
+                                    "col-lg-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -219,13 +232,13 @@
                                             "__typename": "MediaImage",
                                             "id": "90",
                                             "mediaImage": {
-                                                "url": "__ORIGIN__\/sites\/default\/files\/2026-08\/macdonaldesign-headless-nextjs_0.png",
+                                                "url": "__ORIGIN__/sites/default/files/2026-08/macdonaldesign-headless-nextjs_0.png",
                                                 "alt": "MacDonaldesign Headless Nextjs",
                                                 "height": 800,
                                                 "width": 800,
                                                 "variations": [
                                                     {
-                                                        "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/macdonaldesign-headless-nextjs_0.png?h=fbf7a813\u0026itok=LOG5N1RF"
+                                                        "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-08/macdonaldesign-headless-nextjs_0.png?h=fbf7a813&itok=LOG5N1RF"
                                                     }
                                                 ]
                                             }
@@ -238,7 +251,9 @@
                                 "id": "268",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6"],
+                                "columnWidth": [
+                                    "col-lg-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -246,7 +261,7 @@
                                         "id": "267",
                                         "verticalAlign": true,
                                         "body": {
-                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EPHASE 2 SOLUTION\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EHeadless Next.js Application\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e8c19bdc0643eb173ab66c3da11dbfe15\u0022\u003EDeveloped a Next.js front end using TypeScript and modern React architecture.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e266104edb158b00364efe853b17d3476\u0022\u003EImplemented a headless Drupal architecture using REST API and GraphQL to retrieve content from Drupal.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e187a5080f20b3566472e25b102119f3d\u0022\u003ESeparated the content management layer from the presentation layer, allowing the front end and Drupal platform to evolve independently.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e82214da8d47e23074d2c30b52f22a13e\u0022\u003EBuilt responsive, reusable UI components with a focus on performance, accessibility, and maintainability.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022ea843cd76c8893e5c1cefa8693825e1e8\u0022\u003EUsed Node.js, NPM, and modern front-end development tooling to manage the application and build process.\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                            "processed": "<p><span class=\"subhead color-accent\">PHASE 2 SOLUTION</span></p>\n<p><span class=\"h3\">Headless Next.js Application</span></p>\n<ul>\n<li data-list-item-id=\"e8c19bdc0643eb173ab66c3da11dbfe15\">Developed a Next.js front end using TypeScript and modern React architecture.</li>\n<li data-list-item-id=\"e266104edb158b00364efe853b17d3476\">Implemented a headless Drupal architecture using REST API and GraphQL to retrieve content from Drupal.</li>\n<li data-list-item-id=\"e187a5080f20b3566472e25b102119f3d\">Separated the content management layer from the presentation layer, allowing the front end and Drupal platform to evolve independently.</li>\n<li data-list-item-id=\"e82214da8d47e23074d2c30b52f22a13e\">Built responsive, reusable UI components with a focus on performance, accessibility, and maintainability.</li>\n<li data-list-item-id=\"ea843cd76c8893e5c1cefa8693825e1e8\">Used Node.js, NPM, and modern front-end development tooling to manage the application and build process.</li>\n</ul>\n"
                                         }
                                     }
                                 ]
@@ -261,7 +276,7 @@
                             "__typename": "MediaBackgroundImage",
                             "id": "13",
                             "mediaImage2": {
-                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
+                                "url": "__ORIGIN__/sites/default/files/2026-07/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
                             }
                         },
                         "bgImagePosition": "center center",
@@ -278,7 +293,9 @@
                                 "id": "271",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6"],
+                                "columnWidth": [
+                                    "col-lg-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -286,7 +303,7 @@
                                         "id": "270",
                                         "verticalAlign": true,
                                         "body": {
-                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EPHASE 3 SOLUTION\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003ECI\/CD \u0026amp; Deployment Automation\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e90faeeed3d2241fc7fec39a37c1855dc\u0022\u003EBuilt automated Jenkins CI\/CD pipelines for development and production deployments.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e951d2d2690d0e66c3ab8093955264f19\u0022\u003EIntegrated GitHub Actions into the development workflow for automated processes and repository-level tasks.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e51e6400efd5be211a9cf130bc9ab5f30\u0022\u003EImplemented Git-based deployment workflows using separate development and production branches.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e61bd9fd4d860e6a9e86e60c5a6db246d\u0022\u003ECreated automated production release tagging and immutable release builds.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e4510a6f5a1f82f17d22cd27fc8175209\u0022\u003EBuilt deployment scripts that package application code into versioned build artifacts and deploy them to the appropriate environment.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e0739ab08a2fd6144f10f1a5707258c8c\u0022\u003EImplemented automated Drupal deployment tasks including database updates, configuration imports, cache rebuilding, and cleanup of previous releases.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022ebff42959867b531cc2fba6cad85402f9\u0022\u003EDesigned a release-based deployment architecture with shared files and configuration separated from application code.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e15d56b4af8027a968c3a8fb48886e504\u0022\u003EAdded automated deployment verification and failure-stage tracking to improve pipeline visibility and troubleshooting.\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                            "processed": "<p><span class=\"subhead color-accent\">PHASE 3 SOLUTION</span></p>\n<p><span class=\"h3\">CI/CD &amp; Deployment Automation</span></p>\n<ul>\n<li data-list-item-id=\"e90faeeed3d2241fc7fec39a37c1855dc\">Built automated Jenkins CI/CD pipelines for development and production deployments.</li>\n<li data-list-item-id=\"e951d2d2690d0e66c3ab8093955264f19\">Integrated GitHub Actions into the development workflow for automated processes and repository-level tasks.</li>\n<li data-list-item-id=\"e51e6400efd5be211a9cf130bc9ab5f30\">Implemented Git-based deployment workflows using separate development and production branches.</li>\n<li data-list-item-id=\"e61bd9fd4d860e6a9e86e60c5a6db246d\">Created automated production release tagging and immutable release builds.</li>\n<li data-list-item-id=\"e4510a6f5a1f82f17d22cd27fc8175209\">Built deployment scripts that package application code into versioned build artifacts and deploy them to the appropriate environment.</li>\n<li data-list-item-id=\"e0739ab08a2fd6144f10f1a5707258c8c\">Implemented automated Drupal deployment tasks including database updates, configuration imports, cache rebuilding, and cleanup of previous releases.</li>\n<li data-list-item-id=\"ebff42959867b531cc2fba6cad85402f9\">Designed a release-based deployment architecture with shared files and configuration separated from application code.</li>\n<li data-list-item-id=\"e15d56b4af8027a968c3a8fb48886e504\">Added automated deployment verification and failure-stage tracking to improve pipeline visibility and troubleshooting.</li>\n</ul>\n"
                                         }
                                     }
                                 ]
@@ -296,7 +313,9 @@
                                 "id": "280",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6"],
+                                "columnWidth": [
+                                    "col-lg-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -308,13 +327,13 @@
                                             "__typename": "MediaImage",
                                             "id": "94",
                                             "mediaImage": {
-                                                "url": "__ORIGIN__\/sites\/default\/files\/2026-08\/MacDonalDesign-phase3.jpg",
-                                                "alt": "MacDonalDesign Phase 3 CI\/CD Pipeline infographic ",
+                                                "url": "__ORIGIN__/sites/default/files/2026-08/MacDonalDesign-phase3.jpg",
+                                                "alt": "MacDonalDesign Phase 3 CI/CD Pipeline infographic ",
                                                 "height": 800,
                                                 "width": 800,
                                                 "variations": [
                                                     {
-                                                        "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/MacDonalDesign-phase3.jpg?h=fbf7a813\u0026itok=3eFhaNdA"
+                                                        "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-08/MacDonalDesign-phase3.jpg?h=fbf7a813&itok=3eFhaNdA"
                                                     }
                                                 ]
                                             }
@@ -343,7 +362,10 @@
                                 "id": "274",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6", "offset-lg-3"],
+                                "columnWidth": [
+                                    "col-lg-6",
+                                    "offset-lg-3"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -351,18 +373,52 @@
                                         "id": "273",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ESUCCESS\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EImpact\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EThe portfolio became a working demonstration of the development practices it represents. The combination of Drupal 11, Next.js, TypeScript, REST API, GraphQL, GitHub, GitHub Actions, Jenkins, CI\/CD, and headless architecture created a scalable platform that separates content management from the front-end experience.\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EThe automated deployment infrastructure also transformed the site from a manually maintained project into a repeatable software delivery process. Code changes can move from GitHub through automated builds and testing into versioned development or production releases, with Drupal updates and deployment tasks handled through Jenkins.\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EThe result is both a portfolio website and a real-world example of modern web architecture, API integration, DevOps, automation, version control, and full-stack development.\u003C\/p\u003E\n"
+                                            "processed": "<p class=\"text-align-center\"><span class=\"subhead color-accent\">SUCCESS</span></p>\n<p class=\"text-align-center\"><span class=\"h3\">Impact</span></p>\n<p class=\"text-align-center\">The portfolio became a working demonstration of the development practices it represents. The combination of Drupal 11, Next.js, TypeScript, REST API, GraphQL, GitHub, GitHub Actions, Jenkins, CI/CD, and headless architecture created a scalable platform that separates content management from the front-end experience.</p>\n<p class=\"text-align-center\">The automated deployment infrastructure also transformed the site from a manually maintained project into a repeatable software delivery process. Code changes can move from GitHub through automated builds and testing into versioned development or production releases, with Drupal updates and deployment tasks handled through Jenkins.</p>\n<p class=\"text-align-center\">The result is both a portfolio website and a real-world example of modern web architecture, API integration, DevOps, automation, version control, and full-stack development.</p>\n"
                                         }
                                     }
                                 ]
                             }
                         ]
                     }
+                ],
+                "metatag": [
+                    {
+                        "__typename": "MetaTagValue",
+                        "attributes": {
+                            "content": "MacDonalDesign | portfolio",
+                            "name": "title"
+                        }
+                    },
+                    {
+                        "__typename": "MetaTagValue",
+                        "attributes": {
+                            "content": "index, follow",
+                            "name": "robots"
+                        }
+                    },
+                    {
+                        "__typename": "MetaTagLink",
+                        "tag": "link",
+                        "attributes": {
+                            "href": "__ORIGIN__/portfolio/macdonaldesign",
+                            "hreflang": null,
+                            "media": null,
+                            "rel": "canonical",
+                            "sizes": null,
+                            "type": null
+                        }
+                    }
                 ]
             },
             "breadcrumbs": [
-                { "url": "\/", "title": "Home" },
-                { "url": "\/portfolio", "title": "Portfolio" }
+                {
+                    "url": "/",
+                    "title": "Home"
+                },
+                {
+                    "url": "/portfolio",
+                    "title": "Portfolio"
+                }
             ]
         }
     }

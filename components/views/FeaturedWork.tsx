@@ -29,6 +29,7 @@ export default async function FeaturedWork() {
                                     autoplay="1"
                                     show="1"
                                     scroll="1"
+                                    alt={post.title}
                                 />
                             ) : (
                                 <Image
@@ -38,7 +39,7 @@ export default async function FeaturedWork() {
                                     }
                                     height={400}
                                     width={600}
-                                    alt=""
+                                    alt={post.title}
                                     unoptimized
                                 />
                             )}

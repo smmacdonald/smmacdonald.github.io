@@ -13,7 +13,7 @@
                         "__typename": "MediaBackgroundImage",
                         "id": "16",
                         "mediaImage2": {
-                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/shawn-macdonald-abstract-flow-bg-img_0.jpg"
+                            "url": "__ORIGIN__/sites/default/files/2026-07/shawn-macdonald-abstract-flow-bg-img_0.jpg"
                         }
                     },
                     "bgImagePosition": "center center",
@@ -30,7 +30,9 @@
                             "id": "72",
                             "bgColor": null,
                             "sectionId": null,
-                            "columnWidth": ["col-lg-6"],
+                            "columnWidth": [
+                                "col-lg-6"
+                            ],
                             "styledBox": false,
                             "element": [
                                 {
@@ -38,7 +40,7 @@
                                     "id": "71",
                                     "verticalAlign": false,
                                     "body": {
-                                        "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EABOUT\u003C\/span\u003E\u003C\/p\u003E\n\u003Ch1\u003EBuilding better\u003Cbr\u003E\u003Cspan class=\u0022color-accent\u0022\u003Edigital experiences.\u003C\/span\u003E\u003C\/h1\u003E\n\u003Cp\u003EIm a Lead Developer and Technical Partner helping organizations plan, build, and scale modern websites.\u003C\/p\u003E\n\u003Cp\u003EWith 15+ years of experience, I bridge strategy, design, and engineering to deliver websites that are scalable, performant, and built to last.\u003C\/p\u003E\n"
+                                        "processed": "<p><span class=\"subhead color-accent\">ABOUT</span></p>\n<h1>Building better<br><span class=\"color-accent\">digital experiences.</span></h1>\n<p>Im a Lead Developer and Technical Partner helping organizations plan, build, and scale modern websites.</p>\n<p>With 15+ years of experience, I bridge strategy, design, and engineering to deliver websites that are scalable, performant, and built to last.</p>\n"
                                     }
                                 }
                             ]
@@ -65,7 +67,9 @@
                                 "id": "49",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-12"],
+                                "columnWidth": [
+                                    "col-lg-12"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -73,7 +77,7 @@
                                         "id": "48",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EWHAT I DO\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center mb-5\u0022\u003E\u003Cspan class=\u0022h2\u0022\u003EStrategy. Development. Execution.\u003C\/span\u003E\u003C\/p\u003E\n"
+                                            "processed": "<p class=\"text-align-center\"><span class=\"subhead color-accent\">WHAT I DO</span></p>\n<p class=\"text-align-center mb-5\"><span class=\"h2\">Strategy. Development. Execution.</span></p>\n"
                                         }
                                     }
                                 ]
@@ -83,7 +87,9 @@
                                 "id": "53",
                                 "bgColor": "rgba(255, 255, 255, 0.05)",
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-4"],
+                                "columnWidth": [
+                                    "col-lg-4"
+                                ],
                                 "styledBox": true,
                                 "element": [
                                     {
@@ -91,7 +97,7 @@
                                         "id": "52",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-users fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003ETechnical Leadership\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003E\u003Cstrong\u003ESkills\u003C\/strong\u003E\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003ETechnical Strategy, Cross-Functional Leadership, Agile \u0026amp; Scrum Methodologies, Project Planning \u0026amp; Roadmapping, Stakeholder \u0026amp; Client Communication, Mentorship \u0026amp; Code Reviews, Process Improvement, Vendor Collaboration\u003C\/p\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-users fa-4x color-accent mb-5\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">Technical Leadership</span></p>\n<p class=\"text-align-center\"><span class=\"subhead color-accent\"><strong>Skills</strong></span></p>\n<p class=\"text-align-center\">Technical Strategy, Cross-Functional Leadership, Agile &amp; Scrum Methodologies, Project Planning &amp; Roadmapping, Stakeholder &amp; Client Communication, Mentorship &amp; Code Reviews, Process Improvement, Vendor Collaboration</p>\n"
                                         }
                                     }
                                 ]
@@ -101,7 +107,9 @@
                                 "id": "55",
                                 "bgColor": "rgba(255, 255, 255, 0.05)",
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-4"],
+                                "columnWidth": [
+                                    "col-lg-4"
+                                ],
                                 "styledBox": true,
                                 "element": [
                                     {
@@ -109,7 +117,7 @@
                                         "id": "54",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-code fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EWeb Development\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ETechnologies\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EDrupal 7\u201311, WordPress, Shopify, Magento, Next.js, React, HTML5, CSS3, SASS \/ LESS, jQuery, Bootstrap\u003C\/p\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-code fa-4x color-accent mb-5\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">Web Development</span></p>\n<p class=\"text-align-center\"><span class=\"subhead color-accent\">Technologies</span></p>\n<p class=\"text-align-center\">Drupal 7–11, WordPress, Shopify, Magento, Next.js, React, HTML5, CSS3, SASS / LESS, jQuery, Bootstrap</p>\n"
                                         }
                                     }
                                 ]
@@ -119,7 +127,9 @@
                                 "id": "51",
                                 "bgColor": "rgba(255, 255, 255, 0.05)",
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-4"],
+                                "columnWidth": [
+                                    "col-lg-4"
+                                ],
                                 "styledBox": true,
                                 "element": [
                                     {
@@ -127,7 +137,7 @@
                                         "id": "50",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-gear-api fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EBackend Development \u0026amp; Integrations\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ETechnologies\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EPHP, Python, Node.js, REST APIs, JSON \/ XML, AJAX, GraphQL, Composer, Drush, YAML\u003C\/p\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-gear-api fa-4x color-accent mb-5\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">Backend Development &amp; Integrations</span></p>\n<p class=\"text-align-center\"><span class=\"subhead color-accent\">Technologies</span></p>\n<p class=\"text-align-center\">PHP, Python, Node.js, REST APIs, JSON / XML, AJAX, GraphQL, Composer, Drush, YAML</p>\n"
                                         }
                                     }
                                 ]
@@ -137,7 +147,9 @@
                                 "id": "75",
                                 "bgColor": "rgba(255, 255, 255, 0.05)",
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-4"],
+                                "columnWidth": [
+                                    "col-lg-4"
+                                ],
                                 "styledBox": true,
                                 "element": [
                                     {
@@ -145,7 +157,7 @@
                                         "id": "74",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-layer-group fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EDevOps \u0026amp; Infrastructure\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ETechnologies\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EJenkins, CI\/CD Pipelines, Git \/ GitHub \/ GitLab, Build Automation, Test Automation, Release Management, Linux \/ Unix, Bash \/ Shell Scripting, Docker, Kubernetes, DDEV, AWS, Azure, Acquia Cloud, Pantheon\u003C\/p\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-layer-group fa-4x color-accent mb-5\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">DevOps &amp; Infrastructure</span></p>\n<p class=\"text-align-center\"><span class=\"subhead color-accent\">Technologies</span></p>\n<p class=\"text-align-center\">Jenkins, CI/CD Pipelines, Git / GitHub / GitLab, Build Automation, Test Automation, Release Management, Linux / Unix, Bash / Shell Scripting, Docker, Kubernetes, DDEV, AWS, Azure, Acquia Cloud, Pantheon</p>\n"
                                         }
                                     }
                                 ]
@@ -155,7 +167,9 @@
                                 "id": "79",
                                 "bgColor": "rgba(255, 255, 255, 0.05)",
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-4"],
+                                "columnWidth": [
+                                    "col-lg-4"
+                                ],
                                 "styledBox": true,
                                 "element": [
                                     {
@@ -163,7 +177,7 @@
                                         "id": "78",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-database fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EDatabases \u0026amp; Tools\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ETechnologies\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EMySQL, MongoDB, Adobe Photoshop, Adobe Illustrator, Adobe InDesign, Microsoft Office Suite\u003C\/p\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-database fa-4x color-accent mb-5\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">Databases &amp; Tools</span></p>\n<p class=\"text-align-center\"><span class=\"subhead color-accent\">Technologies</span></p>\n<p class=\"text-align-center\">MySQL, MongoDB, Adobe Photoshop, Adobe Illustrator, Adobe InDesign, Microsoft Office Suite</p>\n"
                                         }
                                     }
                                 ]
@@ -173,7 +187,9 @@
                                 "id": "77",
                                 "bgColor": "rgba(255, 255, 255, 0.05)",
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-4"],
+                                "columnWidth": [
+                                    "col-lg-4"
+                                ],
                                 "styledBox": true,
                                 "element": [
                                     {
@@ -181,7 +197,7 @@
                                         "id": "76",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-arrow-trend-up fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EPerformance, Search \u0026amp; Analytics\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ETechnologies\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003ECore Web Vitals, Technical SEO, Metadata Optimization, Google Analytics 4, Google Tag Manager, Google Search Console, SearchStax, Apache Solr\u003C\/p\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-arrow-trend-up fa-4x color-accent mb-5\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">Performance, Search &amp; Analytics</span></p>\n<p class=\"text-align-center\"><span class=\"subhead color-accent\">Technologies</span></p>\n<p class=\"text-align-center\">Core Web Vitals, Technical SEO, Metadata Optimization, Google Analytics 4, Google Tag Manager, Google Search Console, SearchStax, Apache Solr</p>\n"
                                         }
                                     }
                                 ]
@@ -196,7 +212,7 @@
                             "__typename": "MediaBackgroundImage",
                             "id": "10",
                             "mediaImage2": {
-                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/pixel_pattern_accent.png"
+                                "url": "__ORIGIN__/sites/default/files/2026-07/pixel_pattern_accent.png"
                             }
                         },
                         "bgImagePosition": "center center",
@@ -213,7 +229,10 @@
                                 "id": "58",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-3", "col-md-6"],
+                                "columnWidth": [
+                                    "col-lg-3",
+                                    "col-md-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -221,7 +240,7 @@
                                         "id": "57",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-layer-group fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003E15+\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EYears of experience building modern web solutions\u003C\/p\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-layer-group fa-4x color-accent mb-5\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">15+</span></p>\n<p class=\"text-align-center\">Years of experience building modern web solutions</p>\n"
                                         }
                                     }
                                 ]
@@ -231,7 +250,10 @@
                                 "id": "60",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-3", "col-md-6"],
+                                "columnWidth": [
+                                    "col-lg-3",
+                                    "col-md-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -239,7 +261,7 @@
                                         "id": "59",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-arrow-trend-up fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003E1m+\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EYearly users on high-traffic web platforms\u003C\/p\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-arrow-trend-up fa-4x color-accent mb-5\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">1m+</span></p>\n<p class=\"text-align-center\">Yearly users on high-traffic web platforms</p>\n"
                                         }
                                     }
                                 ]
@@ -249,7 +271,10 @@
                                 "id": "62",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-3", "col-md-6"],
+                                "columnWidth": [
+                                    "col-lg-3",
+                                    "col-md-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -257,7 +282,7 @@
                                         "id": "61",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-arrows-rotate fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EEnd-to-End\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EFrom strategy and planning to launch and support\u003C\/p\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-arrows-rotate fa-4x color-accent mb-5\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">End-to-End</span></p>\n<p class=\"text-align-center\">From strategy and planning to launch and support</p>\n"
                                         }
                                     }
                                 ]
@@ -267,7 +292,10 @@
                                 "id": "64",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-3", "col-md-6"],
+                                "columnWidth": [
+                                    "col-lg-3",
+                                    "col-md-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -275,7 +303,7 @@
                                         "id": "63",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-user fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EClient Focused\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EClear communication, transparent process, measurable results\u003C\/p\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-user fa-4x color-accent mb-5\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">Client Focused</span></p>\n<p class=\"text-align-center\">Clear communication, transparent process, measurable results</p>\n"
                                         }
                                     }
                                 ]
@@ -301,7 +329,9 @@
                                 "id": "67",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6"],
+                                "columnWidth": [
+                                    "col-lg-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -309,7 +339,7 @@
                                         "id": "66",
                                         "verticalAlign": true,
                                         "body": {
-                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EMY APPROACH\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EAligned from the start.\u003C\/span\u003E\u003Cbr\u003E\u003Cspan class=\u0022h3\u0022\u003EBuilt for the future.\u003C\/span\u003E\u003C\/p\u003E\n"
+                                            "processed": "<p><span class=\"subhead color-accent\">MY APPROACH</span></p>\n<p><span class=\"h3\">Aligned from the start.</span><br><span class=\"h3\">Built for the future.</span></p>\n"
                                         }
                                     }
                                 ]
@@ -319,7 +349,9 @@
                                 "id": "69",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6"],
+                                "columnWidth": [
+                                    "col-lg-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -327,7 +359,7 @@
                                         "id": "68",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Ctable class=\u0022table table-borderless\u0022\u003E\n\u003Ctbody\u003E\n\u003Ctr\u003E\n\u003Ctd\u003E\n\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-magnifying-glass fa-2x color-accent\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003C\/td\u003E\n\u003Ctd\u003EUnderstanding the goals, users, \u0026amp; long-term vision.\u003C\/td\u003E\n\u003C\/tr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003E\n\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-puzzle-piece fa-2x color-accent\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003C\/td\u003E\n\u003Ctd\u003ECreate a clear technical approach that reduces complexity.\u003C\/td\u003E\n\u003C\/tr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003E\n\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-code fa-2x color-accent\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003C\/td\u003E\n\u003Ctd\u003EDevelop Scalable Solutions with performance and maintainability in mind.\u003C\/td\u003E\n\u003C\/tr\u003E\n\u003Ctr\u003E\n\u003Ctd\u003E\n\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-badge-check fa-2x color-accent\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003C\/td\u003E\n\u003Ctd\u003EDeliver results that drive real impact\u003C\/td\u003E\n\u003C\/tr\u003E\n\u003C\/tbody\u003E\n\u003C\/table\u003E\n"
+                                            "processed": "<table class=\"table table-borderless\">\n<tbody>\n<tr>\n<td>\n<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-magnifying-glass fa-2x color-accent\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n</td>\n<td>Understanding the goals, users, &amp; long-term vision.</td>\n</tr>\n<tr>\n<td>\n<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-puzzle-piece fa-2x color-accent\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n</td>\n<td>Create a clear technical approach that reduces complexity.</td>\n</tr>\n<tr>\n<td>\n<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-code fa-2x color-accent\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n</td>\n<td>Develop Scalable Solutions with performance and maintainability in mind.</td>\n</tr>\n<tr>\n<td>\n<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-badge-check fa-2x color-accent\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n</td>\n<td>Deliver results that drive real impact</td>\n</tr>\n</tbody>\n</table>\n"
                                         }
                                     }
                                 ]
@@ -346,7 +378,7 @@
                     {
                         "__typename": "MetaTagValue",
                         "attributes": {
-                            "content": "Learn more about a developer blending engineering, design, and fine art\u2014specializing in Drupal, WordPress, modern JS, and scalable systems.",
+                            "content": "Learn more about a developer blending engineering, design, and fine art—specializing in Drupal, WordPress, modern JS, and scalable systems.",
                             "name": "description"
                         }
                     },
@@ -361,7 +393,7 @@
                         "__typename": "MetaTagLink",
                         "tag": "link",
                         "attributes": {
-                            "href": "__ORIGIN__\/about",
+                            "href": "__ORIGIN__/about",
                             "hreflang": null,
                             "media": null,
                             "rel": "canonical",
@@ -371,7 +403,12 @@
                     }
                 ]
             },
-            "breadcrumbs": [{ "url": "\/", "title": "Home" }]
+            "breadcrumbs": [
+                {
+                    "url": "/",
+                    "title": "Home"
+                }
+            ]
         }
     }
 }

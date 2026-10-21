@@ -88,7 +88,7 @@ test.describe("mobile navigation", () => {
     })
 })
 
-test("keyboard users can tab through the header links in order", async ({
+test("keyboard users reach the skip link first, then the header links in order", async ({
     page,
     browserName,
 }) => {
@@ -110,7 +110,8 @@ test("keyboard users can tab through the header links in order", async ({
         )
     }
 
-    expect(reached.slice(0, 5)).toEqual([
+    expect(reached).toEqual([
+        "#main-content",
         "/",
         "/",
         "/about",
@@ -119,22 +120,102 @@ test("keyboard users can tab through the header links in order", async ({
     ])
 })
 
-// Known gaps from the audit: no skip link and the off-canvas menu ignores Escape.
-test.fixme("a skip link is the first focusable element", async ({ page }) => {
+test("the skip link is hidden until focused and moves focus to the main content", async ({
+    page,
+    browserName,
+}) => {
+    test.skip(
+        browserName === "webkit",
+        "Safari does not Tab to links by default"
+    )
     await page.goto("/")
-    await page.keyboard.press("Tab")
+    const skipLink = page.getByRole("link", { name: "Skip to main content" })
 
-    await expect(
-        page.getByRole("link", { name: /skip to (main )?content/i })
-    ).toBeFocused()
+    await expect(skipLink).not.toBeInViewport()
+    await page.keyboard.press("Tab")
+    await expect(skipLink).toBeFocused()
+    await expect(skipLink).toBeInViewport()
+
+    await page.keyboard.press("Enter")
+
+    await expect(page.locator("main#main-content")).toBeFocused()
 })
 
-test.fixme("Escape closes the off-canvas menu", async ({ page }) => {
-    await page.setViewportSize({ width: 390, height: 844 })
-    await page.goto("/")
-    await page.locator("header a.mobile-menu-toggle").click()
+test("pages have a single main landmark", async ({ page }) => {
+    await page.goto("/about")
 
-    await page.keyboard.press("Escape")
+    await expect(page.getByRole("main")).toHaveCount(1)
+    await expect(
+        page.getByRole("main").getByRole("heading", { level: 1 })
+    ).toHaveCount(1)
+})
 
-    await expect(page.locator(".off-canvas")).not.toHaveClass(/active/)
+test.describe("off-canvas menu accessibility", () => {
+    test.use({ viewport: { width: 390, height: 844 } })
+
+    test("the closed menu is not focusable and the toggle reports its state", async ({
+        page,
+    }) => {
+        await page.goto("/")
+        const toggle = page.locator("header a.mobile-menu-toggle")
+
+        await expect(page.locator(".off-canvas")).toHaveAttribute("inert", "")
+        await expect(toggle).toHaveAttribute("role", "button")
+        // The accessible name must contain the link's visible text (WCAG 2.5.3).
+        await expect(toggle).toHaveAccessibleName(/mobile menu toggle/i)
+        await expect(toggle).not.toHaveAttribute("aria-label", /.+/)
+        await expect(toggle).toHaveAttribute("aria-expanded", "false")
+
+        await toggle.click()
+
+        await expect(page.locator(".off-canvas")).not.toHaveAttribute(
+            "inert",
+            ""
+        )
+        await expect(toggle).toHaveAttribute("aria-expanded", "true")
+    })
+
+    test("opening the menu does not scroll the page to the top", async ({
+        page,
+    }) => {
+        await page.goto("/portfolio")
+        // The site uses smooth scrolling; jump instantly and let the position settle.
+        await page.evaluate(() =>
+            window.scrollTo({ top: 500, behavior: "instant" })
+        )
+        await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(500)
+
+        await page.locator("header a.mobile-menu-toggle").click()
+
+        await expect(page.locator(".off-canvas")).toHaveClass(/active/)
+        // Give a wrongly followed "#" link time to scroll before checking.
+        await page.waitForTimeout(600)
+        expect(await page.evaluate(() => window.scrollY)).toBe(500)
+    })
+
+    test("Escape closes the menu and returns focus to the toggle", async ({
+        page,
+    }) => {
+        await page.goto("/")
+        const toggle = page.locator("header a.mobile-menu-toggle")
+        await toggle.click()
+
+        await page.keyboard.press("Escape")
+
+        await expect(page.locator(".off-canvas")).not.toHaveClass(/active/)
+        await expect(toggle).toBeFocused()
+    })
+
+    test("the menu closes after following a link", async ({ page }) => {
+        await page.goto("/")
+        await page.locator("header a.mobile-menu-toggle").click()
+
+        await page
+            .locator(".off-canvas")
+            .getByRole("link", { name: "About" })
+            .click()
+
+        await expect(page).toHaveURL(/\/about$/)
+        await expect(page.locator(".off-canvas")).not.toHaveClass(/active/)
+    })
 })

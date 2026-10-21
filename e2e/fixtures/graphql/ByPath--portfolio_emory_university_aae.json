@@ -13,7 +13,7 @@
                         "__typename": "MediaBackgroundImage",
                         "id": "14",
                         "mediaImage2": {
-                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/portfolio-header.jpg"
+                            "url": "__ORIGIN__/sites/default/files/2026-07/portfolio-header.jpg"
                         }
                     },
                     "bgImagePosition": "center center",
@@ -30,7 +30,9 @@
                             "id": "106",
                             "bgColor": null,
                             "sectionId": null,
-                            "columnWidth": ["col-lg-6"],
+                            "columnWidth": [
+                                "col-lg-6"
+                            ],
                             "styledBox": false,
                             "element": [
                                 {
@@ -38,7 +40,7 @@
                                     "id": "105",
                                     "verticalAlign": false,
                                     "body": {
-                                        "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EHigher Education\u003C\/span\u003E\u003C\/p\u003E\n\u003Ch1\u003EEmory University - AAE\u003C\/h1\u003E\n\u003Cp\u003EA full rebuild of a university website paired with a migration of its e-commerce system to Shopify. The goal was to eliminate outdated workflows, improve performance, and unify content and commerce into a seamless user experience.\u003C\/p\u003E\n\u003Cp\u003E\u003Ca class=\u0022button transparent\u0022 href=\u0022https:\/\/together.emory.edu\u0022 target=\u0022_blank\u0022 tabindex=\u00220\u0022\u003EView Website\u003C\/a\u003E\u003C\/p\u003E\n"
+                                        "processed": "<p><span class=\"subhead color-accent\">Higher Education</span></p>\n<h1>Emory University - AAE</h1>\n<p>A full rebuild of a university website paired with a migration of its e-commerce system to Shopify. The goal was to eliminate outdated workflows, improve performance, and unify content and commerce into a seamless user experience.</p>\n<p><a class=\"button transparent\" href=\"https://together.emory.edu\" target=\"_blank\" tabindex=\"0\">View Website</a></p>\n"
                                     }
                                 }
                             ]
@@ -48,7 +50,9 @@
                             "id": "127",
                             "bgColor": null,
                             "sectionId": null,
-                            "columnWidth": ["col-lg-6"],
+                            "columnWidth": [
+                                "col-lg-6"
+                            ],
                             "styledBox": false,
                             "element": [
                                 {
@@ -60,13 +64,13 @@
                                         "__typename": "MediaImage",
                                         "id": "35",
                                         "mediaImage": {
-                                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/Together-giving-emory-devices.png",
+                                            "url": "__ORIGIN__/sites/default/files/2026-07/Together-giving-emory-devices.png",
                                             "alt": "Emory University split website Drupal 11 and Shopify custom themes",
                                             "height": 565,
                                             "width": 911,
                                             "variations": [
                                                 {
-                                                    "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/Together-giving-emory-devices.png?h=10e7ca6f\u0026itok=RJMkHtP1"
+                                                    "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-07/Together-giving-emory-devices.png?h=10e7ca6f&itok=RJMkHtP1"
                                                 }
                                             ]
                                         }
@@ -96,7 +100,10 @@
                                 "id": "150",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6", "offset-lg-3"],
+                                "columnWidth": [
+                                    "col-lg-6",
+                                    "offset-lg-3"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -104,7 +111,7 @@
                                         "id": "149",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ECase Study\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EChallenge\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EI inherited a templated website built on an outdated Drupal 9 architecture that combined both content and e-commerce into a single system. The site suffered from significant performance issues, slow load times, and lacked scalability. Although React had been layered in to improve speed, the underlying structure wasn\u2019t designed to support modern performance or growth.\u003C\/p\u003E\n"
+                                            "processed": "<p class=\"text-align-center\"><span class=\"subhead color-accent\">Case Study</span></p>\n<p class=\"text-align-center\"><span class=\"h3\">Challenge</span></p>\n<p class=\"text-align-center\">I inherited a templated website built on an outdated Drupal 9 architecture that combined both content and e-commerce into a single system. The site suffered from significant performance issues, slow load times, and lacked scalability. Although React had been layered in to improve speed, the underlying structure wasn’t designed to support modern performance or growth.</p>\n"
                                         }
                                     }
                                 ]
@@ -119,7 +126,7 @@
                             "__typename": "MediaBackgroundImage",
                             "id": "13",
                             "mediaImage2": {
-                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
+                                "url": "__ORIGIN__/sites/default/files/2026-07/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
                             }
                         },
                         "bgImagePosition": "center center",
@@ -136,7 +143,9 @@
                                 "id": "153",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6"],
+                                "columnWidth": [
+                                    "col-lg-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -144,7 +153,7 @@
                                         "id": "152",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ESolution\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EDecoupling \u0026amp; Rebuild\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003ETo stabilize and modernize the platform, I led a foundational restructuring:\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e446628371ffc5bf38292473425a99eb3\u0022\u003ESeparated e-commerce from the main website, migrating all transactional functionality to Shopify\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e713152389340a21aecee11a13bfe765b\u0022\u003ERebuilt the website on Drupal 11, establishing a scalable, future-ready CMS\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e8f30d3b9f4ad8080011e6aa68050e419\u0022\u003ERedesigned the content architecture, introducing structured content types such as Person, Event, Article, Trip, and Vlog\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e4f37df884dc0c72ae9621f3b39c4e8b0\u0022\u003EImplemented lazy loading across all media, significantly improving perceived performance\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022efcded48e80db95b83e9d240e632300a0\u0022\u003ERemoved unnecessary complexity, eliminating reliance on React for performance fixes and instead solving issues at the architectural level\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                            "processed": "<p><span class=\"subhead color-accent\">Solution</span></p>\n<p><span class=\"h3\">Decoupling &amp; Rebuild</span></p>\n<p>To stabilize and modernize the platform, I led a foundational restructuring:</p>\n<ul>\n<li data-list-item-id=\"e446628371ffc5bf38292473425a99eb3\">Separated e-commerce from the main website, migrating all transactional functionality to Shopify</li>\n<li data-list-item-id=\"e713152389340a21aecee11a13bfe765b\">Rebuilt the website on Drupal 11, establishing a scalable, future-ready CMS</li>\n<li data-list-item-id=\"e8f30d3b9f4ad8080011e6aa68050e419\">Redesigned the content architecture, introducing structured content types such as Person, Event, Article, Trip, and Vlog</li>\n<li data-list-item-id=\"e4f37df884dc0c72ae9621f3b39c4e8b0\">Implemented lazy loading across all media, significantly improving perceived performance</li>\n<li data-list-item-id=\"efcded48e80db95b83e9d240e632300a0\">Removed unnecessary complexity, eliminating reliance on React for performance fixes and instead solving issues at the architectural level</li>\n</ul>\n"
                                         }
                                     }
                                 ]
@@ -154,7 +163,9 @@
                                 "id": "155",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6"],
+                                "columnWidth": [
+                                    "col-lg-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -166,13 +177,13 @@
                                             "__typename": "MediaImage",
                                             "id": "38",
                                             "mediaImage": {
-                                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/spaghetti-code.png",
+                                                "url": "__ORIGIN__/sites/default/files/2026-07/spaghetti-code.png",
                                                 "alt": "Emory University spaghetti code design",
                                                 "height": 747,
                                                 "width": 1200,
                                                 "variations": [
                                                     {
-                                                        "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/spaghetti-code.png?h=05130931\u0026itok=KGuKvn-G"
+                                                        "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-07/spaghetti-code.png?h=05130931&itok=KGuKvn-G"
                                                     }
                                                 ]
                                             }
@@ -201,7 +212,10 @@
                                 "id": "158",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6", "offset-lg-3"],
+                                "columnWidth": [
+                                    "col-lg-6",
+                                    "offset-lg-3"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -209,18 +223,52 @@
                                         "id": "157",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ESuccess\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EImpact\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EBy decoupling the systems and rebuilding with a focus on scalability and performance, the platform transformed from a slow, rigid experience into a fast, maintainable ecosystem. The marketing site became more flexible and content-driven, while the e-commerce experience gained reliability and performance through Shopify.\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EThis separation allowed each platform to excel in its role\u2014resulting in a cleaner user experience, faster load times, and a foundation built for long-term growth.\u003C\/p\u003E\n"
+                                            "processed": "<p class=\"text-align-center\"><span class=\"subhead color-accent\">Success</span></p>\n<p class=\"text-align-center\"><span class=\"h3\">Impact</span></p>\n<p class=\"text-align-center\">By decoupling the systems and rebuilding with a focus on scalability and performance, the platform transformed from a slow, rigid experience into a fast, maintainable ecosystem. The marketing site became more flexible and content-driven, while the e-commerce experience gained reliability and performance through Shopify.</p>\n<p class=\"text-align-center\">This separation allowed each platform to excel in its role—resulting in a cleaner user experience, faster load times, and a foundation built for long-term growth.</p>\n"
                                         }
                                     }
                                 ]
                             }
                         ]
                     }
+                ],
+                "metatag": [
+                    {
+                        "__typename": "MetaTagValue",
+                        "attributes": {
+                            "content": "Emory University - AAE | portfolio",
+                            "name": "title"
+                        }
+                    },
+                    {
+                        "__typename": "MetaTagValue",
+                        "attributes": {
+                            "content": "index, follow",
+                            "name": "robots"
+                        }
+                    },
+                    {
+                        "__typename": "MetaTagLink",
+                        "tag": "link",
+                        "attributes": {
+                            "href": "__ORIGIN__/portfolio/emory-university-aae",
+                            "hreflang": null,
+                            "media": null,
+                            "rel": "canonical",
+                            "sizes": null,
+                            "type": null
+                        }
+                    }
                 ]
             },
             "breadcrumbs": [
-                { "url": "\/", "title": "Home" },
-                { "url": "\/portfolio", "title": "Portfolio" }
+                {
+                    "url": "/",
+                    "title": "Home"
+                },
+                {
+                    "url": "/portfolio",
+                    "title": "Portfolio"
+                }
             ]
         }
     }

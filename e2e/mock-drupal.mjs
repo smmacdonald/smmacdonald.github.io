@@ -127,7 +127,11 @@ export function startMockDrupal({
                     // leaves ":<port>" on relative URLs; make them plain paths.
                     .replace(/"url":":\d+(\\?\/)/g, '"url":"$1')
                 fs.mkdirSync(path.dirname(file), { recursive: true })
-                fs.writeFileSync(file, portable)
+                // Pretty-print so a re-recording produces small, reviewable diffs.
+                fs.writeFileSync(
+                    file,
+                    JSON.stringify(JSON.parse(portable), null, 4) + "\n"
+                )
                 console.log(
                     `[mock-drupal] recorded ${path.relative(FIXTURES, file)}`
                 )

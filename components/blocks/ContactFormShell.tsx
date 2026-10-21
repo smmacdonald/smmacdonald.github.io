@@ -67,13 +67,11 @@ export default function ContactFormShell({
             setSubmitted(true)
             formElement.reset()
         } catch (err) {
+            // The server's response can contain internal details; keep it in the
+            // console and show the visitor a generic message.
             console.error("SUBMIT ERROR:", err)
 
-            setError(
-                err instanceof Error
-                    ? err.message
-                    : "There was a problem submitting the form."
-            )
+            setError("There was a problem submitting the form.")
         } finally {
             setIsSubmitting(false)
         }
