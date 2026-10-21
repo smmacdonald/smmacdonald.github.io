@@ -1,6 +1,7 @@
 import { gql } from "graphql-tag"
 import paragraphSectionFields from "../fragments/paragraphSection"
 import paragraphBlockReferenceFields from "../fragments/paragraphBlockReference"
+import breadcrumbsFields from "../fragments/breadcrumbs"
 
 export default gql`
     query ByPath($path: String!) {
@@ -67,12 +68,12 @@ export default gql`
                     }
                 }
                 breadcrumbs {
-                    url
-                    title
+                    ...breadcrumbsFields
                 }
             }
         }
     }
     ${paragraphSectionFields}
     ${paragraphBlockReferenceFields}
+    ${breadcrumbsFields}
 `

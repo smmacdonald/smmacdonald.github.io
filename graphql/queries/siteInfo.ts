@@ -1,6 +1,7 @@
 import mediaImageFields from "../fragments/mediaImage"
 import mediaLinkedImageFields from "../fragments/mediaLinkedImage"
 import menuItemFields from "../fragments/menuItem"
+import paragraphSocialMediaFields from "../fragments/paragraphSocialMedia"
 
 import { gql } from "graphql-tag"
 
@@ -101,20 +102,7 @@ export default gql`
                 socialMedia {
                     __typename
                     ... on ParagraphSocialMedia {
-                        __typename
-                        id
-                        socialMediaElement {
-                            __typename
-                            ... on ParagraphSocialMediaItem {
-                                __typename
-                                id
-                                link {
-                                    url
-                                    title
-                                }
-                                socialMediaIcon
-                            }
-                        }
+                        ...paragraphSocialMediaFields
                     }
                 }
             }
@@ -145,4 +133,5 @@ export default gql`
     ${mediaImageFields}
     ${menuItemFields}
     ${mediaLinkedImageFields}
+    ${paragraphSocialMediaFields}
 `
