@@ -20,7 +20,7 @@ to `main` directly by the repository owner after local verification.
 | 4a. Accessibility and metadata | `<main>`, skip link, named links, accessible mobile menu, page titles, canonical, generic form error | PR #16 | Done |
 | 4b. Breadcrumb resilience | Always render the Home breadcrumb when Drupal returns an empty trail | PR #17 | Done; live site verified |
 | 4c. Performance quick wins | Small favicon, WOFF2 fonts, preconnect to the Drupal image host | PR #19 | Done; -390 KB per page measured |
-| 6. Documentation | These documents and the README | This branch | In review |
+| 6. Documentation | These documents and the README | PR #18 | Done |
 
 Phase 5 (CI/CD hardening) was delivered incrementally inside phases 1b to 3c rather than as a separate step.
 
