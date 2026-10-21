@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest"
+import { describe, expect, it, vi } from "vitest"
 import { parseMetadata, withHomeCanonical } from "./metadata"
 import type { MetaTagProps } from "@/types/MetaTagProps"
 
@@ -76,6 +76,72 @@ describe("parseMetadata", () => {
 
         expect(result.title).toBeUndefined()
         expect(result.alternates?.canonical).toBe("https://x.test")
+    })
+})
+
+describe("parseMetadata share image", () => {
+    const IMAGE = "https://cms.test/sites/default/files/thumb.jpg"
+
+    it("uses Drupal's legacy image_src link as the Open Graph and Twitter image", () => {
+        const result = parseMetadata([
+            value("title", "Home | portfolio"),
+            value("description", "A developer"),
+            link("image_src", IMAGE),
+        ])
+
+        expect(result.openGraph).toEqual({
+            title: "Home | portfolio",
+            description: "A developer",
+            images: [IMAGE],
+        })
+        expect(result.twitter).toEqual({
+            card: "summary_large_image",
+            title: "Home | portfolio",
+            description: "A developer",
+            images: [IMAGE],
+        })
+    })
+
+    it("prefers an explicit og:image and does not invent a Twitter card", () => {
+        const result = parseMetadata([
+            property("og:image", "https://cms.test/explicit.png"),
+            link("image_src", IMAGE),
+        ])
+
+        expect(result.openGraph?.images).toEqual([
+            "https://cms.test/explicit.png",
+        ])
+        expect(result.twitter).toBeUndefined()
+    })
+
+    it("keeps an explicit twitter:image and card when image_src is also present", () => {
+        const result = parseMetadata([
+            value("twitter:card", "summary"),
+            value("twitter:image", "https://cms.test/tw.png"),
+            link("image_src", IMAGE),
+        ])
+
+        expect((result.twitter as { card?: string }).card).toBe("summary")
+        expect(result.twitter?.images).toEqual(["https://cms.test/tw.png"])
+    })
+
+    it("adds nothing when there is no image", () => {
+        const result = parseMetadata([value("title", "x")])
+
+        expect(result.openGraph).toBeUndefined()
+        expect(result.twitter).toBeUndefined()
+    })
+
+    it("resolves a relative image URL against the Drupal host, not this site", () => {
+        vi.stubEnv("NEXT_PUBLIC_LOCAL_API_URL", "https://cms.test")
+
+        const result = parseMetadata([
+            link("image_src", "/sites/default/files/thumb.jpg"),
+        ])
+
+        expect(result.openGraph?.images).toEqual([
+            "https://cms.test/sites/default/files/thumb.jpg",
+        ])
     })
 })
 
