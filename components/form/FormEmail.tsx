@@ -9,7 +9,7 @@ export default function FormEmail({ name, field }: Props) {
     return (
         <div className={`mb-3 ${field['#webform_id']} ${field["#wrapper_attributes"]?.class?.join(" ") || ""}`}>
             <label
-                htmlFor={name}
+                htmlFor={field['#webform_id'] ?? name}
                 className="form-label"
             >
                 {field['#title']}
@@ -22,7 +22,7 @@ export default function FormEmail({ name, field }: Props) {
             </label>
 
             <input
-                id={field['#webform_id']}
+                id={field['#webform_id'] ?? name}
                 name={name}
                 type="email"
                 className="form-control"

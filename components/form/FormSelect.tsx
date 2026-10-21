@@ -9,7 +9,7 @@ export default function FormSelect({ name, field }: Props) {
     return (
         <div className={`mb-3 ${field['#webform_id']} ${field["#wrapper_attributes"]?.class?.join(" ") || ""}`}>
             <label
-                htmlFor={name}
+                htmlFor={field['#webform_id'] ?? name}
                 className="form-label"
             >
                 {field['#title']}
@@ -22,7 +22,7 @@ export default function FormSelect({ name, field }: Props) {
             </label>
 
             <select
-                id={field['#webform_id']}
+                id={field['#webform_id'] ?? name}
                 name={name}
                 className="form-select"
                 defaultValue={
