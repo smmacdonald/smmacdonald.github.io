@@ -39,6 +39,9 @@ export default function WebformContact() {
         >[0]
     ) {
         event.preventDefault()
+
+        if (isSubmitting) return
+
         setIsSubmitting(true)
         setSubmitted(false)
         setError("")

@@ -1,5 +1,4 @@
 import { MediaLinkedImageProps } from "./MediaLinkedImageProps"
-import { ParagraphSocialMediaItemProps } from "./ParagraphSocialMediaItemProps"
 import { ParagraphSocialMediaProps } from "./ParagraphSocialMediaProps"
 
 export type FooterBrandAndSocialProps = {

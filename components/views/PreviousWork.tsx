@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import PortfolioSlider from "../PortfolioSlider"
 import Image from "next/image"
 
@@ -17,21 +17,25 @@ type ProjectItemProps = {
 }
 
 export default function PreviousWork() {
-    const [termId, setTermId] = useState("")
     const [formFields, setFormFields] = useState<FormFieldItemProps[]>([])
     const [projects, setProjects] = useState<ProjectItemProps[]>([])
     const [loading, setLoading] = useState(true)
 
     const baseUrl = process.env.NEXT_PUBLIC_LOCAL_API_URL
+    const filterRequest = useRef<AbortController | null>(null)
 
-    // Fetch projects
+    // Fetch projects, ignoring any response superseded by a newer filter choice
     const fetchProjects = async (term: string) => {
+        filterRequest.current?.abort()
+        const controller = new AbortController()
+        filterRequest.current = controller
+
         try {
             const url = term
                 ? `${baseUrl}/rest/projects/archived/${term}`
                 : `${baseUrl}/rest/projects/archived`
 
-            const res = await fetch(url)
+            const res = await fetch(url, { signal: controller.signal })
 
             if (!res.ok) {
                 throw new Error(`Projects request failed: ${res.status}`)
@@ -41,6 +45,7 @@ export default function PreviousWork() {
 
             setProjects(data)
         } catch (error) {
+            if (controller.signal.aborted) return
             console.error("Failed to load projects:", error)
         }
     }
@@ -72,15 +77,8 @@ export default function PreviousWork() {
         loadInitialData()
     }, [baseUrl])
 
-    // Fetch filtered projects
-    useEffect(() => {
-        if (!termId) return
-
-        fetchProjects(termId)
-    }, [termId])
-
     const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setTermId(e.target.value)
+        fetchProjects(e.target.value)
     }
 
     if (loading)

@@ -12,8 +12,13 @@ type FeaturedProjectProps = {
 
 export default async function FeaturedWork() {
     const path = process.env.NEXT_PUBLIC_LOCAL_API_URL + '/rest/projects/featured'
-    let data = await fetch(path)
-    let posts: FeaturedProjectProps[] = await data.json()
+    const data = await fetch(path)
+
+    if (!data.ok) {
+        throw new Error(`Featured projects request failed: ${data.status}`)
+    }
+
+    const posts: FeaturedProjectProps[] = await data.json()
 
     return (
         <>

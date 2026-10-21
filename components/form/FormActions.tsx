@@ -5,7 +5,7 @@ type Props = {
     field: WebformFieldProps
 }
 
-export default function FormActions({ name, field }: Props) {
+export default function FormActions({ field }: Props) {
     return (
         <div className="mt-4">
             <button
