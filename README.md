@@ -256,7 +256,7 @@ Export to GitHub Pages" workflow manually** to publish it. Full details, rollbac
 * Content is a snapshot taken at build time; it updates only when the site is rebuilt.
 * GitHub Pages cannot set security headers and serves every file with a 10-minute cache lifetime.
 * The site needs a reachable Drupal at build time (not at runtime, except for the contact form submit).
-* Mobile load performance has a measured baseline but has not been optimised yet; see the performance review.
+* Simulated mobile load time is still slow (Lighthouse LCP about 7 to 8 s); the quick wins cut about 390 KB per page, and larger items (the 406 KB stylesheet, Drupal image styles) remain. See the performance review.
 
 ## Purpose
 
