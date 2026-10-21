@@ -19,7 +19,8 @@ to `main` directly by the repository owner after local verification.
 | 3c. End-to-end tests | Playwright, mock Drupal with recorded fixtures, axe scans, CI job, weekly cross-browser run | PR #15 | Done |
 | 4a. Accessibility and metadata | `<main>`, skip link, named links, accessible mobile menu, page titles, canonical, generic form error | PR #16 | Done |
 | 4b. Breadcrumb resilience | Always render the Home breadcrumb when Drupal returns an empty trail | PR #17 | Done; live site verified |
-| 6. Documentation | These documents and the README | This branch | In review |
+| 4c. Performance quick wins | Small favicon, WOFF2 fonts, preconnect to the Drupal image host | PR #19 | Done; -390 KB per page measured |
+| 6. Documentation | These documents and the README | PR #18 | Done |
 
 Phase 5 (CI/CD hardening) was delivered incrementally inside phases 1b to 3c rather than as a separate step.
 
@@ -29,7 +30,7 @@ Phase 5 (CI/CD hardening) was delivered incrementally inside phases 1b to 3c rat
 |---|---|---|---|---|
 | 1 | Record what fixed the Drupal breadcrumb data (production returns full trails again as of 2026-10-21) so a recurrence can be diagnosed; see [deployment.md](../deployment.md#known-drupal-side-issue-breadcrumbs) | The cause is unknown; the Home link no longer depends on it, but intermediate crumbs still do | Low | Drupal access |
 | 2 | Change the footer call-to-action `<h3>` to `<h2 class="h3">` in Drupal, re-record fixtures, delete the `heading-order` entry in `e2e/a11y.spec.ts` | Last automated accessibility violation | Low | Drupal access |
-| 3 | Performance quick wins: replace the 293 KB `favicon.ico`, convert fonts to WOFF2, `preconnect` to the Drupal image host | Mobile LCP is 7.8 to 9.3 s; see [performance-review.md](performance-review.md) | Low | none |
+| 3 | ~~Performance quick wins~~ **Done (PR #19):** favicon 293 KB to 4.5 KB, WOFF2 fonts, preconnect. Measured -390 KB per page; Lighthouse scores unchanged (see [performance-review.md](performance-review.md)). Next: the 406 KB render-blocking stylesheet (item 8) | Mobile LCP is still about 7.4 to 8 s (simulated) | Low | none |
 | 4 | Review and merge the Dependabot PRs (#3 to #12); pin actions by SHA when doing so | Keeps the toolchain current. The five npm updates already build and pass locally; the five action bumps change the deploy path and should go one at a time | Low | none |
 | 5 | Enable CodeQL and Dependabot security updates in repository settings | Free static analysis and automatic security PRs | Low | repository settings |
 | 6 | Add `prefers-reduced-motion` support (disable the image reveal, menu slide-in and smooth scroll when requested) | Found in the original audit and never fixed | Low | none |
