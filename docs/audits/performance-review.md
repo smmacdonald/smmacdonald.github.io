@@ -2,7 +2,8 @@
 
 Measurements and findings as of **2026-10-21**, taken against the live site
 (`https://smmacdonald.github.io/`). The **Results** table is the baseline taken before any performance work;
-"After the quick wins" (below) records the re-measurement after PR #19 was deployed.
+"After the quick wins" (below) records the re-measurement after PR #19 was deployed, and "After the Bootstrap
+subset" the one after PR #21.
 
 ## Hosting model
 
@@ -95,15 +96,50 @@ What this shows:
   contributors, which have not yet been tested, are the render-blocking 406 KB stylesheet and total bytes
   competing on the simulated 1.6 Mbps link (fonts are still 769 KB, mostly FontAwesome at 462 KB).
 
+## After the Bootstrap subset (PR #21, deployed 2026-10-21)
+
+The site imported all of Bootstrap; it now imports only the modules it uses (grid, headings, forms, alerts,
+tables, helpers, utilities). FontAwesome's CSS (about 172 KB raw) is unchanged on purpose.
+
+| | Before | After |
+|---|---|---|
+| Main stylesheet, raw | 405.6 KB | **312.4 KB** (-93 KB, -23%) |
+| Main stylesheet, gzip -9 | 73.6 KB | **61.7 KB** (-12 KB, -16%) |
+| CSS transferred on the live site (Lighthouse) | 76.8 KB | **64.3 KB** (-12.5 KB) |
+| Lighthouse "unused CSS" estimate | 72 KiB | 60 KiB |
+| Lighthouse render-blocking estimate | 410 ms | 410 to 430 ms (unchanged) |
+
+**Visual check:** 21 screenshots (6 pages at 3 viewports, the open mobile menu, the scrolled header, the contact
+error state) taken before and after differ by 0 pixels beyond anti-aliasing noise; the screenshot harness was first
+shown to be deterministic. The baselines are not committed because they would differ between macOS and Linux.
+
+**Lighthouse scores, mobile:**
+
+| Runs | n | Median | Range | Runs scoring 77 or more |
+|---|---|---|---|---|
+| Before the Bootstrap change (baseline and quick wins, both pages) | 12 | 75.5 | 61 to 76 | 0 |
+| After the Bootstrap change (both pages) | 18 | 76 | 75 to 83 | 5 (77, 80, 81, 83, 83) |
+
+By page, 9 runs each after the change: `/` scored 75 in 7 runs plus 77 and 83 (median 75, LCP median 8.0 s);
+`/portfolio` scored 75 to 76 in 6 runs plus 80, 81 and 83 (median 76, LCP median 7.2 s, range 4.7 to 7.7 s).
+
+**Reading:** the CSS bytes fell by the predicted amount, but the **typical Lighthouse score did not change**
+(the median moved by half a point). High scores of 77 to 83 appeared only after the change (5 of 18 runs, none
+of 12 before), which is suggestive of an intermittent improvement, but with this sample and this much run-to-run
+noise it is **not conclusive** and should not be reported as a gain. Render blocking did not change, so the
+stylesheet is probably blocking for a reason other than Bootstrap's size (FontAwesome's CSS is still 172 KB raw).
+The simulated mobile LCP is still about 7 to 8 s at the median.
+
 ## Findings
 
-Status after PR #19: items 1, 2 and 5 are done.
+Status after PR #19: items 1, 2 and 5 are done. After PR #21: item 3 is partly done (Bootstrap trimmed;
+FontAwesome's CSS remains).
 
 | # | Priority | Finding | Evidence | Recommendation | Expected effect | Effort |
 |---|---|---|---|---|---|---|
 | 1 | High | `app/favicon.ico` is a **610 x 436 PNG renamed `.ico`, 293 KB**, loaded on every page | `file app/favicon.ico`; Lighthouse network list | Replace with a real small `.ico`/PNG/SVG (a few KB) | About 290 KB less on every page load (measured size, not an estimate) | Low **Done**: 4.5 KB, -288 KB measured |
 | 2 | High | Site fonts are **TTF** variable fonts (Montserrat 672 KB and Playfair Display 295 KB on disk) | `assets/scss/fonts.scss`; 278 KB and 133 KB transferred | Convert to WOFF2 (and subset if the italic or unused axes are not needed) | **Measured: 21 to 27% less over the wire (-106 KB on a typical page); 68% smaller on disk.** Subsetting not done | Low **Done** (WOFF2); subsetting open |
-| 3 | Medium | One 406 KB stylesheet: all of Bootstrap is imported (`@use "bootstrap/scss/bootstrap"`) | Built CSS; Lighthouse "unused CSS" est. 72 KiB | Import only the Bootstrap modules in use | Lighthouse estimate: 72 KiB, plus about 410 ms of render blocking | Medium |
+| 3 | Medium | One 406 KB stylesheet: all of Bootstrap is imported (`@use "bootstrap/scss/bootstrap"`) | Built CSS; Lighthouse "unused CSS" est. 72 KiB | Import only the Bootstrap modules in use | Lighthouse estimate: 72 KiB, plus about 410 ms of render blocking. **Measured: -93 KB raw, -12 KB transferred; render blocking unchanged; score unchanged at the median** | Medium **Done** (Bootstrap); FontAwesome CSS kept |
 | 4 | Medium | Hero and card images come from the Drupal host as full-size JPEG/PNG; cards show them at about 97 x 78 px | Lighthouse image-delivery insight (est. 88 KiB) | Use Drupal image styles (WebP, correct sizes) and `srcset` | Lighthouse estimate: 88 KiB | Medium (Drupal config) |
 | 5 | Medium | No `preconnect` to `macdonaldesign.com` although the LCP image comes from there | Lighthouse LCP discovery | Add `<link rel="preconnect" href="https://macdonaldesign.com">` | Saves a connection setup (about 330 ms simulated RTT). Not separately measurable in the noisy scores | Low **Done** |
 | 6 | Medium | Every asset is cached for only 10 minutes | Response headers; Lighthouse cache insight est. 1,021 KiB on repeat visits | Not fixable on GitHub Pages. Only a CDN or host in front with long cache lifetimes for hashed assets would change it | Repeat-visit transfer only | n/a (platform) |
@@ -113,7 +149,9 @@ Status after PR #19: items 1, 2 and 5 are done.
 ## Suggested order and a budget
 
 1. Items 1, 2, 5: **done** (results above).
-2. Item 3 (the 406 KB render-blocking stylesheet) is now the most likely lever for the remaining LCP; then item 4 with Drupal image styles. Re-measure after each, and change one thing at a time so the effect is visible above the noise.
+2. Item 3 (Bootstrap) is done and did not move the median score. What remains are item 4 (Drupal image styles) and
+   FontAwesome's size (your choice: its CSS is 172 KB raw and its fonts 462 KB). Re-measure after each, change one
+   thing at a time, and use at least 9 runs per page: 3 runs were not enough to separate effects from noise.
 
 A reasonable budget for this site, to check by hand after changes: simulated-mobile LCP under 4 s, total
 transfer under 1 MB per page, TBT under 200 ms, CLS under 0.1. Do not treat the Lighthouse score as a guarantee;
