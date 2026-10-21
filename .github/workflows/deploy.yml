@@ -25,7 +25,7 @@ jobs:
   # CHECK
   # -------------------------
   check:
-    name: Format, lint, type check and audit
+    name: Format, lint, type check, test and audit
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -51,6 +51,9 @@ jobs:
 
       - name: Type check
         run: npm run typecheck
+
+      - name: Unit and component tests
+        run: npm run test:coverage
 
       - name: Audit production dependencies
         run: npm audit --omit=dev --audit-level=high
