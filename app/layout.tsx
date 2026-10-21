@@ -7,8 +7,6 @@ import Header from "@/components/regions/Header"
 import Footer from "@/components/regions/Footer"
 import OffCanvas from "@/components/regions/OffCanvas"
 
-const path = process.env.NEXT_PUBLIC_LOCAL_API_URL
-
 export const metadata: Metadata = {
     metadataBase: new URL("https://smmacdonald.github.io/"),
 }

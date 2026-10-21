@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 import { parseMetadata } from "@/lib/metadata"
 import { getPageByPath } from "@/lib/getPage"
 import Section from "@/components/Section"
@@ -6,13 +7,18 @@ import { PageProps } from "@/types/PageProps"
 
 async function getHomePage() {
     const { data } = await getPageByPath("/homepage")
-    const entity = await data?.route?.entity
+    const entity = data?.route?.entity
+
+    if (!entity) {
+        notFound()
+    }
+
     return entity
 }
 
 export async function generateMetadata(): Promise<Metadata> {
     const data = await getHomePage()
-    return parseMetadata(data.metatag)
+    return parseMetadata(data.metatag ?? [])
 }
 
 export default async function Home() {

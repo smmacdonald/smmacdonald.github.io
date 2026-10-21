@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 import { parseMetadata } from "@/lib/metadata"
 import { getPageByPath } from "@/lib/getPage"
 import BodyClassSync from "@/src/utils/BodyClassSync"
@@ -22,35 +23,41 @@ type SitemapProps = {
     view_node: string
 }
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
-    try {
-        const url = process.env.NEXT_PUBLIC_LOCAL_API_URL + '/rest/headless-sitemap'
-        const allPaths = await fetch(url)
-        let paths: SitemapProps[] = await allPaths.json()
+    const url = process.env.NEXT_PUBLIC_LOCAL_API_URL + '/rest/headless-sitemap'
+    const response = await fetch(url, { signal: AbortSignal.timeout(15_000) })
 
-        return paths
-            .map((item) => {
-                const pathString = item.view_node
-                const cleanSlugArray = pathString.replace(/^\/|\/$/g, "").split("/")
-
-                if (
-                    cleanSlugArray.includes("403") ||
-                    cleanSlugArray.includes("404") ||
-                    (cleanSlugArray.length === 1 && cleanSlugArray[0] === "homepage")
-                ) {
-                    return null
-                }
-
-                return {
-                    slug: cleanSlugArray,
-                }
-            })
-            .filter(Boolean)
-
-    } catch (error) {
-        console.error("Failed to fetch paths for static export:", error)
-        return []
+    if (!response.ok) {
+        throw new Error(`Failed to fetch sitemap paths from ${url}: ${response.status}`)
     }
+
+    const paths: SitemapProps[] = await response.json()
+
+    const params = paths
+        .map((item) => {
+            const cleanSlugArray = item.view_node.replace(/^\/|\/$/g, "").split("/")
+
+            if (
+                cleanSlugArray.includes("403") ||
+                cleanSlugArray.includes("404") ||
+                (cleanSlugArray.length === 1 && cleanSlugArray[0] === "homepage")
+            ) {
+                return null
+            }
+
+            return {
+                slug: cleanSlugArray,
+            }
+        })
+        .filter((item) => item !== null)
+
+    if (params.length === 0) {
+        throw new Error("The Drupal sitemap returned no routes; refusing to build an empty site")
+    }
+
+    return params
 }
 
 async function getSlugPage(params: Props["params"]) {
@@ -67,11 +74,11 @@ export async function generateMetadata({ params, }: Props): Promise<Metadata> {
 
 export default async function Slug({ params }: Props) {
     const data = await getSlugPage(params)
-    const entity = data.route.entity
-    const breadcrumbs = data.route.breadcrumbs
+    const entity = data?.route?.entity
+    const breadcrumbs = data?.route?.breadcrumbs
 
     if (!entity) {
-        return null
+        notFound()
     }
     return (
         <>
