@@ -161,6 +161,9 @@ test.describe("off-canvas menu accessibility", () => {
 
         await expect(page.locator(".off-canvas")).toHaveAttribute("inert", "")
         await expect(toggle).toHaveAttribute("role", "button")
+        // The accessible name must contain the link's visible text (WCAG 2.5.3).
+        await expect(toggle).toHaveAccessibleName(/mobile menu toggle/i)
+        await expect(toggle).not.toHaveAttribute("aria-label", /.+/)
         await expect(toggle).toHaveAttribute("aria-expanded", "false")
 
         await toggle.click()

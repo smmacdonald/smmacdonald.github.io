@@ -58,6 +58,11 @@ test("@a11y the open mobile menu has no new violations", async ({ page }) => {
     await page.goto("/")
     await page.locator("header a.mobile-menu-toggle").click()
     await expect(page.locator(".off-canvas")).toHaveClass(/active/)
+    // Scan only once the slide-in animation has finished.
+    await expect(page.locator(".off-canvas")).toHaveCSS(
+        "transform",
+        "matrix(1, 0, 0, 1, 0, 0)"
+    )
 
     const { violations } = await new AxeBuilder({ page })
         .include(".off-canvas")

@@ -21,10 +21,10 @@ export default function OffCanvasPanel({
     const hasOpened = useRef(false)
 
     // Describe the toggle links to assistive technology and keep them in sync.
+    // The accessible name stays the link's own text so it matches what is shown.
     useEffect(() => {
         document.querySelectorAll<HTMLElement>(TOGGLE).forEach((toggle) => {
             toggle.setAttribute("role", "button")
-            toggle.setAttribute("aria-label", "Menu")
             toggle.setAttribute("aria-controls", PANEL_ID)
             toggle.setAttribute("aria-expanded", String(isOpen))
         })
