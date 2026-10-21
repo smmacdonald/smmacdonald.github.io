@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -11,17 +14,49 @@ permissions:
   pages: write
   id-token: write
 
+# Deploys queue behind each other and are never cancelled midway.
+# Pull request checks are cancelled when superseded.
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: ${{ github.event_name == 'pull_request' && format('ci-{0}', github.ref) || 'pages' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
+  # -------------------------
+  # CHECK
+  # -------------------------
+  check:
+    name: Type check and audit
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=high
+
   # -------------------------
   # BUILD
   # -------------------------
   build:
     name: Build Next.js
     runs-on: ubuntu-latest
+    needs: check
+    if: github.event_name != 'pull_request'
 
     environment:
       name: github-pages
@@ -33,7 +68,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: .nvmrc
           cache: npm
 
       - name: Setup GitHub Pages
@@ -83,7 +118,21 @@ jobs:
             exit 1
           fi
 
+          for page in 404.html about.html contact.html portfolio.html; do
+            if [ ! -f "./out/$page" ]; then
+              echo "::error::./out/$page was not created"
+              exit 1
+            fi
+          done
+
+          html_count=$(find ./out -name '*.html' | wc -l)
+          if [ "$html_count" -lt 8 ]; then
+            echo "::error::Only $html_count HTML files were generated; expected at least 8"
+            exit 1
+          fi
+
           echo "Static export created successfully"
+          echo "HTML pages generated: $html_count"
           echo "Files generated: $(find ./out -type f | wc -l)"
 
       - name: Upload GitHub Pages Artifact
@@ -98,6 +147,7 @@ jobs:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     needs: build
+    if: github.event_name != 'pull_request'
 
     environment:
       name: github-pages
@@ -107,3 +157,24 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Smoke test live site
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          for path in "" "about" "portfolio"; do
+            ok=false
+            for attempt in 1 2 3 4 5 6 7 8 9 10; do
+              code=$(curl -s -o /dev/null -w '%{http_code}' "${SITE_URL}${path}")
+              if [ "$code" = "200" ]; then
+                ok=true
+                break
+              fi
+              sleep 6
+            done
+            if [ "$ok" != "true" ]; then
+              echo "::error::${SITE_URL}${path} did not return 200 (last status: ${code})"
+              exit 1
+            fi
+            echo "OK ${SITE_URL}${path}"
+          done
