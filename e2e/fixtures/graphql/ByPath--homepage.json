@@ -1,0 +1,596 @@
+{
+    "data": {
+        "route": {
+            "__typename": "RouteInternal",
+            "entity": {
+                "id": "1",
+                "title": "Homepage",
+                "pageHero": {
+                    "__typename": "ParagraphSection",
+                    "id": "47",
+                    "bgColor": "rgba(20, 20, 20, 0.75)",
+                    "bgImage": {
+                        "__typename": "MediaBackgroundImage",
+                        "id": "8",
+                        "mediaImage2": {
+                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/hero-img-abstract.jpg"
+                        }
+                    },
+                    "bgImagePosition": "center center",
+                    "bgImageRepeat": "no-repeat",
+                    "bgImageSize": "cover",
+                    "centerContent": false,
+                    "fullWidth": false,
+                    "margin": null,
+                    "padding": "padding-top-bottom-120",
+                    "sectionId": null,
+                    "content": [
+                        {
+                            "__typename": "ParagraphColumn",
+                            "id": "46",
+                            "bgColor": null,
+                            "sectionId": null,
+                            "columnWidth": ["col-lg-6"],
+                            "styledBox": false,
+                            "element": [
+                                {
+                                    "__typename": "ParagraphText",
+                                    "id": "45",
+                                    "verticalAlign": false,
+                                    "body": {
+                                        "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ESENIOR DEVELOPER | LEAD. BUILD. DELIVER.\u003C\/span\u003E\u003C\/p\u003E\n\u003Ch1\u003EI build powerful\u003Cbr\u003E\u003Cspan class=\u0022color-accent\u0022\u003Eweb solutions.\u003C\/span\u003E\u003C\/h1\u003E\n\u003Cp\u003ESenior Developer with 15+ years of experience building scalable web applications. I code, lead teams, and deliver digital solutions that drive real results.\u003C\/p\u003E\n\u003Cp\u003E\u003Ca class=\u0022button transparent\u0022 href=\u0022\/portfolio\u0022 data-entity-substitution=\u0022canonical\u0022 tabindex=\u00220\u0022\u003EView My Work\u003C\/a\u003E\u003C\/p\u003E\n"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "content": [
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "98",
+                        "bgColor": "rgba(25, 25, 25, 1)",
+                        "bgImage": null,
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "cover",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-90",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "100",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-12"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "99",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EBuilt In Collaboration With\u003C\/span\u003E\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "97",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-12"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphSlider",
+                                        "id": "96",
+                                        "sectionId": null,
+                                        "autoplay": true,
+                                        "slidesToScroll": "1",
+                                        "slidesToShow": "4",
+                                        "slide": [
+                                            {
+                                                "__typename": "ParagraphImage",
+                                                "id": "86",
+                                                "animate": null,
+                                                "animationDirection": null,
+                                                "media": {
+                                                    "__typename": "MediaImage",
+                                                    "id": "27",
+                                                    "mediaImage": {
+                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-6.png",
+                                                        "alt": "Azizi law logo",
+                                                        "height": 300,
+                                                        "width": 400,
+                                                        "variations": [
+                                                            {
+                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-6.png?h=3b5d1417\u0026itok=rzuFEmOY"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "__typename": "ParagraphImage",
+                                                "id": "87",
+                                                "animate": null,
+                                                "animationDirection": null,
+                                                "media": {
+                                                    "__typename": "MediaImage",
+                                                    "id": "18",
+                                                    "mediaImage": {
+                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-11.png",
+                                                        "alt": "San Jacinto College Logo",
+                                                        "height": 300,
+                                                        "width": 400,
+                                                        "variations": [
+                                                            {
+                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-11.png?h=3b5d1417\u0026itok=NCH-R3yk"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "__typename": "ParagraphImage",
+                                                "id": "89",
+                                                "animate": null,
+                                                "animationDirection": null,
+                                                "media": {
+                                                    "__typename": "MediaImage",
+                                                    "id": "20",
+                                                    "mediaImage": {
+                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-5.png",
+                                                        "alt": "California State University Long Beach logo",
+                                                        "height": 300,
+                                                        "width": 400,
+                                                        "variations": [
+                                                            {
+                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-5.png?h=3b5d1417\u0026itok=OEdPuElq"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "__typename": "ParagraphImage",
+                                                "id": "90",
+                                                "animate": null,
+                                                "animationDirection": null,
+                                                "media": {
+                                                    "__typename": "MediaImage",
+                                                    "id": "21",
+                                                    "mediaImage": {
+                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-4.png",
+                                                        "alt": "Emory University Logo",
+                                                        "height": 300,
+                                                        "width": 400,
+                                                        "variations": [
+                                                            {
+                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-4.png?h=3b5d1417\u0026itok=CYZbOklo"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "__typename": "ParagraphImage",
+                                                "id": "91",
+                                                "animate": null,
+                                                "animationDirection": null,
+                                                "media": {
+                                                    "__typename": "MediaImage",
+                                                    "id": "22",
+                                                    "mediaImage": {
+                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-3.png",
+                                                        "alt": "Humboldt State University Logo",
+                                                        "height": 300,
+                                                        "width": 400,
+                                                        "variations": [
+                                                            {
+                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-3.png?h=3b5d1417\u0026itok=2i8QHy9b"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "__typename": "ParagraphImage",
+                                                "id": "92",
+                                                "animate": null,
+                                                "animationDirection": null,
+                                                "media": {
+                                                    "__typename": "MediaImage",
+                                                    "id": "23",
+                                                    "mediaImage": {
+                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-2.png",
+                                                        "alt": "Irvine Unified School District Logo",
+                                                        "height": 300,
+                                                        "width": 400,
+                                                        "variations": [
+                                                            {
+                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-2.png?h=3b5d1417\u0026itok=jMUioaiZ"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "__typename": "ParagraphImage",
+                                                "id": "94",
+                                                "animate": null,
+                                                "animationDirection": null,
+                                                "media": {
+                                                    "__typename": "MediaImage",
+                                                    "id": "25",
+                                                    "mediaImage": {
+                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-8.png",
+                                                        "alt": "Occidental College Logo",
+                                                        "height": 300,
+                                                        "width": 400,
+                                                        "variations": [
+                                                            {
+                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-8.png?h=3b5d1417\u0026itok=EobgMhjR"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "__typename": "ParagraphImage",
+                                                "id": "95",
+                                                "animate": null,
+                                                "animationDirection": null,
+                                                "media": {
+                                                    "__typename": "MediaImage",
+                                                    "id": "26",
+                                                    "mediaImage": {
+                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-7.png",
+                                                        "alt": "Southern Connecticut State University Logo",
+                                                        "height": 300,
+                                                        "width": 400,
+                                                        "variations": [
+                                                            {
+                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-7.png?h=3b5d1417\u0026itok=btZ53-yw"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "25",
+                        "bgColor": null,
+                        "bgImage": null,
+                        "bgImagePosition": "right bottom",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "auto",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-90",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "29",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-4"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "28",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-user-group fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003ELeadership\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ELEADING TEAMS \u0026amp; EMPOWERING DEVELOPERS\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022eda2661d11158cc07541d09427fbac128\u0022\u003ELead developer on multiple projects\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e837482794707919380bc51496ea53f5f\u0022\u003EMentor \u0026amp; train developers\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e94c5412e3802af97ab1158b7b871ff1d\u0022\u003ECode reviews \u0026amp; best practices\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e84db456b0e7f605ba9a73c596e2a1e8b\u0022\u003ETechnical architecture \u0026amp; decisions\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e16b081f1b835951000ca67a82ed936de\u0022\u003EStakeholder Communication\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e3f56a65c5845ed41d2f39173f00a15bb\u0022\u003EClient training \u0026amp; workshops\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "24",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-4"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "23",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-code fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003ECoding Excellence\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003Eclean, scalable, \u0026amp; performant solutions\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022eda2661d11158cc07541d09427fbac128\u0022\u003EDrupal 7-11 theme \u0026amp; module development\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022eddde34de661c76d0938f67ef6bfd7d1e\u0022\u003EWordpress theme \u0026amp; plugin development\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e2a0d842837d160af6cc17c57a2048e94\u0022\u003ECustom modules \u0026amp; integrations\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e23639c1aa1dba39429e58bfe75c20ca0\u0022\u003EFrontend Build: SCSS, Gulp, NPM, JS\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e951f20230a868a6cd0469392f4d5c26e\u0022\u003EREST API development \u0026amp; integrations\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e5dabfdd0eb5f3e7d8acc1c5edfb37dbb\u0022\u003EDatabase design \u0026amp; optimization\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "27",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-4"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "26",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-clipboard-list-check fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EProject Management\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EDELIVERING PROJECTS ON TIME \u0026amp; ON TARGET\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022eda2661d11158cc07541d09427fbac128\u0022\u003EManage multiple clients \u0026amp; projects\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e28c1fffe9b391a96471cea68e8fdc923\u0022\u003ERequirement gathering \u0026amp; planning\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e433d0398307f42b353d3d77656603bcf\u0022\u003ECross-functional team collaboration\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022ea2b83a5d320ac46e4f5ccb10199f9adf\u0022\u003ETimelines, budgets \u0026amp; resource planning\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022efaf98e1bc6182ee45ed9ed330444dfe3\u0022\u003EAgile workflow \u0026amp; task management\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e876f96fae7708c7c17f941477b3dc502\u0022\u003EWebsite redesigns \u0026amp; migrations\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "35",
+                        "bgColor": "rgba(74, 193, 175, 0.2)",
+                        "bgImage": {
+                            "__typename": "MediaBackgroundImage",
+                            "id": "15",
+                            "mediaImage2": {
+                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/shawn-macdonald-abstract-pixel-bg-img_0.jpg"
+                            }
+                        },
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "cover",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-90",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "31",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-3"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "30",
+                                        "verticalAlign": true,
+                                        "body": {
+                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EFEATURED WORK\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EProjects That Make an Impact\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003EFrom complex Drupal builds to custom integrations, I create solutions that solve real problems and deliver value\u003C\/p\u003E\n\u003Cp\u003E\u003Ca class=\u0022button transparent\u0022 tabindex=\u00220\u0022 href=\u0022\/portfolio\u0022 data-entity-substitution=\u0022canonical\u0022\u003EView All Projects\u003C\/a\u003E\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphCardFeaturedImageText",
+                                "id": "32",
+                                "bgColor": "rgba(20, 20, 20, 1)",
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-3"],
+                                "media": {
+                                    "__typename": "MediaImage",
+                                    "id": "2",
+                                    "mediaImage": {
+                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/MacDonalDesign-NeoGenomics-Laboratories-home-page_2.jpg",
+                                        "alt": "NeoGenomics custom built theme",
+                                        "height": 3599,
+                                        "width": 800,
+                                        "variations": [
+                                            {
+                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/MacDonalDesign-NeoGenomics-Laboratories-home-page_2.jpg?h=8660f157\u0026itok=2wD41rFc"
+                                            }
+                                        ]
+                                    }
+                                },
+                                "body": {
+                                    "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EDrupal 10 + Next.js\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h4\u0022\u003ENeoGenomics Laboratories\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003ELead a full rebuild from Drupal 7 to Drupal 10, Custom modules, API integrations, and performance optimization.\u003C\/p\u003E\n\u003Cp class=\u0022mt-auto\u0022\u003E\u003Ca class=\u0022arrow-right fa-regular fa-arrow-right\u0022 href=\u0022\/portfolio\/neogenomics-laboratories\u0022 data-entity-substitution=\u0022canonical\u0022 tabindex=\u00220\u0022\u003EView Project\u003C\/a\u003E\u003C\/p\u003E\n"
+                                }
+                            },
+                            {
+                                "__typename": "ParagraphCardFeaturedImageText",
+                                "id": "34",
+                                "bgColor": "rgba(20, 20, 20, 1)",
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-3"],
+                                "media": {
+                                    "__typename": "MediaImage",
+                                    "id": "89",
+                                    "mediaImage": {
+                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-08\/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg",
+                                        "alt": "MacDonalDesign portfolio",
+                                        "height": 7318,
+                                        "width": 4036,
+                                        "variations": [
+                                            {
+                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg?h=c49f93d5\u0026itok=w90zW2-b"
+                                            }
+                                        ]
+                                    }
+                                },
+                                "body": {
+                                    "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EDrupal 11 + Next.js\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h4\u0022\u003EMacDonalDesign\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003EA custom headless web platform built with Drupal 11 and Next.js, backed by GraphQL, REST APIs, GitHub, and Jenkins CI\/CD.\u003C\/p\u003E\n\u003Cp class=\u0022mt-auto\u0022\u003E\u003Ca class=\u0022arrow-right fa-regular fa-arrow-right\u0022 href=\u0022\/portfolio\/macdonaldesign\u0022 data-entity-substitution=\u0022canonical\u0022 tabindex=\u00220\u0022\u003EView Project\u003C\/a\u003E\u003C\/p\u003E\n"
+                                }
+                            },
+                            {
+                                "__typename": "ParagraphCardFeaturedImageText",
+                                "id": "33",
+                                "bgColor": "rgba(20, 20, 20, 1)",
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-3"],
+                                "media": {
+                                    "__typename": "MediaImage",
+                                    "id": "3",
+                                    "mediaImage": {
+                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/emory-university-aae.jpg",
+                                        "alt": "Emory University Together website",
+                                        "height": 3533,
+                                        "width": 1000,
+                                        "variations": [
+                                            {
+                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/emory-university-aae.jpg?h=9b0a2110\u0026itok=L76KnTLz"
+                                            }
+                                        ]
+                                    }
+                                },
+                                "body": {
+                                    "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EDrupal 11 + React\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h4\u0022\u003EEmory University - AAE\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003EMigrated large-scale site to Drupal, Integrated with Shopify, and improved workflows.\u003C\/p\u003E\n\u003Cp class=\u0022mt-auto\u0022\u003E\u003Ca class=\u0022arrow-right fa-regular fa-arrow-right\u0022 href=\u0022\/portfolio\/emory-university-aae\u0022 data-entity-substitution=\u0022canonical\u0022 tabindex=\u00220\u0022\u003EView Project\u003C\/a\u003E\u003C\/p\u003E\n"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "38",
+                        "bgColor": null,
+                        "bgImage": null,
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "cover",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-90",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "37",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "36",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cdiv class=\u0022mb-4 align-left media media--type-image media--view-mode-default\u0022\u003E\n  \n      \u003Cdiv class=\u0022field field--name-field-media-image field--type-image field--label-visually_hidden\u0022\u003E\n        \u003Cimg loading=\u0022lazy\u0022 src=\u0022\/sites\/default\/files\/2026-07\/profile-image.jpg\u0022 width=\u0022400\u0022 height=\u0022400\u0022 alt\u003E\n\n\n  \u003C\/div\u003E\n\n  \u003C\/div\u003E\n\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EABOUT ME\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EDeveloper. Problem Solver. Team Leader.\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003EI love turning complex challenges into simple, elegant solutions. I write clean code, build intuitive exeriences, and help teams do their best work.\u003C\/p\u003E\n\u003Cp\u003E\u003Ca class=\u0022button transparent\u0022 href=\u0022\/about\u0022 data-entity-substitution=\u0022canonical\u0022 tabindex=\u00220\u0022\u003EMore About Me\u003C\/a\u003E\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "40",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-2", "col-md-4"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "39",
+                                        "verticalAlign": true,
+                                        "body": {
+                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-calendar-check fa-4x color-accent\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003E15+\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EYears Experience\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "42",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-2", "col-md-4"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "41",
+                                        "verticalAlign": true,
+                                        "body": {
+                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-computer fa-4x color-accent\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003E50+\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EProjects Completed\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "44",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-2", "col-md-4"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "43",
+                                        "verticalAlign": true,
+                                        "body": {
+                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-users fa-4x color-accent\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003E15+\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003ETeam Members Led\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "metatag": [
+                    {
+                        "__typename": "MetaTagValue",
+                        "attributes": {
+                            "content": "Homepage | portfolio",
+                            "name": "title"
+                        }
+                    },
+                    {
+                        "__typename": "MetaTagValue",
+                        "attributes": {
+                            "content": "Full-stack developer and creative technologist crafting scalable web platforms, digital experiences, and visual design across modern frameworks.",
+                            "name": "description"
+                        }
+                    },
+                    {
+                        "__typename": "MetaTagValue",
+                        "attributes": {
+                            "content": "index, follow",
+                            "name": "robots"
+                        }
+                    },
+                    {
+                        "__typename": "MetaTagLink",
+                        "tag": "link",
+                        "attributes": {
+                            "href": "__ORIGIN__\/homepage",
+                            "hreflang": null,
+                            "media": null,
+                            "rel": "canonical",
+                            "sizes": null,
+                            "type": null
+                        }
+                    },
+                    {
+                        "__typename": "MetaTagLink",
+                        "tag": "link",
+                        "attributes": {
+                            "href": "https:\/\/macdonaldesign.com\/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg",
+                            "hreflang": null,
+                            "media": null,
+                            "rel": "image_src",
+                            "sizes": null,
+                            "type": null
+                        }
+                    }
+                ]
+            },
+            "breadcrumbs": []
+        }
+    }
+}

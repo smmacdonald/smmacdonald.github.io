@@ -1,0 +1,232 @@
+{
+    "data": {
+        "route": {
+            "__typename": "RouteInternal",
+            "entity": {
+                "id": "11",
+                "title": "City College of San Francisco",
+                "projectHero": {
+                    "__typename": "ParagraphSection",
+                    "id": "119",
+                    "bgColor": "rgba(20, 20, 20, 0.75)",
+                    "bgImage": {
+                        "__typename": "MediaBackgroundImage",
+                        "id": "14",
+                        "mediaImage2": {
+                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/portfolio-header.jpg"
+                        }
+                    },
+                    "bgImagePosition": "center center",
+                    "bgImageRepeat": "no-repeat",
+                    "bgImageSize": "cover",
+                    "centerContent": false,
+                    "fullWidth": false,
+                    "margin": null,
+                    "padding": "padding-top-bottom-60",
+                    "sectionId": null,
+                    "content": [
+                        {
+                            "__typename": "ParagraphColumn",
+                            "id": "118",
+                            "bgColor": null,
+                            "sectionId": null,
+                            "columnWidth": ["col-lg-6"],
+                            "styledBox": false,
+                            "element": [
+                                {
+                                    "__typename": "ParagraphText",
+                                    "id": "117",
+                                    "verticalAlign": false,
+                                    "body": {
+                                        "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EHigher Education\u003C\/span\u003E\u003C\/p\u003E\n\u003Ch1\u003ECity College of San Francisco\u003C\/h1\u003E\n\u003Cp\u003ECreating a unified digital experience for the university meant eliminating fragmented systems and establishing a single source of truth. By integrating course data directly into the website, we streamlined content management, improved accuracy, and made it easier for students and faculty to access up-to-date information. The result is a cohesive, user-friendly platform that brings clarity and consistency to the university\u2019s academic offerings.\u003C\/p\u003E\n\u003Cp\u003E\u003Ca class=\u0022button transparent\u0022 href=\u0022https:\/\/www.ccsf.edu\u0022 target=\u0022_blank\u0022 tabindex=\u00220\u0022\u003EView Website\u003C\/a\u003E\u003C\/p\u003E\n"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "__typename": "ParagraphColumn",
+                            "id": "121",
+                            "bgColor": null,
+                            "sectionId": null,
+                            "columnWidth": ["col-lg-6"],
+                            "styledBox": false,
+                            "element": [
+                                {
+                                    "__typename": "ParagraphImage",
+                                    "id": "120",
+                                    "animate": true,
+                                    "animationDirection": "from_bottom",
+                                    "media": {
+                                        "__typename": "MediaImage",
+                                        "id": "33",
+                                        "mediaImage": {
+                                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/ccsf-grid.png",
+                                            "alt": "City College of San Francisco grid website display",
+                                            "height": 600,
+                                            "width": 800,
+                                            "variations": [
+                                                {
+                                                    "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/ccsf-grid.png?h=827069f2\u0026itok=6kd02JeQ"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "content": [
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "177",
+                        "bgColor": null,
+                        "bgImage": null,
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "cover",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "176",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6", "offset-lg-3"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "175",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EMy Role\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003ELead Developer responsible for guiding a team of five developers through the planning, architecture, and implementation of a large-scale university website enhancement project. Served as the primary technical liaison between the agency team and university stakeholders, providing technical direction, code reviews, and solution planning.\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "184",
+                        "bgColor": "rgba(255, 255, 255, 0.05)",
+                        "bgImage": {
+                            "__typename": "MediaBackgroundImage",
+                            "id": "13",
+                            "mediaImage2": {
+                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
+                            }
+                        },
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "repeat",
+                        "bgImageSize": "auto",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "179",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-4"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "178",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EProblem\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003EThe university needed a more engaging and scalable digital experience that improved access to critical information for students, faculty, and prospective students. Existing systems required more advanced content discovery, better integration with institutional data sources, and a more interactive way to showcase campus resources.\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "181",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-4"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "180",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EApproach\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e347db02c7b145a9a29fb76818812716f\u0022\u003ELed development efforts to create structured content systems for events, news, and academic information.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022ec05051724ea578aca2acf0ba98b33dba\u0022\u003EIntegrated the website with the university\u2019s single source of truth through APIs to ensure accurate and synchronized course data.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e7dff2482a295d05082f9c2b8cbcd4438\u0022\u003ECollaborated with designers and stakeholders to translate user needs into scalable technical solutions.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e70d07754d5b91d23f790b32301eedbd3\u0022\u003EGuided a team of developers through implementation, code standards, and project delivery.\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "183",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-4"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "182",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EKey Wins\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e419a42c30d7c45bfe4032ac6607513bc\u0022\u003EDeveloped a robust events calendar and newsroom experience that improved content organization and discovery.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e89887c5d997bc11779174dc0f54f43b4\u0022\u003EBuilt an advanced course search platform connected directly to university systems through API integrations.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022eb38c39c9bec3fe157c5415a01d8fd61e\u0022\u003ECreated a custom Google Maps experience featuring a 3D campus image overlay for an immersive campus exploration experience.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e006915ecbe8bcbf73e37b1a2193adcb6\u0022\u003EEstablished reusable development patterns and technical solutions to support future platform growth.\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "187",
+                        "bgColor": null,
+                        "bgImage": null,
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "cover",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "186",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6", "offset-lg-3"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "185",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EOutcome\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EDelivered a modern, user-focused university website experience that improved access to academic and campus information while creating a flexible foundation for future enhancements. The project strengthened the institution\u2019s digital presence through better integrations, improved usability, and scalable architecture.\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "breadcrumbs": [
+                { "url": "\/", "title": "Home" },
+                { "url": "\/portfolio", "title": "Portfolio" }
+            ]
+        }
+    }
+}

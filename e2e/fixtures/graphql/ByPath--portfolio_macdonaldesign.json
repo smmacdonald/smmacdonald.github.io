@@ -1,0 +1,369 @@
+{
+    "data": {
+        "route": {
+            "__typename": "RouteInternal",
+            "entity": {
+                "id": "50",
+                "title": "MacDonalDesign",
+                "projectHero": {
+                    "__typename": "ParagraphSection",
+                    "id": "256",
+                    "bgColor": "rgba(20, 20, 20, 0.75)",
+                    "bgImage": {
+                        "__typename": "MediaBackgroundImage",
+                        "id": "14",
+                        "mediaImage2": {
+                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/portfolio-header.jpg"
+                        }
+                    },
+                    "bgImagePosition": "center center",
+                    "bgImageRepeat": "no-repeat",
+                    "bgImageSize": "cover",
+                    "centerContent": false,
+                    "fullWidth": false,
+                    "margin": null,
+                    "padding": "padding-top-bottom-60",
+                    "sectionId": null,
+                    "content": [
+                        {
+                            "__typename": "ParagraphColumn",
+                            "id": "255",
+                            "bgColor": null,
+                            "sectionId": null,
+                            "columnWidth": ["col-lg-6"],
+                            "styledBox": false,
+                            "element": [
+                                {
+                                    "__typename": "ParagraphText",
+                                    "id": "254",
+                                    "verticalAlign": true,
+                                    "body": {
+                                        "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ELocal \u0026amp; Creative\u003C\/span\u003E\u003C\/p\u003E\n\u003Ch1\u003EMacDonalDesign\u003C\/h1\u003E\n\u003Cp\u003EA fully custom digital ecosystem built with headless Drupal 11, Next.js, and automated CI\/CD. The platform combines modern frontend architecture, API-driven content, GitHub integration, and Jenkins deployments into a scalable development workflow.\u003C\/p\u003E\n\u003Cp\u003E\u003Ca class=\u0022button transparent\u0022 href=\u0022https:\/\/smmacdonald.github.io\u0022 target=\u0022_blank\u0022 tabindex=\u00220\u0022\u003EView Website\u003C\/a\u003E\u003C\/p\u003E\n"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "__typename": "ParagraphColumn",
+                            "id": "259",
+                            "bgColor": null,
+                            "sectionId": null,
+                            "columnWidth": ["col-lg-6"],
+                            "styledBox": false,
+                            "element": [
+                                {
+                                    "__typename": "ParagraphImage",
+                                    "id": "258",
+                                    "animate": true,
+                                    "animationDirection": "from_bottom",
+                                    "media": {
+                                        "__typename": "MediaImage",
+                                        "id": "92",
+                                        "mediaImage": {
+                                            "url": "__ORIGIN__\/sites\/default\/files\/2026-08\/portfolio-styled-elements-2.png",
+                                            "alt": "Headless Portfolio Elements",
+                                            "height": 400,
+                                            "width": 600,
+                                            "variations": [
+                                                {
+                                                    "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/portfolio-styled-elements-2.png?h=252f27fa\u0026itok=ZLgPYltz"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "content": [
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "262",
+                        "bgColor": null,
+                        "bgImage": null,
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "cover",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "261",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6", "offset-lg-3"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "260",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ECASE STUDY\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EChallenge\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EThe goal was to build more than a traditional portfolio website. I wanted the site itself to demonstrate modern web development, API-driven architecture, version control, automation, and CI\/CD practices while remaining flexible enough to evolve as new projects and technologies were added.\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "265",
+                        "bgColor": "rgba(255, 255, 255, 0.05)",
+                        "bgImage": {
+                            "__typename": "MediaBackgroundImage",
+                            "id": "13",
+                            "mediaImage2": {
+                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
+                            }
+                        },
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "repeat",
+                        "bgImageSize": "auto",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "264",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "263",
+                                        "verticalAlign": true,
+                                        "body": {
+                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EPHASE 1 SOLUTION\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EModern Drupal Platform\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e14325da0ea3ef791610c9b22f19517b5\u0022\u003EBuilt a custom Drupal 11 website as the content management platform.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022eeea1ae9a4363f182b0d1f9f0e9042ad7\u0022\u003EStructured portfolio projects, experience, skills, and other content in Drupal.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022eedd96273d33d5b9e5e2748b28f0cd0c0\u0022\u003EDeveloped a custom content architecture designed to support a headless implementation.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022efc9ae0b3aedfa5c8379bc0ea06893c86\u0022\u003EUsed Git and GitHub for source control and version management.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e10dea5fa713166e353d9583bb56eb854\u0022\u003EBuilt reusable Drupal components and custom functionality rather than relying entirely on contributed modules.\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "278",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphImage",
+                                        "id": "277",
+                                        "animate": true,
+                                        "animationDirection": "from_right",
+                                        "media": {
+                                            "__typename": "MediaImage",
+                                            "id": "93",
+                                            "mediaImage": {
+                                                "url": "__ORIGIN__\/sites\/default\/files\/2026-08\/macdonaldesign-phase-1_0.png",
+                                                "alt": "MacDonalDesign Phase 1 Drupal 11 platform",
+                                                "height": 512,
+                                                "width": 600,
+                                                "variations": [
+                                                    {
+                                                        "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/macdonaldesign-phase-1_0.png?h=51f69b1a\u0026itok=0MHAms3a"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "269",
+                        "bgColor": "rgba(255, 255, 255, 0.1)",
+                        "bgImage": {
+                            "__typename": "MediaBackgroundImage",
+                            "id": "13",
+                            "mediaImage2": {
+                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
+                            }
+                        },
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "repeat",
+                        "bgImageSize": "auto",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "266",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphImage",
+                                        "id": "276",
+                                        "animate": true,
+                                        "animationDirection": "from_left",
+                                        "media": {
+                                            "__typename": "MediaImage",
+                                            "id": "90",
+                                            "mediaImage": {
+                                                "url": "__ORIGIN__\/sites\/default\/files\/2026-08\/macdonaldesign-headless-nextjs_0.png",
+                                                "alt": "MacDonaldesign Headless Nextjs",
+                                                "height": 800,
+                                                "width": 800,
+                                                "variations": [
+                                                    {
+                                                        "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/macdonaldesign-headless-nextjs_0.png?h=fbf7a813\u0026itok=LOG5N1RF"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "268",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "267",
+                                        "verticalAlign": true,
+                                        "body": {
+                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EPHASE 2 SOLUTION\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EHeadless Next.js Application\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e8c19bdc0643eb173ab66c3da11dbfe15\u0022\u003EDeveloped a Next.js front end using TypeScript and modern React architecture.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e266104edb158b00364efe853b17d3476\u0022\u003EImplemented a headless Drupal architecture using REST API and GraphQL to retrieve content from Drupal.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e187a5080f20b3566472e25b102119f3d\u0022\u003ESeparated the content management layer from the presentation layer, allowing the front end and Drupal platform to evolve independently.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e82214da8d47e23074d2c30b52f22a13e\u0022\u003EBuilt responsive, reusable UI components with a focus on performance, accessibility, and maintainability.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022ea843cd76c8893e5c1cefa8693825e1e8\u0022\u003EUsed Node.js, NPM, and modern front-end development tooling to manage the application and build process.\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "272",
+                        "bgColor": "rgba(255, 255, 255, 0.15)",
+                        "bgImage": {
+                            "__typename": "MediaBackgroundImage",
+                            "id": "13",
+                            "mediaImage2": {
+                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
+                            }
+                        },
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "repeat",
+                        "bgImageSize": "auto",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "271",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "270",
+                                        "verticalAlign": true,
+                                        "body": {
+                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EPHASE 3 SOLUTION\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003ECI\/CD \u0026amp; Deployment Automation\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e90faeeed3d2241fc7fec39a37c1855dc\u0022\u003EBuilt automated Jenkins CI\/CD pipelines for development and production deployments.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e951d2d2690d0e66c3ab8093955264f19\u0022\u003EIntegrated GitHub Actions into the development workflow for automated processes and repository-level tasks.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e51e6400efd5be211a9cf130bc9ab5f30\u0022\u003EImplemented Git-based deployment workflows using separate development and production branches.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e61bd9fd4d860e6a9e86e60c5a6db246d\u0022\u003ECreated automated production release tagging and immutable release builds.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e4510a6f5a1f82f17d22cd27fc8175209\u0022\u003EBuilt deployment scripts that package application code into versioned build artifacts and deploy them to the appropriate environment.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e0739ab08a2fd6144f10f1a5707258c8c\u0022\u003EImplemented automated Drupal deployment tasks including database updates, configuration imports, cache rebuilding, and cleanup of previous releases.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022ebff42959867b531cc2fba6cad85402f9\u0022\u003EDesigned a release-based deployment architecture with shared files and configuration separated from application code.\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e15d56b4af8027a968c3a8fb48886e504\u0022\u003EAdded automated deployment verification and failure-stage tracking to improve pipeline visibility and troubleshooting.\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "280",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphImage",
+                                        "id": "279",
+                                        "animate": true,
+                                        "animationDirection": "from_right",
+                                        "media": {
+                                            "__typename": "MediaImage",
+                                            "id": "94",
+                                            "mediaImage": {
+                                                "url": "__ORIGIN__\/sites\/default\/files\/2026-08\/MacDonalDesign-phase3.jpg",
+                                                "alt": "MacDonalDesign Phase 3 CI\/CD Pipeline infographic ",
+                                                "height": 800,
+                                                "width": 800,
+                                                "variations": [
+                                                    {
+                                                        "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/MacDonalDesign-phase3.jpg?h=fbf7a813\u0026itok=3eFhaNdA"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "275",
+                        "bgColor": null,
+                        "bgImage": null,
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "cover",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "274",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6", "offset-lg-3"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "273",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ESUCCESS\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EImpact\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EThe portfolio became a working demonstration of the development practices it represents. The combination of Drupal 11, Next.js, TypeScript, REST API, GraphQL, GitHub, GitHub Actions, Jenkins, CI\/CD, and headless architecture created a scalable platform that separates content management from the front-end experience.\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EThe automated deployment infrastructure also transformed the site from a manually maintained project into a repeatable software delivery process. Code changes can move from GitHub through automated builds and testing into versioned development or production releases, with Drupal updates and deployment tasks handled through Jenkins.\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EThe result is both a portfolio website and a real-world example of modern web architecture, API integration, DevOps, automation, version control, and full-stack development.\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "breadcrumbs": [
+                { "url": "\/", "title": "Home" },
+                { "url": "\/portfolio", "title": "Portfolio" }
+            ]
+        }
+    }
+}

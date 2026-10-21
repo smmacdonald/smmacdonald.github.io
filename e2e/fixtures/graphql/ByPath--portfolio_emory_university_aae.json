@@ -1,0 +1,227 @@
+{
+    "data": {
+        "route": {
+            "__typename": "RouteInternal",
+            "entity": {
+                "id": "8",
+                "title": "Emory University - AAE",
+                "projectHero": {
+                    "__typename": "ParagraphSection",
+                    "id": "107",
+                    "bgColor": "rgba(20, 20, 20, 0.75)",
+                    "bgImage": {
+                        "__typename": "MediaBackgroundImage",
+                        "id": "14",
+                        "mediaImage2": {
+                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/portfolio-header.jpg"
+                        }
+                    },
+                    "bgImagePosition": "center center",
+                    "bgImageRepeat": "no-repeat",
+                    "bgImageSize": "cover",
+                    "centerContent": false,
+                    "fullWidth": false,
+                    "margin": null,
+                    "padding": "padding-top-bottom-60",
+                    "sectionId": null,
+                    "content": [
+                        {
+                            "__typename": "ParagraphColumn",
+                            "id": "106",
+                            "bgColor": null,
+                            "sectionId": null,
+                            "columnWidth": ["col-lg-6"],
+                            "styledBox": false,
+                            "element": [
+                                {
+                                    "__typename": "ParagraphText",
+                                    "id": "105",
+                                    "verticalAlign": false,
+                                    "body": {
+                                        "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EHigher Education\u003C\/span\u003E\u003C\/p\u003E\n\u003Ch1\u003EEmory University - AAE\u003C\/h1\u003E\n\u003Cp\u003EA full rebuild of a university website paired with a migration of its e-commerce system to Shopify. The goal was to eliminate outdated workflows, improve performance, and unify content and commerce into a seamless user experience.\u003C\/p\u003E\n\u003Cp\u003E\u003Ca class=\u0022button transparent\u0022 href=\u0022https:\/\/together.emory.edu\u0022 target=\u0022_blank\u0022 tabindex=\u00220\u0022\u003EView Website\u003C\/a\u003E\u003C\/p\u003E\n"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "__typename": "ParagraphColumn",
+                            "id": "127",
+                            "bgColor": null,
+                            "sectionId": null,
+                            "columnWidth": ["col-lg-6"],
+                            "styledBox": false,
+                            "element": [
+                                {
+                                    "__typename": "ParagraphImage",
+                                    "id": "126",
+                                    "animate": true,
+                                    "animationDirection": "from_bottom",
+                                    "media": {
+                                        "__typename": "MediaImage",
+                                        "id": "35",
+                                        "mediaImage": {
+                                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/Together-giving-emory-devices.png",
+                                            "alt": "Emory University split website Drupal 11 and Shopify custom themes",
+                                            "height": 565,
+                                            "width": 911,
+                                            "variations": [
+                                                {
+                                                    "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/Together-giving-emory-devices.png?h=10e7ca6f\u0026itok=RJMkHtP1"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "content": [
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "151",
+                        "bgColor": null,
+                        "bgImage": null,
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "cover",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "150",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6", "offset-lg-3"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "149",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ECase Study\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EChallenge\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EI inherited a templated website built on an outdated Drupal 9 architecture that combined both content and e-commerce into a single system. The site suffered from significant performance issues, slow load times, and lacked scalability. Although React had been layered in to improve speed, the underlying structure wasn\u2019t designed to support modern performance or growth.\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "156",
+                        "bgColor": "rgba(255, 255, 255, 0.05)",
+                        "bgImage": {
+                            "__typename": "MediaBackgroundImage",
+                            "id": "13",
+                            "mediaImage2": {
+                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/noisy-texture-200x200-o39-d95-c-4ac1af-t1.png"
+                            }
+                        },
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "repeat",
+                        "bgImageSize": "auto",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "153",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "152",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ESolution\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EDecoupling \u0026amp; Rebuild\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003ETo stabilize and modernize the platform, I led a foundational restructuring:\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022e446628371ffc5bf38292473425a99eb3\u0022\u003ESeparated e-commerce from the main website, migrating all transactional functionality to Shopify\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e713152389340a21aecee11a13bfe765b\u0022\u003ERebuilt the website on Drupal 11, establishing a scalable, future-ready CMS\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e8f30d3b9f4ad8080011e6aa68050e419\u0022\u003ERedesigned the content architecture, introducing structured content types such as Person, Event, Article, Trip, and Vlog\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e4f37df884dc0c72ae9621f3b39c4e8b0\u0022\u003EImplemented lazy loading across all media, significantly improving perceived performance\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022efcded48e80db95b83e9d240e632300a0\u0022\u003ERemoved unnecessary complexity, eliminating reliance on React for performance fixes and instead solving issues at the architectural level\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "155",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphImage",
+                                        "id": "154",
+                                        "animate": null,
+                                        "animationDirection": null,
+                                        "media": {
+                                            "__typename": "MediaImage",
+                                            "id": "38",
+                                            "mediaImage": {
+                                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/spaghetti-code.png",
+                                                "alt": "Emory University spaghetti code design",
+                                                "height": 747,
+                                                "width": 1200,
+                                                "variations": [
+                                                    {
+                                                        "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/spaghetti-code.png?h=05130931\u0026itok=KGuKvn-G"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ParagraphSection",
+                        "id": "159",
+                        "bgColor": null,
+                        "bgImage": null,
+                        "bgImagePosition": "center center",
+                        "bgImageRepeat": "no-repeat",
+                        "bgImageSize": "cover",
+                        "centerContent": false,
+                        "fullWidth": false,
+                        "margin": null,
+                        "padding": "padding-top-bottom-60",
+                        "sectionId": null,
+                        "content": [
+                            {
+                                "__typename": "ParagraphColumn",
+                                "id": "158",
+                                "bgColor": null,
+                                "sectionId": null,
+                                "columnWidth": ["col-lg-6", "offset-lg-3"],
+                                "styledBox": false,
+                                "element": [
+                                    {
+                                        "__typename": "ParagraphText",
+                                        "id": "157",
+                                        "verticalAlign": false,
+                                        "body": {
+                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ESuccess\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EImpact\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EBy decoupling the systems and rebuilding with a focus on scalability and performance, the platform transformed from a slow, rigid experience into a fast, maintainable ecosystem. The marketing site became more flexible and content-driven, while the e-commerce experience gained reliability and performance through Shopify.\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EThis separation allowed each platform to excel in its role\u2014resulting in a cleaner user experience, faster load times, and a foundation built for long-term growth.\u003C\/p\u003E\n"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "breadcrumbs": [
+                { "url": "\/", "title": "Home" },
+                { "url": "\/portfolio", "title": "Portfolio" }
+            ]
+        }
+    }
+}
