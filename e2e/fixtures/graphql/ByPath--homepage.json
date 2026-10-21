@@ -13,7 +13,7 @@
                         "__typename": "MediaBackgroundImage",
                         "id": "8",
                         "mediaImage2": {
-                            "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/hero-img-abstract.jpg"
+                            "url": "__ORIGIN__/sites/default/files/2026-07/hero-img-abstract.jpg"
                         }
                     },
                     "bgImagePosition": "center center",
@@ -30,7 +30,9 @@
                             "id": "46",
                             "bgColor": null,
                             "sectionId": null,
-                            "columnWidth": ["col-lg-6"],
+                            "columnWidth": [
+                                "col-lg-6"
+                            ],
                             "styledBox": false,
                             "element": [
                                 {
@@ -38,7 +40,7 @@
                                     "id": "45",
                                     "verticalAlign": false,
                                     "body": {
-                                        "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ESENIOR DEVELOPER | LEAD. BUILD. DELIVER.\u003C\/span\u003E\u003C\/p\u003E\n\u003Ch1\u003EI build powerful\u003Cbr\u003E\u003Cspan class=\u0022color-accent\u0022\u003Eweb solutions.\u003C\/span\u003E\u003C\/h1\u003E\n\u003Cp\u003ESenior Developer with 15+ years of experience building scalable web applications. I code, lead teams, and deliver digital solutions that drive real results.\u003C\/p\u003E\n\u003Cp\u003E\u003Ca class=\u0022button transparent\u0022 href=\u0022\/portfolio\u0022 data-entity-substitution=\u0022canonical\u0022 tabindex=\u00220\u0022\u003EView My Work\u003C\/a\u003E\u003C\/p\u003E\n"
+                                        "processed": "<p><span class=\"subhead color-accent\">SENIOR DEVELOPER | LEAD. BUILD. DELIVER.</span></p>\n<h1>I build powerful<br><span class=\"color-accent\">web solutions.</span></h1>\n<p>Senior Developer with 15+ years of experience building scalable web applications. I code, lead teams, and deliver digital solutions that drive real results.</p>\n<p><a class=\"button transparent\" href=\"/portfolio\" data-entity-substitution=\"canonical\" tabindex=\"0\">View My Work</a></p>\n"
                                     }
                                 }
                             ]
@@ -65,7 +67,9 @@
                                 "id": "100",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-12"],
+                                "columnWidth": [
+                                    "col-lg-12"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -73,7 +77,7 @@
                                         "id": "99",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EBuilt In Collaboration With\u003C\/span\u003E\u003C\/p\u003E\n"
+                                            "processed": "<p class=\"text-align-center\"><span class=\"subhead color-accent\">Built In Collaboration With</span></p>\n"
                                         }
                                     }
                                 ]
@@ -83,7 +87,9 @@
                                 "id": "97",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-12"],
+                                "columnWidth": [
+                                    "col-lg-12"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -103,13 +109,13 @@
                                                     "__typename": "MediaImage",
                                                     "id": "27",
                                                     "mediaImage": {
-                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-6.png",
+                                                        "url": "__ORIGIN__/sites/default/files/2026-07/New%20Project-6.png",
                                                         "alt": "Azizi law logo",
                                                         "height": 300,
                                                         "width": 400,
                                                         "variations": [
                                                             {
-                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-6.png?h=3b5d1417\u0026itok=rzuFEmOY"
+                                                                "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-07/New%20Project-6.png?h=3b5d1417&itok=rzuFEmOY"
                                                             }
                                                         ]
                                                     }
@@ -124,13 +130,13 @@
                                                     "__typename": "MediaImage",
                                                     "id": "18",
                                                     "mediaImage": {
-                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-11.png",
+                                                        "url": "__ORIGIN__/sites/default/files/2026-07/New%20Project-11.png",
                                                         "alt": "San Jacinto College Logo",
                                                         "height": 300,
                                                         "width": 400,
                                                         "variations": [
                                                             {
-                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-11.png?h=3b5d1417\u0026itok=NCH-R3yk"
+                                                                "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-07/New%20Project-11.png?h=3b5d1417&itok=NCH-R3yk"
                                                             }
                                                         ]
                                                     }
@@ -145,13 +151,13 @@
                                                     "__typename": "MediaImage",
                                                     "id": "20",
                                                     "mediaImage": {
-                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-5.png",
+                                                        "url": "__ORIGIN__/sites/default/files/2026-07/New%20Project-5.png",
                                                         "alt": "California State University Long Beach logo",
                                                         "height": 300,
                                                         "width": 400,
                                                         "variations": [
                                                             {
-                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-5.png?h=3b5d1417\u0026itok=OEdPuElq"
+                                                                "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-07/New%20Project-5.png?h=3b5d1417&itok=OEdPuElq"
                                                             }
                                                         ]
                                                     }
@@ -166,13 +172,13 @@
                                                     "__typename": "MediaImage",
                                                     "id": "21",
                                                     "mediaImage": {
-                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-4.png",
+                                                        "url": "__ORIGIN__/sites/default/files/2026-07/New%20Project-4.png",
                                                         "alt": "Emory University Logo",
                                                         "height": 300,
                                                         "width": 400,
                                                         "variations": [
                                                             {
-                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-4.png?h=3b5d1417\u0026itok=CYZbOklo"
+                                                                "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-07/New%20Project-4.png?h=3b5d1417&itok=CYZbOklo"
                                                             }
                                                         ]
                                                     }
@@ -187,13 +193,13 @@
                                                     "__typename": "MediaImage",
                                                     "id": "22",
                                                     "mediaImage": {
-                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-3.png",
+                                                        "url": "__ORIGIN__/sites/default/files/2026-07/New%20Project-3.png",
                                                         "alt": "Humboldt State University Logo",
                                                         "height": 300,
                                                         "width": 400,
                                                         "variations": [
                                                             {
-                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-3.png?h=3b5d1417\u0026itok=2i8QHy9b"
+                                                                "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-07/New%20Project-3.png?h=3b5d1417&itok=2i8QHy9b"
                                                             }
                                                         ]
                                                     }
@@ -208,13 +214,13 @@
                                                     "__typename": "MediaImage",
                                                     "id": "23",
                                                     "mediaImage": {
-                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-2.png",
+                                                        "url": "__ORIGIN__/sites/default/files/2026-07/New%20Project-2.png",
                                                         "alt": "Irvine Unified School District Logo",
                                                         "height": 300,
                                                         "width": 400,
                                                         "variations": [
                                                             {
-                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-2.png?h=3b5d1417\u0026itok=jMUioaiZ"
+                                                                "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-07/New%20Project-2.png?h=3b5d1417&itok=jMUioaiZ"
                                                             }
                                                         ]
                                                     }
@@ -229,13 +235,13 @@
                                                     "__typename": "MediaImage",
                                                     "id": "25",
                                                     "mediaImage": {
-                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-8.png",
+                                                        "url": "__ORIGIN__/sites/default/files/2026-07/New%20Project-8.png",
                                                         "alt": "Occidental College Logo",
                                                         "height": 300,
                                                         "width": 400,
                                                         "variations": [
                                                             {
-                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-8.png?h=3b5d1417\u0026itok=EobgMhjR"
+                                                                "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-07/New%20Project-8.png?h=3b5d1417&itok=EobgMhjR"
                                                             }
                                                         ]
                                                     }
@@ -250,13 +256,13 @@
                                                     "__typename": "MediaImage",
                                                     "id": "26",
                                                     "mediaImage": {
-                                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/New%20Project-7.png",
+                                                        "url": "__ORIGIN__/sites/default/files/2026-07/New%20Project-7.png",
                                                         "alt": "Southern Connecticut State University Logo",
                                                         "height": 300,
                                                         "width": 400,
                                                         "variations": [
                                                             {
-                                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/New%20Project-7.png?h=3b5d1417\u0026itok=btZ53-yw"
+                                                                "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-07/New%20Project-7.png?h=3b5d1417&itok=btZ53-yw"
                                                             }
                                                         ]
                                                     }
@@ -287,7 +293,9 @@
                                 "id": "29",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-4"],
+                                "columnWidth": [
+                                    "col-lg-4"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -295,7 +303,7 @@
                                         "id": "28",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-user-group fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003ELeadership\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ELEADING TEAMS \u0026amp; EMPOWERING DEVELOPERS\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022eda2661d11158cc07541d09427fbac128\u0022\u003ELead developer on multiple projects\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e837482794707919380bc51496ea53f5f\u0022\u003EMentor \u0026amp; train developers\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e94c5412e3802af97ab1158b7b871ff1d\u0022\u003ECode reviews \u0026amp; best practices\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e84db456b0e7f605ba9a73c596e2a1e8b\u0022\u003ETechnical architecture \u0026amp; decisions\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e16b081f1b835951000ca67a82ed936de\u0022\u003EStakeholder Communication\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e3f56a65c5845ed41d2f39173f00a15bb\u0022\u003EClient training \u0026amp; workshops\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-user-group fa-4x color-accent mb-5\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">Leadership</span></p>\n<p class=\"text-align-center\"><span class=\"subhead color-accent\">LEADING TEAMS &amp; EMPOWERING DEVELOPERS</span></p>\n<ul>\n<li data-list-item-id=\"eda2661d11158cc07541d09427fbac128\">Lead developer on multiple projects</li>\n<li data-list-item-id=\"e837482794707919380bc51496ea53f5f\">Mentor &amp; train developers</li>\n<li data-list-item-id=\"e94c5412e3802af97ab1158b7b871ff1d\">Code reviews &amp; best practices</li>\n<li data-list-item-id=\"e84db456b0e7f605ba9a73c596e2a1e8b\">Technical architecture &amp; decisions</li>\n<li data-list-item-id=\"e16b081f1b835951000ca67a82ed936de\">Stakeholder Communication</li>\n<li data-list-item-id=\"e3f56a65c5845ed41d2f39173f00a15bb\">Client training &amp; workshops</li>\n</ul>\n"
                                         }
                                     }
                                 ]
@@ -305,7 +313,9 @@
                                 "id": "24",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-4"],
+                                "columnWidth": [
+                                    "col-lg-4"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -313,7 +323,7 @@
                                         "id": "23",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-code fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003ECoding Excellence\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003Eclean, scalable, \u0026amp; performant solutions\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022eda2661d11158cc07541d09427fbac128\u0022\u003EDrupal 7-11 theme \u0026amp; module development\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022eddde34de661c76d0938f67ef6bfd7d1e\u0022\u003EWordpress theme \u0026amp; plugin development\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e2a0d842837d160af6cc17c57a2048e94\u0022\u003ECustom modules \u0026amp; integrations\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e23639c1aa1dba39429e58bfe75c20ca0\u0022\u003EFrontend Build: SCSS, Gulp, NPM, JS\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e951f20230a868a6cd0469392f4d5c26e\u0022\u003EREST API development \u0026amp; integrations\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e5dabfdd0eb5f3e7d8acc1c5edfb37dbb\u0022\u003EDatabase design \u0026amp; optimization\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-code fa-4x color-accent mb-5\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">Coding Excellence</span></p>\n<p class=\"text-align-center\"><span class=\"subhead color-accent\">clean, scalable, &amp; performant solutions</span></p>\n<ul>\n<li data-list-item-id=\"eda2661d11158cc07541d09427fbac128\">Drupal 7-11 theme &amp; module development</li>\n<li data-list-item-id=\"eddde34de661c76d0938f67ef6bfd7d1e\">Wordpress theme &amp; plugin development</li>\n<li data-list-item-id=\"e2a0d842837d160af6cc17c57a2048e94\">Custom modules &amp; integrations</li>\n<li data-list-item-id=\"e23639c1aa1dba39429e58bfe75c20ca0\">Frontend Build: SCSS, Gulp, NPM, JS</li>\n<li data-list-item-id=\"e951f20230a868a6cd0469392f4d5c26e\">REST API development &amp; integrations</li>\n<li data-list-item-id=\"e5dabfdd0eb5f3e7d8acc1c5edfb37dbb\">Database design &amp; optimization</li>\n</ul>\n"
                                         }
                                     }
                                 ]
@@ -323,7 +333,9 @@
                                 "id": "27",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-4"],
+                                "columnWidth": [
+                                    "col-lg-4"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -331,7 +343,7 @@
                                         "id": "26",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-clipboard-list-check fa-4x color-accent mb-5\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003EProject Management\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EDELIVERING PROJECTS ON TIME \u0026amp; ON TARGET\u003C\/span\u003E\u003C\/p\u003E\n\u003Cul\u003E\n\u003Cli data-list-item-id=\u0022eda2661d11158cc07541d09427fbac128\u0022\u003EManage multiple clients \u0026amp; projects\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e28c1fffe9b391a96471cea68e8fdc923\u0022\u003ERequirement gathering \u0026amp; planning\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e433d0398307f42b353d3d77656603bcf\u0022\u003ECross-functional team collaboration\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022ea2b83a5d320ac46e4f5ccb10199f9adf\u0022\u003ETimelines, budgets \u0026amp; resource planning\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022efaf98e1bc6182ee45ed9ed330444dfe3\u0022\u003EAgile workflow \u0026amp; task management\u003C\/li\u003E\n\u003Cli data-list-item-id=\u0022e876f96fae7708c7c17f941477b3dc502\u0022\u003EWebsite redesigns \u0026amp; migrations\u003C\/li\u003E\n\u003C\/ul\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-clipboard-list-check fa-4x color-accent mb-5\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">Project Management</span></p>\n<p class=\"text-align-center\"><span class=\"subhead color-accent\">DELIVERING PROJECTS ON TIME &amp; ON TARGET</span></p>\n<ul>\n<li data-list-item-id=\"eda2661d11158cc07541d09427fbac128\">Manage multiple clients &amp; projects</li>\n<li data-list-item-id=\"e28c1fffe9b391a96471cea68e8fdc923\">Requirement gathering &amp; planning</li>\n<li data-list-item-id=\"e433d0398307f42b353d3d77656603bcf\">Cross-functional team collaboration</li>\n<li data-list-item-id=\"ea2b83a5d320ac46e4f5ccb10199f9adf\">Timelines, budgets &amp; resource planning</li>\n<li data-list-item-id=\"efaf98e1bc6182ee45ed9ed330444dfe3\">Agile workflow &amp; task management</li>\n<li data-list-item-id=\"e876f96fae7708c7c17f941477b3dc502\">Website redesigns &amp; migrations</li>\n</ul>\n"
                                         }
                                     }
                                 ]
@@ -346,7 +358,7 @@
                             "__typename": "MediaBackgroundImage",
                             "id": "15",
                             "mediaImage2": {
-                                "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/shawn-macdonald-abstract-pixel-bg-img_0.jpg"
+                                "url": "__ORIGIN__/sites/default/files/2026-07/shawn-macdonald-abstract-pixel-bg-img_0.jpg"
                             }
                         },
                         "bgImagePosition": "center center",
@@ -363,7 +375,9 @@
                                 "id": "31",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-3"],
+                                "columnWidth": [
+                                    "col-lg-3"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -371,7 +385,7 @@
                                         "id": "30",
                                         "verticalAlign": true,
                                         "body": {
-                                            "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EFEATURED WORK\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EProjects That Make an Impact\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003EFrom complex Drupal builds to custom integrations, I create solutions that solve real problems and deliver value\u003C\/p\u003E\n\u003Cp\u003E\u003Ca class=\u0022button transparent\u0022 tabindex=\u00220\u0022 href=\u0022\/portfolio\u0022 data-entity-substitution=\u0022canonical\u0022\u003EView All Projects\u003C\/a\u003E\u003C\/p\u003E\n"
+                                            "processed": "<p><span class=\"subhead color-accent\">FEATURED WORK</span></p>\n<p><span class=\"h3\">Projects That Make an Impact</span></p>\n<p>From complex Drupal builds to custom integrations, I create solutions that solve real problems and deliver value</p>\n<p><a class=\"button transparent\" tabindex=\"0\" href=\"/portfolio\" data-entity-substitution=\"canonical\">View All Projects</a></p>\n"
                                         }
                                     }
                                 ]
@@ -381,24 +395,26 @@
                                 "id": "32",
                                 "bgColor": "rgba(20, 20, 20, 1)",
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-3"],
+                                "columnWidth": [
+                                    "col-lg-3"
+                                ],
                                 "media": {
                                     "__typename": "MediaImage",
                                     "id": "2",
                                     "mediaImage": {
-                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/MacDonalDesign-NeoGenomics-Laboratories-home-page_2.jpg",
+                                        "url": "__ORIGIN__/sites/default/files/2026-07/MacDonalDesign-NeoGenomics-Laboratories-home-page_2.jpg",
                                         "alt": "NeoGenomics custom built theme",
                                         "height": 3599,
                                         "width": 800,
                                         "variations": [
                                             {
-                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/MacDonalDesign-NeoGenomics-Laboratories-home-page_2.jpg?h=8660f157\u0026itok=2wD41rFc"
+                                                "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-07/MacDonalDesign-NeoGenomics-Laboratories-home-page_2.jpg?h=8660f157&itok=2wD41rFc"
                                             }
                                         ]
                                     }
                                 },
                                 "body": {
-                                    "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EDrupal 10 + Next.js\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h4\u0022\u003ENeoGenomics Laboratories\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003ELead a full rebuild from Drupal 7 to Drupal 10, Custom modules, API integrations, and performance optimization.\u003C\/p\u003E\n\u003Cp class=\u0022mt-auto\u0022\u003E\u003Ca class=\u0022arrow-right fa-regular fa-arrow-right\u0022 href=\u0022\/portfolio\/neogenomics-laboratories\u0022 data-entity-substitution=\u0022canonical\u0022 tabindex=\u00220\u0022\u003EView Project\u003C\/a\u003E\u003C\/p\u003E\n"
+                                    "processed": "<p><span class=\"subhead color-accent\">Drupal 10 + Next.js</span></p>\n<p><span class=\"h4\">NeoGenomics Laboratories</span></p>\n<p>Lead a full rebuild from Drupal 7 to Drupal 10, Custom modules, API integrations, and performance optimization.</p>\n<p class=\"mt-auto\"><a class=\"arrow-right fa-regular fa-arrow-right\" href=\"/portfolio/neogenomics-laboratories\" data-entity-substitution=\"canonical\" tabindex=\"0\">View Project</a></p>\n"
                                 }
                             },
                             {
@@ -406,24 +422,26 @@
                                 "id": "34",
                                 "bgColor": "rgba(20, 20, 20, 1)",
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-3"],
+                                "columnWidth": [
+                                    "col-lg-3"
+                                ],
                                 "media": {
                                     "__typename": "MediaImage",
                                     "id": "89",
                                     "mediaImage": {
-                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-08\/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg",
+                                        "url": "__ORIGIN__/sites/default/files/2026-08/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg",
                                         "alt": "MacDonalDesign portfolio",
                                         "height": 7318,
                                         "width": 4036,
                                         "variations": [
                                             {
-                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg?h=c49f93d5\u0026itok=w90zW2-b"
+                                                "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-08/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg?h=c49f93d5&itok=w90zW2-b"
                                             }
                                         ]
                                     }
                                 },
                                 "body": {
-                                    "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EDrupal 11 + Next.js\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h4\u0022\u003EMacDonalDesign\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003EA custom headless web platform built with Drupal 11 and Next.js, backed by GraphQL, REST APIs, GitHub, and Jenkins CI\/CD.\u003C\/p\u003E\n\u003Cp class=\u0022mt-auto\u0022\u003E\u003Ca class=\u0022arrow-right fa-regular fa-arrow-right\u0022 href=\u0022\/portfolio\/macdonaldesign\u0022 data-entity-substitution=\u0022canonical\u0022 tabindex=\u00220\u0022\u003EView Project\u003C\/a\u003E\u003C\/p\u003E\n"
+                                    "processed": "<p><span class=\"subhead color-accent\">Drupal 11 + Next.js</span></p>\n<p><span class=\"h4\">MacDonalDesign</span></p>\n<p>A custom headless web platform built with Drupal 11 and Next.js, backed by GraphQL, REST APIs, GitHub, and Jenkins CI/CD.</p>\n<p class=\"mt-auto\"><a class=\"arrow-right fa-regular fa-arrow-right\" href=\"/portfolio/macdonaldesign\" data-entity-substitution=\"canonical\" tabindex=\"0\">View Project</a></p>\n"
                                 }
                             },
                             {
@@ -431,24 +449,26 @@
                                 "id": "33",
                                 "bgColor": "rgba(20, 20, 20, 1)",
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-3"],
+                                "columnWidth": [
+                                    "col-lg-3"
+                                ],
                                 "media": {
                                     "__typename": "MediaImage",
                                     "id": "3",
                                     "mediaImage": {
-                                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/emory-university-aae.jpg",
+                                        "url": "__ORIGIN__/sites/default/files/2026-07/emory-university-aae.jpg",
                                         "alt": "Emory University Together website",
                                         "height": 3533,
                                         "width": 1000,
                                         "variations": [
                                             {
-                                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/emory-university-aae.jpg?h=9b0a2110\u0026itok=L76KnTLz"
+                                                "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-07/emory-university-aae.jpg?h=9b0a2110&itok=L76KnTLz"
                                             }
                                         ]
                                     }
                                 },
                                 "body": {
-                                    "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EDrupal 11 + React\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h4\u0022\u003EEmory University - AAE\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003EMigrated large-scale site to Drupal, Integrated with Shopify, and improved workflows.\u003C\/p\u003E\n\u003Cp class=\u0022mt-auto\u0022\u003E\u003Ca class=\u0022arrow-right fa-regular fa-arrow-right\u0022 href=\u0022\/portfolio\/emory-university-aae\u0022 data-entity-substitution=\u0022canonical\u0022 tabindex=\u00220\u0022\u003EView Project\u003C\/a\u003E\u003C\/p\u003E\n"
+                                    "processed": "<p><span class=\"subhead color-accent\">Drupal 11 + React</span></p>\n<p><span class=\"h4\">Emory University - AAE</span></p>\n<p>Migrated large-scale site to Drupal, Integrated with Shopify, and improved workflows.</p>\n<p class=\"mt-auto\"><a class=\"arrow-right fa-regular fa-arrow-right\" href=\"/portfolio/emory-university-aae\" data-entity-substitution=\"canonical\" tabindex=\"0\">View Project</a></p>\n"
                                 }
                             }
                         ]
@@ -472,7 +492,9 @@
                                 "id": "37",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-6"],
+                                "columnWidth": [
+                                    "col-lg-6"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -480,7 +502,7 @@
                                         "id": "36",
                                         "verticalAlign": false,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022mb-4 align-left media media--type-image media--view-mode-default\u0022\u003E\n  \n      \u003Cdiv class=\u0022field field--name-field-media-image field--type-image field--label-visually_hidden\u0022\u003E\n        \u003Cimg loading=\u0022lazy\u0022 src=\u0022\/sites\/default\/files\/2026-07\/profile-image.jpg\u0022 width=\u0022400\u0022 height=\u0022400\u0022 alt\u003E\n\n\n  \u003C\/div\u003E\n\n  \u003C\/div\u003E\n\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003EABOUT ME\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003E\u003Cspan class=\u0022h3\u0022\u003EDeveloper. Problem Solver. Team Leader.\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp\u003EI love turning complex challenges into simple, elegant solutions. I write clean code, build intuitive exeriences, and help teams do their best work.\u003C\/p\u003E\n\u003Cp\u003E\u003Ca class=\u0022button transparent\u0022 href=\u0022\/about\u0022 data-entity-substitution=\u0022canonical\u0022 tabindex=\u00220\u0022\u003EMore About Me\u003C\/a\u003E\u003C\/p\u003E\n"
+                                            "processed": "<div class=\"mb-4 align-left media media--type-image media--view-mode-default\">\n  \n      <div class=\"field field--name-field-media-image field--type-image field--label-visually_hidden\">\n        <img loading=\"lazy\" src=\"/sites/default/files/2026-07/profile-image.jpg\" width=\"400\" height=\"400\" alt>\n\n\n  </div>\n\n  </div>\n<p><span class=\"subhead color-accent\">ABOUT ME</span></p>\n<p><span class=\"h3\">Developer. Problem Solver. Team Leader.</span></p>\n<p>I love turning complex challenges into simple, elegant solutions. I write clean code, build intuitive exeriences, and help teams do their best work.</p>\n<p><a class=\"button transparent\" href=\"/about\" data-entity-substitution=\"canonical\" tabindex=\"0\">More About Me</a></p>\n"
                                         }
                                     }
                                 ]
@@ -490,7 +512,10 @@
                                 "id": "40",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-2", "col-md-4"],
+                                "columnWidth": [
+                                    "col-lg-2",
+                                    "col-md-4"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -498,7 +523,7 @@
                                         "id": "39",
                                         "verticalAlign": true,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-calendar-check fa-4x color-accent\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003E15+\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EYears Experience\u003C\/p\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-calendar-check fa-4x color-accent\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">15+</span></p>\n<p class=\"text-align-center\">Years Experience</p>\n"
                                         }
                                     }
                                 ]
@@ -508,7 +533,10 @@
                                 "id": "42",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-2", "col-md-4"],
+                                "columnWidth": [
+                                    "col-lg-2",
+                                    "col-md-4"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -516,7 +544,7 @@
                                         "id": "41",
                                         "verticalAlign": true,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-computer fa-4x color-accent\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003E50+\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003EProjects Completed\u003C\/p\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-computer fa-4x color-accent\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">50+</span></p>\n<p class=\"text-align-center\">Projects Completed</p>\n"
                                         }
                                     }
                                 ]
@@ -526,7 +554,10 @@
                                 "id": "44",
                                 "bgColor": null,
                                 "sectionId": null,
-                                "columnWidth": ["col-lg-2", "col-md-4"],
+                                "columnWidth": [
+                                    "col-lg-2",
+                                    "col-md-4"
+                                ],
                                 "styledBox": false,
                                 "element": [
                                     {
@@ -534,7 +565,7 @@
                                         "id": "43",
                                         "verticalAlign": true,
                                         "body": {
-                                            "processed": "\u003Cdiv class=\u0022text-align-center\u0022\u003E\n\u003Cp class=\u0022text-align-center fa-regular fa-users fa-4x color-accent\u0022\u003E\u003Cspan style=\u0022display:none;\u0022\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/p\u003E\n\u003C\/div\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003E\u003Cspan class=\u0022h3\u0022\u003E15+\u003C\/span\u003E\u003C\/p\u003E\n\u003Cp class=\u0022text-align-center\u0022\u003ETeam Members Led\u003C\/p\u003E\n"
+                                            "processed": "<div class=\"text-align-center\">\n<p class=\"text-align-center fa-regular fa-users fa-4x color-accent\"><span style=\"display:none;\">&nbsp;</span></p>\n</div>\n<p class=\"text-align-center\"><span class=\"h3\">15+</span></p>\n<p class=\"text-align-center\">Team Members Led</p>\n"
                                         }
                                     }
                                 ]
@@ -568,7 +599,7 @@
                         "__typename": "MetaTagLink",
                         "tag": "link",
                         "attributes": {
-                            "href": "__ORIGIN__\/homepage",
+                            "href": "__ORIGIN__/homepage",
                             "hreflang": null,
                             "media": null,
                             "rel": "canonical",
@@ -580,7 +611,7 @@
                         "__typename": "MetaTagLink",
                         "tag": "link",
                         "attributes": {
-                            "href": "https:\/\/macdonaldesign.com\/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg",
+                            "href": "https://macdonaldesign.com/sites/default/files/styles/featured_image/public/2026-08/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg",
                             "hreflang": null,
                             "media": null,
                             "rel": "image_src",

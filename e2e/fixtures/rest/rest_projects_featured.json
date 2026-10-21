@@ -1,30 +1,30 @@
 [
     {
         "field_filter": "32",
-        "field_slider": "\n          \n      \n  \n      \n      \/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/MacDonalDesign-NeoGenomics-Laboratories-home-page_2.jpg?h=8660f157\u0026amp;itok=2wD41rFc\n  \n\n  \n\n  \n\n      , \n          \n      \n  \n      \n      \/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/neo-nextjs.jpg?h=e7f84465\u0026amp;itok=y742ElF7\n  \n\n  \n\n  \n\n      ",
+        "field_slider": "\n          \n      \n  \n      \n      /sites/default/files/styles/featured_image/public/2026-07/MacDonalDesign-NeoGenomics-Laboratories-home-page_2.jpg?h=8660f157&amp;itok=2wD41rFc\n  \n\n  \n\n  \n\n      , \n          \n      \n  \n      \n      /sites/default/files/styles/featured_image/public/2026-07/neo-nextjs.jpg?h=e7f84465&amp;itok=y742ElF7\n  \n\n  \n\n  \n\n      ",
         "title": "NeoGenomics Laboratories",
         "field_tags": "Drupal 10, Next.js, Wordpress, REST API, Migration",
-        "url": "\/portfolio\/neogenomics-laboratories"
+        "url": "/portfolio/neogenomics-laboratories"
     },
     {
         "field_filter": "34",
-        "field_slider": "\/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg?h=c49f93d5\u0026amp;itok=w90zW2-b",
+        "field_slider": "/sites/default/files/styles/featured_image/public/2026-08/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg?h=c49f93d5&amp;itok=w90zW2-b",
         "title": "MacDonalDesign",
         "field_tags": "Next.js, Jenkins, GraphQL, REST API, Github Actions, Drupal 11",
-        "url": "\/portfolio\/macdonaldesign"
+        "url": "/portfolio/macdonaldesign"
     },
     {
         "field_filter": "31",
-        "field_slider": "\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/emory-university-aae.jpg?h=9b0a2110\u0026amp;itok=L76KnTLz",
+        "field_slider": "/sites/default/files/styles/featured_image/public/2026-07/emory-university-aae.jpg?h=9b0a2110&amp;itok=L76KnTLz",
         "title": "Emory University - AAE",
         "field_tags": "Drupal 11, Shopify, Migration, REST API, React",
-        "url": "\/portfolio\/emory-university-aae"
+        "url": "/portfolio/emory-university-aae"
     },
     {
         "field_filter": "30",
-        "field_slider": "\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/chandler-home.jpg?h=afd72823\u0026amp;itok=xMbwlUtp",
+        "field_slider": "/sites/default/files/styles/featured_image/public/2026-07/chandler-home.jpg?h=afd72823&amp;itok=xMbwlUtp",
         "title": "City of Chandler, AZ",
         "field_tags": "Drupal 9, Migration",
-        "url": "\/portfolio\/city-chandler-az"
+        "url": "/portfolio/city-chandler-az"
     }
 ]

@@ -13,7 +13,9 @@
         "#webform_children": [],
         "#webform_multiple": false,
         "#webform_composite": false,
-        "#webform_parents": ["name"],
+        "#webform_parents": [
+            "name"
+        ],
         "#admin_title": "Your Name",
         "#webform_plugin_id": "textfield"
     },
@@ -31,7 +33,9 @@
         "#webform_children": [],
         "#webform_multiple": false,
         "#webform_composite": false,
-        "#webform_parents": ["email"],
+        "#webform_parents": [
+            "email"
+        ],
         "#admin_title": "Your Email",
         "#webform_plugin_id": "email"
     },
@@ -49,7 +53,9 @@
         "#webform_children": [],
         "#webform_multiple": false,
         "#webform_composite": false,
-        "#webform_parents": ["subject"],
+        "#webform_parents": [
+            "subject"
+        ],
         "#admin_title": "Subject",
         "#webform_plugin_id": "textfield"
     },
@@ -67,7 +73,9 @@
         "#webform_children": [],
         "#webform_multiple": false,
         "#webform_composite": false,
-        "#webform_parents": ["message"],
+        "#webform_parents": [
+            "message"
+        ],
         "#admin_title": "Message",
         "#webform_plugin_id": "textarea"
     },
@@ -79,7 +87,11 @@
             "option 2": "option 2",
             "option 3": "option 3"
         },
-        "#wrapper_attributes": { "class": ["invisible"] },
+        "#wrapper_attributes": {
+            "class": [
+                "invisible"
+            ]
+        },
         "#webform": "contact",
         "#webform_id": "contact--hidden_fields",
         "#webform_key": "hidden_fields",
@@ -89,7 +101,9 @@
         "#webform_children": [],
         "#webform_multiple": false,
         "#webform_composite": false,
-        "#webform_parents": ["hidden_fields"],
+        "#webform_parents": [
+            "hidden_fields"
+        ],
         "#admin_title": "Hidden fields",
         "#webform_plugin_id": "select"
     },
@@ -106,7 +120,9 @@
         "#webform_children": [],
         "#webform_multiple": false,
         "#webform_composite": false,
-        "#webform_parents": ["actions"],
+        "#webform_parents": [
+            "actions"
+        ],
         "#admin_title": "Submit button(s)",
         "#webform_plugin_id": "webform_actions"
     }

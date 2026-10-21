@@ -14,31 +14,10 @@ import { PAGES } from "./helpers"
  * hand, along with keyboard use and screen reader behavior (docs/testing).
  */
 const KNOWN: Record<string, string[]> = {
-    // Icon-only social links have no accessible name.
-    "link-name": [
-        "home",
-        "about",
-        "portfolio",
-        "project",
-        "contact",
-        "not-found",
-    ],
-    // No <main> landmark.
-    "landmark-one-main": [
-        "home",
-        "about",
-        "portfolio",
-        "project",
-        "contact",
-        "not-found",
-    ],
-    region: ["home", "about", "portfolio", "project", "contact", "not-found"],
-    // Heading levels skip (for example h1 to h3 in the footer call to action).
+    // The footer call to action is an <h3> in the Drupal block body, right after
+    // the page's <h1>. Fix in Drupal: change it to <h2 class="h3">, re-record the
+    // fixtures (npm run e2e:record) and delete this entry.
     "heading-order": ["home", "about", "portfolio", "project", "not-found"],
-    // Project pages and the 404 page set no <title>.
-    "document-title": ["project", "not-found"],
-    // react-slick marks focusable slide dots with role="presentation".
-    "presentation-role-conflict": ["portfolio"],
 }
 
 const knownFor = (name: string) =>

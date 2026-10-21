@@ -31,7 +31,7 @@
                     "__typename": "MetaTagLink",
                     "tag": "link",
                     "attributes": {
-                        "href": "__ORIGIN__\/homepage",
+                        "href": "__ORIGIN__/homepage",
                         "hreflang": null,
                         "media": null,
                         "rel": "canonical",
@@ -43,7 +43,7 @@
                     "__typename": "MetaTagLink",
                     "tag": "link",
                     "attributes": {
-                        "href": "https:\/\/macdonaldesign.com\/sites\/default\/files\/styles\/featured_image\/public\/2026-08\/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg",
+                        "href": "https://macdonaldesign.com/sites/default/files/styles/featured_image/public/2026-08/screencapture-macdonaldesign-2026-08-26-14_22_45.jpg",
                         "hreflang": null,
                         "media": null,
                         "rel": "image_src",
@@ -62,13 +62,13 @@
                     "__typename": "MediaImage",
                     "id": "1",
                     "mediaImage": {
-                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/logo.png",
+                        "url": "__ORIGIN__/sites/default/files/2026-07/logo.png",
                         "alt": "MacDonalDesign logo",
                         "height": 38,
                         "width": 248,
                         "variations": [
                             {
-                                "url": "__ORIGIN__\/sites\/default\/files\/styles\/featured_image\/public\/2026-07\/logo.png?h=420377e3\u0026itok=Uop-FGGz"
+                                "url": "__ORIGIN__/sites/default/files/styles/featured_image/public/2026-07/logo.png?h=420377e3&itok=Uop-FGGz"
                             }
                         ]
                     }
@@ -79,25 +79,25 @@
             "name": "Main navigation",
             "items": [
                 {
-                    "url": "\/",
+                    "url": "/",
                     "title": "Home",
                     "internal": true,
                     "children": []
                 },
                 {
-                    "url": "\/about",
+                    "url": "/about",
                     "title": "About",
                     "internal": true,
                     "children": []
                 },
                 {
-                    "url": "\/portfolio",
+                    "url": "/portfolio",
                     "title": "Portfolio",
                     "internal": true,
                     "children": []
                 },
                 {
-                    "url": "\/contact",
+                    "url": "/contact",
                     "title": "Contact",
                     "internal": true,
                     "children": []
@@ -123,16 +123,18 @@
                     "__typename": "MediaLinkedImage",
                     "id": "28",
                     "mediaImage1": {
-                        "url": "__ORIGIN__\/sites\/default\/files\/2026-07\/logo_0.png",
+                        "url": "__ORIGIN__/sites/default/files/2026-07/logo_0.png",
                         "alt": "MacDonalDesign logo",
                         "height": 38,
                         "width": 248
                     },
-                    "link": { "url": "\/" }
+                    "link": {
+                        "url": "/"
+                    }
                 }
             ],
             "body": {
-                "processed": "\u003Cp\u003ESenior Web Developer \u0026amp; Digital Strategist crafting scalable, high-performance websites | Specializing in Drupal, WordPress, and custom solutions for higher education, enterprise, and data-driven platforms.\u003C\/p\u003E\n\u003Cp\u003E\u003Ca href=\u0022mailto:SmMacDonald@me.com\u0022\u003ESmMacDonald@me.com\u003C\/a\u003E\u003Cbr\u003E949.735.4933 - Austin, TX\u003C\/p\u003E\n"
+                "processed": "<p>Senior Web Developer &amp; Digital Strategist crafting scalable, high-performance websites | Specializing in Drupal, WordPress, and custom solutions for higher education, enterprise, and data-driven platforms.</p>\n<p><a href=\"mailto:SmMacDonald@me.com\">SmMacDonald@me.com</a><br>949.735.4933 - Austin, TX</p>\n"
             },
             "socialMedia": [
                 {
@@ -143,7 +145,7 @@
                             "__typename": "ParagraphSocialMediaItem",
                             "id": "103",
                             "link": {
-                                "url": "https:\/\/www.linkedin.com\/in\/smmacdonald\/",
+                                "url": "https://www.linkedin.com/in/smmacdonald/",
                                 "title": ""
                             },
                             "socialMediaIcon": "fa-brands fa-linkedin-in"
@@ -152,7 +154,7 @@
                             "__typename": "ParagraphSocialMediaItem",
                             "id": "253",
                             "link": {
-                                "url": "https:\/\/github.com\/smmacdonald",
+                                "url": "https://github.com/smmacdonald",
                                 "title": ""
                             },
                             "socialMediaIcon": "fa-brands fa-github"
@@ -166,7 +168,7 @@
             "id": "2",
             "title": "footer get in touch message",
             "body": {
-                "processed": "\u003Cp\u003E\u003Cspan class=\u0022subhead color-accent\u0022\u003ELETS WORK TOGETHER\u003C\/span\u003E\u003C\/p\u003E\n\u003Ch3\u003EHave A Project In Mind?\u003Cbr\u003E\u003Cspan class=\u0022color-accent\u0022\u003ELets Connect.\u003C\/span\u003E\u003C\/h3\u003E\n\u003Cp class=\u0022mb-5\u0022\u003EI work with organizations looking for a reliable technical partner who can think strategically and execute at a high level.\u003C\/p\u003E\n\u003Cp\u003E\u003Ca class=\u0022button transparent\u0022 href=\u0022\/contact\u0022 data-entity-substitution=\u0022canonical\u0022 tabindex=\u00220\u0022\u003EGET IN TOUCH\u003C\/a\u003E\u003C\/p\u003E\n"
+                "processed": "<p><span class=\"subhead color-accent\">LETS WORK TOGETHER</span></p>\n<h3>Have A Project In Mind?<br><span class=\"color-accent\">Lets Connect.</span></h3>\n<p class=\"mb-5\">I work with organizations looking for a reliable technical partner who can think strategically and execute at a high level.</p>\n<p><a class=\"button transparent\" href=\"/contact\" data-entity-substitution=\"canonical\" tabindex=\"0\">GET IN TOUCH</a></p>\n"
             }
         },
         "copyright": {
@@ -174,7 +176,7 @@
             "id": "6",
             "title": "footer copyright",
             "body": {
-                "processed": "\u003Cp\u003E\u003Csmall\u003E\u00a9 2026 MacDonalDesign\u003C\/small\u003E\u003C\/p\u003E\n"
+                "processed": "<p><small>© 2026 MacDonalDesign</small></p>\n"
             }
         }
     }

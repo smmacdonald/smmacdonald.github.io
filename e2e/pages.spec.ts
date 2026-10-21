@@ -72,23 +72,45 @@ test("social links point to the expected external profiles", async ({
     ])
 })
 
-// Known gap from the audit: external links open in a new tab but set no `rel`.
-test.fixme("external links that open a new tab set rel=noopener noreferrer", async ({
+test("external links that open a new tab set rel=noopener noreferrer and name the destination", async ({
+    page,
+}) => {
+    await page.goto("/")
+    const links = page.locator('a[target="_blank"]')
+
+    await expect(links).toHaveCount(2)
+    for (const link of await links.all()) {
+        await expect(link).toHaveAttribute("rel", "noopener noreferrer")
+        await expect(link).toHaveAccessibleName(/opens in a new tab/)
+    }
+    await expect(
+        page.getByRole("link", { name: "LinkedIn (opens in a new tab)" })
+    ).toBeVisible()
+    await expect(
+        page.getByRole("link", { name: "GitHub (opens in a new tab)" })
+    ).toBeVisible()
+})
+
+test("project pages use the title from Drupal's metatags", async ({ page }) => {
+    await page.goto("/portfolio/macdonaldesign")
+
+    await expect(page).toHaveTitle("MacDonalDesign | portfolio")
+})
+
+test("the 404 page has a title", async ({ page }) => {
+    await page.goto("/does-not-exist")
+
+    await expect(page).toHaveTitle("Page not found | portfolio")
+})
+
+test("the home page canonical is / rather than the redirecting /homepage", async ({
     page,
 }) => {
     await page.goto("/")
 
-    for (const link of await page.locator('a[target="_blank"]').all()) {
-        await expect(link).toHaveAttribute("rel", /noopener/)
-    }
-})
+    const canonical = await page
+        .locator('link[rel="canonical"]')
+        .getAttribute("href")
 
-// Known gap from the audit: project pages request no SEO metadata from Drupal.
-test.fixme("project pages have a title and meta description", async ({
-    page,
-}) => {
-    await page.goto("/portfolio/macdonaldesign")
-
-    await expect(page).toHaveTitle(/MacDonalDesign/)
-    await expect(page.locator('meta[name="description"]')).toHaveCount(1)
+    expect(new URL(canonical!).pathname).toBe("/")
 })

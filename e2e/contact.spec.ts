@@ -85,8 +85,7 @@ test("shows an error and keeps the input when the submission fails", async ({
     await expect(page.getByLabel(/Your Name/)).toHaveValue("Ada Lovelace")
 })
 
-// Known gap from the audit: the visitor sees Drupal's raw error body.
-test.fixme("a failed submission shows a generic message, not the server response", async ({
+test("a failed submission shows a generic message, not the server response", async ({
     page,
 }) => {
     await page.route(SUBMIT, (route) =>
@@ -100,7 +99,7 @@ test.fixme("a failed submission shows a generic message, not the server response
     await fillForm(page)
     await page.getByRole("button", { name: /submit|send/i }).click()
 
-    await expect(page.locator("#contact").getByRole("alert")).not.toContainText(
-        "SQLSTATE"
-    )
+    const alert = page.locator("#contact").getByRole("alert")
+    await expect(alert).toHaveText("There was a problem submitting the form.")
+    await expect(alert).not.toContainText("SQLSTATE")
 })
