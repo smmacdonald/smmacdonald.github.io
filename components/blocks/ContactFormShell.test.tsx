@@ -92,7 +92,7 @@ describe("ContactFormShell", () => {
         })
     })
 
-    it("shows an error alert when Drupal rejects the submission", async () => {
+    it("shows a generic error, not the server's response, when Drupal rejects the submission", async () => {
         const user = userEvent.setup()
         stubSubmit(() =>
             Promise.resolve(new Response("Validation failed", { status: 422 }))
@@ -102,9 +102,11 @@ describe("ContactFormShell", () => {
         await fillForm(user)
         await user.click(screen.getByRole("button", { name: "Send" }))
 
-        expect(await screen.findByRole("alert")).toHaveTextContent(
-            "Validation failed"
+        const alert = await screen.findByRole("alert")
+        expect(alert).toHaveTextContent(
+            "There was a problem submitting the form."
         )
+        expect(alert).not.toHaveTextContent("Validation failed")
         // The visitor's input is kept so they can retry.
         expect(screen.getByLabelText(/Your Name/)).toHaveValue("Ada")
     })

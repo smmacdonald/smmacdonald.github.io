@@ -10,6 +10,8 @@ type PortfolioSliderProps = {
     autoplay: string
     show: string
     scroll: string
+    /** Accessible description applied to every slide image. */
+    alt?: string
 }
 
 export default function PortfolioSlider({
@@ -17,6 +19,7 @@ export default function PortfolioSlider({
     autoplay,
     show,
     scroll,
+    alt = "",
 }: PortfolioSliderProps) {
     const toShow = Number(show)
     const toScroll = Number(scroll)
@@ -56,7 +59,7 @@ export default function PortfolioSlider({
                         src={path + item.trim()}
                         height={400}
                         width={600}
-                        alt=""
+                        alt={alt}
                         unoptimized
                     />
                 )
