@@ -19,7 +19,11 @@
         "check": "npm run format:check && npm run lint && npm run typecheck && npm run test",
         "test": "vitest run",
         "test:watch": "vitest",
-        "test:coverage": "vitest run --coverage"
+        "test:coverage": "vitest run --coverage",
+        "test:e2e": "playwright test",
+        "test:e2e:ui": "playwright test --ui",
+        "test:a11y": "playwright test --grep @a11y",
+        "e2e:record": "node e2e/server.mjs --record"
     },
     "dependencies": {
         "bootstrap": "^5.3.8",
@@ -32,7 +36,9 @@
         "slick-carousel": "^1.8.1"
     },
     "devDependencies": {
+        "@axe-core/playwright": "^4.14.0",
         "@graphql-tools/webpack-loader": "^7.0.0",
+        "@playwright/test": "^1.64.1",
         "@testing-library/dom": "^10.4.2",
         "@testing-library/jest-dom": "^7.0.1",
         "@testing-library/react": "^16.3.3",
