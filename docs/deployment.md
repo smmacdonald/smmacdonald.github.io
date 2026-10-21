@@ -121,6 +121,7 @@ if yours does not, set `NODE_EXTRA_CA_CERTS` to the mkcert root CA.
 | Build fails: "The Drupal sitemap returned no routes" | `/rest/headless-sitemap` returned an empty list; check the Drupal view and caches |
 | Pull request waits for a check that never reports | The ruleset requires a check name that no longer exists; update the ruleset |
 | E2E fails after a Drupal or query change | Re-record fixtures: `npm run e2e:record -- <drupal url>` and review the diff |
+| A shared link shows the wrong thumbnail (for example the first slider image) | The page has no `og:image`, so the sharing app guesses an image. Drupal's Metatag "Image" is emitted as `<link rel="image_src">`; this site republishes it as `og:image`/`twitter:image`, **only for pages that have one set in Drupal** (check the GraphQL `metatag` list for an `image_src` entry). Set it in Drupal (per node, or in Metatag's global/content-type defaults), run the workflow to rebuild, then refresh the app's cache: LinkedIn Post Inspector, Facebook Sharing Debugger; Slack and iMessage cache for a while. The image should be about 1200 x 630 px; a 600 x 400 image gives a small preview on some apps |
 | Commit hook fails | Pre-commit runs Prettier and ESLint on staged files; pre-push runs the typecheck. Fix the reported issue; do not bypass with `--no-verify` |
 
 ## Known Drupal-side issue: breadcrumbs

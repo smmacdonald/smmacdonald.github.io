@@ -196,6 +196,10 @@ that receive server-rendered content.
   [docs/audits/testing-strategy.md](docs/audits/testing-strategy.md).
 * Page titles and canonical URLs come from Drupal's metatags (including project pages and the 404 page). This is
   not the primary site, so it intentionally has no sitemap or `robots.txt`.
+* Link previews: the share image comes from Drupal's Metatag "Image" (emitted as `<link rel="image_src">`, which
+  sharing apps ignore) and is republished as `og:image` and `twitter:image`, with the page title and description.
+  A page with no image in Drupal has no share image, so apps guess one from the page. After changing it, rebuild
+  the site and refresh the preview cache (see [docs/deployment.md](docs/deployment.md#troubleshooting)).
 * The breadcrumb trail always starts with Home, even if Drupal returns an empty trail; the build logs a warning
   when that happens.
 
