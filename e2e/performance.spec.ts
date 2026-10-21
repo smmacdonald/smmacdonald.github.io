@@ -47,3 +47,68 @@ test("pages preconnect to the Drupal host that serves their images", async ({
         new RegExp(`url\\(.*${origin!.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`)
     )
 })
+
+test("the Bootstrap subset still provides the classes the site relies on", async ({
+    page,
+}) => {
+    await page.goto("/")
+
+    // Probe each class on a throwaway element and read the style it produces.
+    const styles = await page.evaluate(() => {
+        const probe = (className: string, property: string) => {
+            const element = document.createElement("div")
+            element.className = className
+            document.body.appendChild(element)
+            const value = getComputedStyle(element).getPropertyValue(property)
+            element.remove()
+            return value
+        }
+        return {
+            "d-flex": probe("d-flex", "display"),
+            "d-none": probe("d-none", "display"),
+            row: probe("row", "display"),
+            "mb-5": probe("mb-5", "margin-bottom"),
+            "p-4": probe("p-4", "padding-top"),
+            invisible: probe("invisible", "visibility"),
+            "list-unstyled": probe("list-unstyled", "list-style-type"),
+            "visually-hidden": probe("visually-hidden", "position"),
+            "form-control": probe("form-control", "border-top-width"),
+            alert: probe("alert", "padding-top"),
+        }
+    })
+
+    expect(styles).toEqual({
+        "d-flex": "flex",
+        "d-none": "none",
+        row: "flex",
+        "mb-5": "48px",
+        "p-4": "24px",
+        invisible: "hidden",
+        "list-unstyled": "none",
+        "visually-hidden": "absolute",
+        "form-control": "1px",
+        alert: "16px",
+    })
+})
+
+test("the stylesheets stay within the size budget", async ({ page }) => {
+    // Collect the body reads and await them all; "network idle" can fire first.
+    const sizes: Promise<number>[] = []
+    page.on("response", (response) => {
+        if (response.request().resourceType() === "stylesheet") {
+            sizes.push(response.body().then((body) => body.length))
+        }
+    })
+
+    await page.goto("/")
+    await page.waitForLoadState("networkidle")
+    const stylesheetBytes = (await Promise.all(sizes)).reduce(
+        (total, size) => total + size,
+        0
+    )
+
+    // About 316 KB today: the Bootstrap subset, FontAwesome's CSS, slick and the
+    // site styles. Importing all of Bootstrap again adds about 94 KB.
+    expect(stylesheetBytes).toBeGreaterThan(100 * 1024)
+    expect(stylesheetBytes).toBeLessThan(340 * 1024)
+})
