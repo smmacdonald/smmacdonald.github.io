@@ -57,6 +57,9 @@ Rather than hard-coding this information into the Next.js application, Drupal ac
 * **REST API** — API access for Drupal resources and content
 * **GitHub Pages** — Static hosting
 * **GitHub Actions** — Automated builds and deployment
+* **TypeScript, ESLint, Prettier** — Type safety and consistent code
+* **Vitest and Testing Library** — Unit and component tests
+* **Playwright and axe-core** — End-to-end and accessibility tests, run against recorded Drupal fixtures
 
 ## Drupal 11 Integration
 
@@ -102,7 +105,7 @@ The frontend is responsible for:
 * Rendering portfolio content
 * Creating responsive layouts
 * Providing navigation and page structure
-* Optimizing images and assets
+* Serving images from the Drupal site (the static export uses unoptimized images)
 * Generating static pages
 * Providing a modern user experience
 
@@ -148,81 +151,112 @@ This decoupled approach makes it possible to change the frontend without rebuild
 
 ## Project Structure
 
-A simplified view of the application might look like:
-
 ```text
 .
-├── app/
-│   ├── ['...slug]/
-│   └── ...
-├── assets/
-├── components/
-├── graphql/
-├── lib/
-├── src/
-│   ├── utlis/
-│   └── ...
-├── types/
-├── public/
-├── next.config.js
-└── package.json
+├── app/                 Next.js App Router: layout, home page, [...slug] pages, not-found, error
+├── components/          React components (server by default; small client islands for interactivity)
+├── graphql/             GraphQL queries and shared fragments
+├── lib/                 Data fetching (GraphQL, REST), metadata, breadcrumbs, helpers
+├── src/utils/           Small utilities (form field renderer, CMS image paths, body class)
+├── types/               TypeScript types for the Drupal data
+├── assets/              SCSS, fonts and the full FontAwesome library
+├── e2e/                 Playwright tests, mock Drupal server and recorded fixtures
+├── docs/                Audit reports and deployment guide
+└── .github/workflows/   CI and deployment
 ```
 
-The exact structure may evolve as the project grows.
+Content pages are rendered on the server at build time from Drupal. Interactivity (the sticky header, the
+mobile menu, the portfolio filter, the contact form submit, the image reveal) lives in small client components
+that receive server-rendered content.
 
 ## Getting Started
 
 ### Prerequisites
 
-You'll need:
+* Node.js 24 (see `.nvmrc`; `nvm use` picks it up) and npm
+* A Drupal 11 site with the GraphQL and REST endpoints this frontend reads. Locally this project is developed
+  against a DDEV site
+* To run the end-to-end tests, nothing else: they use recorded fixtures instead of a live Drupal
 
-* Node.js
-* npm, pnpm, or another supported package manager
-* A Drupal 11 installation with the required API modules/configuration
-* Access to the Drupal GraphQL and/or REST endpoints
-
-### Install
-
-Clone the repository and install the dependencies:
+### Install and configure
 
 ```bash
 git clone <repository-url>
 cd <project-directory>
-npm install
+npm ci
+cp .env.example .env.local   # then edit the Drupal URLs
 ```
 
-### Environment Variables
+`.env.example` lists every variable:
 
-Create a local environment file and provide the Drupal API configuration required by the application.
+| Variable | Purpose |
+|---|---|
+| `NEXT_PUBLIC_LOCAL_API_URL` | Origin of the Drupal site, no trailing slash |
+| `NEXT_PUBLIC_LOCAL_API_GRAPHQL_URL` | Drupal GraphQL endpoint |
+| `BASE_PATH` | Optional sub-path to serve from; leave unset for `https://<user>.github.io/` |
 
-For example:
+These values are compiled into the public JavaScript, so never put credentials in them. With DDEV, if ports 80
+and 443 are taken, DDEV uses another router port (shown by `ddev describe`); include it in both URLs.
 
-```env
-NEXT_PUBLIC_LOCAL_API_URL=https://your-drupal-site.example
-NEXT_PUBLIC_LOCAL_API_GRAPHQL_URL=https://your-drupal-site.example/graphql
-```
-
-The actual variables used by the application may differ depending on the project's configuration.
-
-### Run the Development Server
+### Run the development server
 
 ```bash
 npm run dev
 ```
 
-Then open the development site in your browser.
+## Scripts
+
+| Command | What it does |
+|---|---|
+| `npm run dev` / `build` / `start` | Development server, production build (static export to `out/`), serve a build |
+| `npm run check` | Format check, lint, typecheck and unit tests (what CI runs first) |
+| `npm run lint` / `lint:fix` | ESLint |
+| `npm run format` / `format:check` | Prettier |
+| `npm run typecheck` | `tsc --noEmit` |
+| `npm test` / `test:watch` / `test:coverage` | Vitest unit and component tests |
+| `npm run test:e2e` | Playwright on Chromium; builds the site from fixtures first |
+| `npm run test:a11y` | Only the axe accessibility scans |
+| `npm run e2e:record -- <drupal url>` | Re-record the Drupal fixtures |
+| `npm run knip` | Report unused files, exports and dependencies |
+
+Git hooks (Husky): pre-commit formats and lints staged files; pre-push runs the typecheck.
+
+## Testing
+
+* **Unit and component tests** (Vitest, Testing Library) cover the logic and the interactive components.
+* **End-to-end tests** (Playwright) build the real site against recorded Drupal responses and run it in a
+  browser, including keyboard use, forms and axe accessibility scans. First time: `npx playwright install chromium`.
+  Set `E2E_ALL_BROWSERS=1` to also run Firefox and WebKit.
+* Details, the manual test checklist and known gaps: [docs/audits/testing-strategy.md](docs/audits/testing-strategy.md).
 
 ## Deployment
 
-The project is designed to build as a static Next.js application and deploy to GitHub Pages.
+Pushes to `main` build and deploy the static site to GitHub Pages through GitHub Actions. Every change reaches
+`main` through a pull request that must pass the format, lint, type, unit, end-to-end and audit checks; the
+build only runs, and the site is only deployed, when those pass. A smoke test checks the live site afterwards.
 
-A typical production build can be generated with:
+Because Drupal content is read at build time, **after editing content in Drupal run the "Deploy Next.js Static
+Export to GitHub Pages" workflow manually** to publish it. Full details, rollback options and troubleshooting:
+[docs/deployment.md](docs/deployment.md).
 
-```bash
-npm run build
-```
+## Documentation
 
-Deployment is handled through GitHub Actions so that changes pushed to the repository can be built and published automatically.
+| Document | Contents |
+|---|---|
+| [docs/deployment.md](docs/deployment.md) | Pipeline, settings, releasing, rollback, troubleshooting, a known Drupal issue |
+| [docs/audits/frontend-audit.md](docs/audits/frontend-audit.md) | Audit findings and outcomes |
+| [docs/audits/implementation-plan.md](docs/audits/implementation-plan.md) | What was delivered and what is left |
+| [docs/audits/testing-strategy.md](docs/audits/testing-strategy.md) | Test layers, fixtures, coverage, manual checks |
+| [docs/audits/security-review.md](docs/audits/security-review.md) | Security findings and status |
+| [docs/audits/performance-review.md](docs/audits/performance-review.md) | Lighthouse baseline and recommendations |
+| [docs/audits/final-verification.md](docs/audits/final-verification.md) | Results of the final checks |
+
+## Known limitations
+
+* Content is a snapshot taken at build time; it updates only when the site is rebuilt.
+* GitHub Pages cannot set security headers and serves every file with a 10-minute cache lifetime.
+* The site needs a reachable Drupal at build time (not at runtime, except for the contact form submit).
+* Mobile load performance has a measured baseline but has not been optimised yet; see the performance review.
 
 ## Purpose
 
