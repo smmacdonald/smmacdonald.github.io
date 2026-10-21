@@ -137,7 +137,22 @@ export function startMockDrupal({
                 )
             }
 
-            const stored = fs.readFileSync(file, "utf8")
+            let stored = fs.readFileSync(file, "utf8")
+
+            // Reproduce a Drupal that returns an empty breadcrumb trail for some
+            // pages (seen in production): E2E_EMPTY_BREADCRUMBS="/about,/portfolio".
+            const emptyTrails = (process.env.E2E_EMPTY_BREADCRUMBS ?? "")
+                .split(",")
+                .filter(Boolean)
+            if (emptyTrails.length && url.pathname === "/graphql") {
+                const requested = JSON.parse(bodyText || "{}").variables?.path
+                if (emptyTrails.includes(requested)) {
+                    const result = JSON.parse(stored)
+                    if (result.data?.route) result.data.route.breadcrumbs = []
+                    stored = JSON.stringify(result)
+                }
+            }
+
             response
                 .writeHead(200, { ...cors, "Content-Type": "application/json" })
                 .end(
