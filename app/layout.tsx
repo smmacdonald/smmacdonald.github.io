@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { preconnect } from "react-dom"
 
 import "@/assets/scss/styles.scss"
 import { getSiteInfo } from "@/lib/getSiteInfo"
@@ -17,6 +18,10 @@ export default async function RootLayout({
     children: React.ReactNode
 }>) {
     const siteInfo = await getSiteInfo()
+
+    // Hero and card images come from the Drupal host; open the connection early.
+    const apiOrigin = process.env.NEXT_PUBLIC_LOCAL_API_URL
+    if (apiOrigin) preconnect(new URL(apiOrigin).origin)
     return (
         <html lang="en" data-scroll-behavior="smooth">
             <body>
