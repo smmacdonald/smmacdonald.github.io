@@ -59,9 +59,10 @@ coverage of logic and user-visible behaviour, not a percentage.
 
 ## The accessibility ratchet
 
-`e2e/a11y.spec.ts` lists the axe violations that exist today per page (currently only `heading-order`, caused
-by a heading in a Drupal block). The test fails when a **new** violation appears and also when a listed one is
-**fixed**, so entries must be deleted as issues are resolved and the list can only shrink.
+`e2e/a11y.spec.ts` lists the axe violations that exist today per page. **The list is currently empty**: every page and
+the open mobile menu scan clean (the last entry, `heading-order` from a footer heading in a Drupal block, was fixed on
+2026-10-22). The test fails when a **new** violation appears and also when a listed one is **fixed**, so if one ever
+has to be accepted it is added with its reason and removed as soon as it is resolved.
 
 ## Test quality checks done
 

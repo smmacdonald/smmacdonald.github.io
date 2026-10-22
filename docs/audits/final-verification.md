@@ -20,6 +20,12 @@ Nothing below is claimed as passing unless it was run; see "Not executed" for wh
 > budget). Locally, all three browsers passed 163 tests with 2 WebKit skips. The Lighthouse re-measurements are in
 > [performance-review.md](performance-review.md); they show about 400 KB less per page but no change in the
 > typical score.
+>
+> **Update, 2026-10-22:** the footer call-to-action heading was changed to `<h2 class="h3">` in Drupal and the E2E
+> fixture re-recorded; the `heading-order` entry was removed from `e2e/a11y.spec.ts`, so every axe scan now runs
+> against an empty known-violations list and passes. Screenshots of 6 pages at 3 viewports, full page and footer
+> (36 images), showed no visual difference from the old `<h3>`. Item 2 under "Issues that need manual review" below is
+> resolved.
 
 ## Passed
 
