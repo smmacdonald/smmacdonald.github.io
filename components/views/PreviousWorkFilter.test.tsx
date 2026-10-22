@@ -11,7 +11,7 @@ vi.mock("../PortfolioSlider", () => ({
 }))
 
 const filters = [
-    { tid: "5", name: "Web &amp; Apps", count: "3" },
+    { tid: "5", name: "Web & Apps", count: "3" },
     { tid: "6", name: "Branding", count: "1" },
 ]
 const project = (title: string, field_slider: string, field_tags: string) => ({
@@ -47,7 +47,7 @@ describe("PreviousWorkFilter", () => {
         expect(screen.getByText("Gamma")).toBeInTheDocument()
     })
 
-    it("decodes HTML entities in filter labels and shows counts", () => {
+    it("shows the filter labels with their counts", () => {
         renderFilter()
 
         expect(screen.getByLabelText("Web & Apps (3)")).toBeInTheDocument()

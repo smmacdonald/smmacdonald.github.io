@@ -36,6 +36,48 @@ describe("PreviousWork (server component)", () => {
         expect(fetchMock).toHaveBeenCalledTimes(4)
     })
 
+    it("decodes the HTML entities Drupal's REST views put in text and URLs", async () => {
+        const escaped: Record<string, unknown> = {
+            "https://cms.test/rest/projects-filters/archived": [
+                { tid: "5", name: "Local &amp; Creative", count: "2" },
+            ],
+            "https://cms.test/rest/projects/archived": [
+                {
+                    title: "Earth &amp; Sky",
+                    field_tags: "Wordpress, R&amp;D",
+                    field_slider: "/sites/a.jpg?h=1&amp;itok=2",
+                    field_media: "",
+                },
+            ],
+            "https://cms.test/rest/projects/archived/5": [
+                {
+                    title: "Isaacs &amp; Isaacs",
+                    field_tags: "Wordpress",
+                    field_slider: "/sites/b.jpg?h=3&amp;itok=4",
+                    field_media: "",
+                },
+            ],
+        }
+        vi.stubGlobal(
+            "fetch",
+            vi.fn((url: string) =>
+                Promise.resolve(new Response(JSON.stringify(escaped[url])))
+            )
+        )
+
+        const element = await PreviousWork()
+
+        expect(element.props.filters[0].name).toBe("Local & Creative")
+        expect(element.props.projectsByTerm.all[0]).toMatchObject({
+            title: "Earth & Sky",
+            field_tags: "Wordpress, R&D",
+            field_slider: "/sites/a.jpg?h=1&itok=2",
+        })
+        expect(element.props.projectsByTerm["5"][0].title).toBe(
+            "Isaacs & Isaacs"
+        )
+    })
+
     it("fails the build when any request fails", async () => {
         vi.stubGlobal(
             "fetch",
