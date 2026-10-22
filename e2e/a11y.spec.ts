@@ -5,20 +5,18 @@ import { PAGES } from "./helpers"
 /**
  * Automated accessibility scan (axe-core, WCAG 2.2 A/AA plus best practices).
  *
- * KNOWN lists the violations that exist today, taken from the audit. The test
- * fails when a NEW violation appears, and also when a listed one is fixed, so
- * entries must be deleted as the underlying issues are resolved.
+ * KNOWN lists any violations that exist today, as rule id to the pages that
+ * have it. It is empty now: every page and the open mobile menu scan clean. The
+ * test fails when a NEW violation appears, and also when a listed one is fixed,
+ * so if one ever has to be accepted, add it here with the reason and remove it
+ * as soon as it is resolved.
  *
  * Automated checks find only part of the problems. `color-contrast` cannot be
  * decided by axe on these pages (text over background images); check it by
- * hand, along with keyboard use and screen reader behavior (docs/testing).
+ * hand, along with keyboard use and screen reader behavior
+ * (docs/audits/testing-strategy.md).
  */
-const KNOWN: Record<string, string[]> = {
-    // The footer call to action is an <h3> in the Drupal block body, right after
-    // the page's <h1>. Fix in Drupal: change it to <h2 class="h3">, re-record the
-    // fixtures (npm run e2e:record) and delete this entry.
-    "heading-order": ["home", "about", "portfolio", "project", "not-found"],
-}
+const KNOWN: Record<string, string[]> = {}
 
 const knownFor = (name: string) =>
     Object.entries(KNOWN)

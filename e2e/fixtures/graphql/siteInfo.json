@@ -168,7 +168,7 @@
             "id": "2",
             "title": "footer get in touch message",
             "body": {
-                "processed": "<p><span class=\"subhead color-accent\">LETS WORK TOGETHER</span></p>\n<h3>Have A Project In Mind?<br><span class=\"color-accent\">Lets Connect.</span></h3>\n<p class=\"mb-5\">I work with organizations looking for a reliable technical partner who can think strategically and execute at a high level.</p>\n<p><a class=\"button transparent\" href=\"/contact\" data-entity-substitution=\"canonical\" tabindex=\"0\">GET IN TOUCH</a></p>\n"
+                "processed": "<p><span class=\"subhead color-accent\">LETS WORK TOGETHER</span></p>\n<h2 class=\"h3\">Have A Project In Mind?<br><span class=\"color-accent\">Lets Connect.</span></h2>\n<p class=\"mb-5\">I work with organizations looking for a reliable technical partner who can think strategically and execute at a high level.</p>\n<p><a class=\"button transparent\" href=\"/contact\" data-entity-substitution=\"canonical\" tabindex=\"0\">GET IN TOUCH</a></p>\n"
             }
         },
         "copyright": {
