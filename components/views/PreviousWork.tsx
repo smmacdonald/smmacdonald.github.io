@@ -1,5 +1,6 @@
 import PreviousWorkFilter from "./PreviousWorkFilter"
 import { getJson } from "@/lib/getJson"
+import { decodeStringFields } from "@/lib/text"
 import {
     PreviousWorkFilterProps,
     PreviousWorkProjectProps,
@@ -10,7 +11,9 @@ import {
 export default async function PreviousWork() {
     const baseUrl = process.env.NEXT_PUBLIC_LOCAL_API_URL
 
-    const [filters, all] = await Promise.all([
+    // Drupal's REST views HTML-escape every field ("Earth &amp; Sky"); these are
+    // plain text and URLs, so decode them before they are rendered.
+    const [filterRows, allRows] = await Promise.all([
         getJson<PreviousWorkFilterProps[]>(
             `${baseUrl}/rest/projects-filters/archived`
         ),
@@ -18,6 +21,9 @@ export default async function PreviousWork() {
             `${baseUrl}/rest/projects/archived`
         ),
     ])
+
+    const filters = filterRows.map(decodeStringFields)
+    const all = allRows.map(decodeStringFields)
 
     const lists = await Promise.all(
         filters.map((filter) =>
@@ -29,7 +35,7 @@ export default async function PreviousWork() {
 
     const projectsByTerm: PreviousWorkProjectsByTerm = { all }
     filters.forEach((filter, index) => {
-        projectsByTerm[filter.tid] = lists[index]
+        projectsByTerm[filter.tid] = lists[index].map(decodeStringFields)
     })
 
     return (

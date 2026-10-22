@@ -89,3 +89,45 @@ test.describe("project pages", () => {
         await expect(page).toHaveURL(/\/portfolio$/)
     })
 })
+
+test.describe("text from Drupal's REST views", () => {
+    test("project titles show their real characters, not HTML escapes", async ({
+        page,
+    }) => {
+        await page.goto("/portfolio")
+
+        // The REST view returns "Earth &amp; Sky"; visitors must see "Earth & Sky".
+        await expect(
+            page.getByText("Earth & Sky", { exact: true })
+        ).toBeVisible()
+        await expect(
+            page.getByText("Isaacs & Isaacs", { exact: true })
+        ).toBeVisible()
+        expect(await page.locator("main").innerText()).not.toContain("&amp;")
+    })
+
+    test("filter labels and image URLs are decoded too", async ({ page }) => {
+        await page.goto("/portfolio")
+
+        await expect(page.getByLabel(/^Local & Creative/)).toBeAttached()
+        // Image URLs must not carry a literal "&amp;" into their query strings.
+        expect(await page.locator('img[src*="&amp;"]').count()).toBe(0)
+    })
+
+    test("no page shows a literal HTML escape in its visible text", async ({
+        page,
+    }) => {
+        for (const path of [
+            "/",
+            "/about",
+            "/portfolio",
+            "/portfolio/macdonaldesign",
+            "/contact",
+        ]) {
+            await page.goto(path)
+            expect(await page.locator("body").innerText(), path).not.toMatch(
+                /&(amp|lt|gt|quot|#\d+);/
+            )
+        }
+    })
+})

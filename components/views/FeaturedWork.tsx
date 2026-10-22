@@ -2,6 +2,7 @@ import Link from "next/link"
 import PortfolioSlider from "../PortfolioSlider"
 import Image from "next/image"
 import { getJson } from "@/lib/getJson"
+import { decodeStringFields } from "@/lib/text"
 
 type FeaturedProjectProps = {
     field_filter: string
@@ -12,9 +13,12 @@ type FeaturedProjectProps = {
 }
 
 export default async function FeaturedWork() {
-    const posts = await getJson<FeaturedProjectProps[]>(
-        process.env.NEXT_PUBLIC_LOCAL_API_URL + "/rest/projects/featured"
-    )
+    // Drupal's REST views HTML-escape every field; decode the plain text and URLs.
+    const posts = (
+        await getJson<FeaturedProjectProps[]>(
+            process.env.NEXT_PUBLIC_LOCAL_API_URL + "/rest/projects/featured"
+        )
+    ).map(decodeStringFields)
 
     return (
         <>

@@ -54,8 +54,7 @@ export default function PreviousWorkFilter({ filters, projectsByTerm }: Props) {
                             className="form-check-label"
                             htmlFor={`flexRadioDefault-${element.tid}`}
                         >
-                            {element.name?.replaceAll("&amp;", "&")} (
-                            {element.count})
+                            {element.name} ({element.count})
                         </label>
                     </div>
                 ))}
