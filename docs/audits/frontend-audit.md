@@ -36,7 +36,7 @@ build-time static export (no server to run or secure).
 (a Drupal outage or misconfiguration could ship a broken site).
 
 **Biggest wins delivered:** security upgrade, loud build failures, quality gates and tests that block deploys,
-server-rendered content, and an accessibility pass that took axe from 6 distinct violated rules across the site to 1 (`heading-order`, a Drupal content edit).
+server-rendered content, and an accessibility pass that took axe from 6 distinct violated rules across the site to 0 (the last one, `heading-order`, was a Drupal content edit made on 2026-10-22).
 
 **Biggest remaining opportunities:** mobile load performance (LCP 7.8 to 10 s on simulated mobile; see
 [performance-review.md](performance-review.md)), the unexplained Drupal breadcrumb outage (fixed on the live site, cause not recorded;
@@ -70,7 +70,7 @@ Status: **Done** (merged), **Open PR** (written and verified, awaiting merge), *
 | Low | Quality | Unused GraphQL files and invalid fragments (targeting types missing from the schema) | Knip; schema introspection | Delete dead ones, fix and use the shared ones | Low | Done |
 | Low | Config | No `.env.example`; `basePath` hard-coded for production | `next.config.ts` at start | `.env.example`, `BASE_PATH` env var | Low | Done |
 | Medium | Accessibility | No `prefers-reduced-motion` handling for the image reveal, the menu slide-in or the smooth scrolling | `grep prefers-reduced-motion assets/ app/ components/` finds nothing | Add a `@media (prefers-reduced-motion: reduce)` block that disables the transitions and animations | Low | Open |
-| Low | Quality | Footer call to action is an `<h3>` right after the `<h1>` (axe `heading-order`) | CMS block body | Change it to `<h2 class="h3">` in Drupal | Low | Drupal |
+| Low | Quality | Footer call to action is an `<h3>` right after the `<h1>` (axe `heading-order`) | CMS block body | Change it to `<h2 class="h3">` in Drupal | Low | Done 2026-10-22 (Drupal edit; fixture re-recorded; no visual change in 36 before/after screenshots) |
 | Low | Accessibility | External links open a new tab without `rel` | `SocialMediaElement.tsx` | `rel="noopener noreferrer"` | Low | Done |
 
 ## Architecture recommendations

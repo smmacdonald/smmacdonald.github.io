@@ -39,8 +39,8 @@ Media files are served as a neutral placeholder image.
 
 Tests marked `test.fixme` document problems found in the audit (for example the
 missing skip link and project-page metadata). `e2e/a11y.spec.ts` lists the
-axe violations that exist today; it fails when a new one appears **and** when a
-listed one is fixed, so delete entries as the issues are resolved.
+axe violations that exist today (currently none); it fails when a new one appears
+**and** when a listed one is fixed, so delete entries as the issues are resolved.
 
 Automated checks do not replace manual testing: color contrast over images,
 keyboard use, zoom/reflow and screen reader behavior still need a hand check.

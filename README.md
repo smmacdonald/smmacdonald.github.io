@@ -190,9 +190,9 @@ that receive server-rendered content.
 * A skip link and a `<main>` landmark on every page; the mobile menu is keyboard and screen-reader accessible
   (it reports `aria-expanded`, closes with Escape, and the closed panel is `inert`); icon-only links have
   accessible names; external links open in a new tab safely.
-* Automated checks run on every page with axe-core (WCAG 2.2 A/AA and best practices). The one known violation
-  is a heading level in a Drupal block, tracked in `e2e/a11y.spec.ts`. Contrast over images, zoom and screen
-  reader behavior still need manual checks; see the checklist in
+* Automated checks run on every page with axe-core (WCAG 2.2 A/AA and best practices); every page and the open
+  mobile menu currently scan clean (the known-violations list in `e2e/a11y.spec.ts` is empty). Contrast over
+  images, zoom and screen reader behavior still need manual checks; see the checklist in
   [docs/audits/testing-strategy.md](docs/audits/testing-strategy.md).
 * Page titles and canonical URLs come from Drupal's metatags (including project pages and the 404 page). This is
   not the primary site, so it intentionally has no sitemap or `robots.txt`.
@@ -301,7 +301,7 @@ An audit and modernisation pass (October 2026) delivered, through reviewed pull 
 | Performance | Favicon 293 KB to 4.5 KB, WOFF2 fonts, preconnect, Bootstrap subset: about 400 KB less per page and a 16% smaller stylesheet (gzip) |
 | Documentation | Audit reports, deployment guide, this README |
 
-Still open: the footer heading level in Drupal, `prefers-reduced-motion` support, the Dependabot pull requests,
+Still open: `prefers-reduced-motion` support, the Dependabot pull requests,
 larger performance work (Drupal image styles) and manual accessibility testing. See
 [docs/audits/implementation-plan.md](docs/audits/implementation-plan.md).
 
